@@ -1,0 +1,108 @@
+<!---------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+21 05 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+---------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>CSS Forms</title>
+  </head>
+
+  <body>
+
+    <h1>CSS Forms.</h1>
+
+<!-- The look of an HTML form can be greatly improved with CSS: -->
+
+    <h2>Starting example: Using CSS to style an HTML Form</h2>
+
+    <style>
+      
+      input[type="text"], select {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        background: #339537;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background: #3fb443;
+      }
+
+      .form-1 {
+        border-radius: 5px;
+        background: #dadada;
+        padding: 30px;
+      }
+      </style>
+
+    <div class="form-1">
+      <form action="#">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name...">
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+          <option value="russia">Russia</option>
+          <option value="japan">Japan</option>
+        </select>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div><hr/>
+
+
+
+<!-- Styling Input Fields
+==========================
+Use the width property to determine the width of the input field: -->
+
+    <style>
+      input {
+        width: 100%;
+      }
+      </style>
+
+      <p>A full-width input field:</p>
+
+      <form>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname">
+      </form> 
+
+
+<!-- The example above applies to all <input> elements. If you only want to
+style a specific input type, you can use attribute selectors:
+
+input[type=text] - will only select text fields
+input[type=password] - will only select password fields
+input[type=number] - will only select number fields
+etc..                                                                       -->
+
+
+  </body>
+</html>

@@ -1,0 +1,147 @@
+<!-------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+23 06 2020
+CSS Advanced from: https://www.w3schools.com/css/
+ -------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS FlexBox </title>
+  </head>
+  <body>
+    <h1>CSS flexbox-direction properties.</h1><hr/>
+
+
+<!-- flex-direction Property
+========================-->
+
+
+<!-- The 'flex-direction' property defines in which direction (sens) 
+the container wants to stack the flex items.
+
+CSS Syntax
+===========
+
+flex-direction: column| column-reverse| row| row-reverse
+
+Value            Description
+--------------   -----------
+column           stacks the flex items vertically (top to bottom)
+--------------------------------------------------------------------------------
+column-reverse   stacks the flex items vertically (bottom to top)
+--------------------------------------------------------------------------------
+row              stacks the flex items horizontally (left to right)
+--------------------------------------------------------------------------------
+row-reverse      stacks the flex items horizontally (right to left)
+-------------------------------------------------------------------------------->
+
+      <h3>flex-direction: column</h3>
+      <!-- 'column' value stacks the flex items vertically (from top to bottom) -->
+      <style>
+        .flex-container_3 {
+          display: flex;
+          background-color: dodgerblue;
+          flex-direction: column;
+        }
+
+        .flex-container_3 > div {
+          background-color: #f1f1f1;
+          margin: 10px;
+          font-size: 30px;
+          width: 100px;
+          text-align: center;
+          line-height: 75px;
+        }
+
+      </style>
+      <div class="flex-container_3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div><br/><br/>
+
+      <!-------------------------------------------------->
+
+      <h3>flex-direction: column-reverse</h3>
+      <!-- column-reverse value stacks the flex items vertically 
+         (but from bottom to top): -->
+      <style>
+        .flex-container_4 {
+          display: flex;
+          background-color: dodgerblue;
+          flex-direction: column-reverse;
+        }
+
+        .flex-container_4 > div {
+          background-color: #f1f1f1;
+          margin: 10px;
+          font-size: 30px;
+          width: 100px;
+          text-align: center;
+          line-height: 75px;
+        }
+      </style>
+      <div class="flex-container_4">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div><br/><br/>
+
+      <!---------------------------------------------------->
+
+      <h3>flex-direction: row (default)</h3>
+      <!-- row value stacks the flex items horizontally (from left to right) -->
+      <style>
+        .flex-container_5 {
+          display: flex;
+          background-color: dodgerblue;
+          flex-direction: row;
+        }
+
+        .flex-container_5 > div {
+          background-color: #f1f1f1;
+          margin: 10px;
+          font-size: 30px;
+          width: 100px;
+          text-align: center;
+          line-height: 75px;
+        }
+      </style>
+      <div class="flex-container_5">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div><br/><br/>
+
+      <!-- ---------------------------------- -->
+
+
+      <h3>flex-direction: row-reverse</h3>
+      <!-- row-reverse value stacks the flex items horizontally (but from right to left) -->
+      <style>
+        .flex-container_6 {
+          display: flex;
+          background-color: dodgerblue;
+          flex-direction: row-reverse;
+        }
+
+        .flex-container_6 > div {
+          background-color: #f1f1f1;
+          margin: 10px;
+          font-size: 30px;
+          width: 100px;
+          text-align: center;
+          line-height: 75px;
+        }
+      </style>
+      <div class="flex-container_6">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div><br/><br/><hr/>
+
+
+  </body>
+</html>

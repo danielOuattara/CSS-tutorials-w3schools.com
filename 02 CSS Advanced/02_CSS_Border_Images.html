@@ -1,0 +1,141 @@
+<!-------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+15 06 2020
+CSS Advanced from: https://www.w3schools.com/css/
+ -------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Border Images </title>
+  </head>
+  <body>
+    <h1>CSS Border Images.</h1><hr/>
+
+
+<!-- CSS Border Images
+======================
+
+With the CSS 'border-image' property, you can set an image to be used as
+the border around an element.
+
+
+CSS border-image Property
+==========================
+
+The CSS 'border-image' property allows you to specify an image to be used
+instead of the normal border around an element.
+
+
+The property has three parts:
+-----------------------------
+    > The image to use as the border
+    > Where to slice the image
+    > Define whether the middle sections should be repeated (round) 
+      or stretched
+
+
+NOTE: We will use the image, called "border.png"
+=====
+
+The 'border-image' property takes the image and slices it into nine sections,
+like a tic-tac-toe board. It then places the corners at the corners, and
+the middle sections are repeated or stretched as you specify.
+
+
+Important: For 'border-image' to work, the element also needs the 'border' 
+=========  property set ! Here, the middle sections of the image are repeated 
+           to create the border: -->
+
+      <style>
+
+        p { margin: 30px 15px;}
+
+        #borderimg_1 {
+          border: 10px solid transparent;
+          padding: 15px;
+          border-image: url('./../../images/border.png') 30 round;
+        }
+        #borderimg_2 {
+          border: 10px solid transparent;
+          padding: 15px;
+          border-image: url('./../../images/border.png') 30 stretch;
+        }
+      </style>
+
+      <p>Here is the original image:<br/><img src="./../../images/border.png" 
+        alt="border.png"></p>
+      <p>Here the middle sections of the image are repeated to create
+        the Border </p>
+
+      <p id="borderimg_1">border-image: url (border.png) 30 round;</p>
+
+      <p id="borderimg_2">border-image: url (border.png) 30 stretch;</p>
+
+      <p><strong>Note:</strong> Internet Explorer 10, and earlier versions,
+         do not support the border-image property.</p><br/><hr/><br/>
+
+
+<!--Tip: The 'border-image' property is actually a shorthand property for
+  
+    > 'border-image-source'
+    > 'border-image-slice'
+    > 'border-image-width'
+    > 'border-image-outset'
+    > 'border-image-repeat'
+
+
+ CSS border-image - Different Slice Values
+===============================================
+
+Different slice values completely changes the look of the border: -->
+
+      <style>
+        #borderimg_3 {
+          border: 10px solid transparent;
+          padding: 15px;
+          border-image: url('./../../images/border.png') 50 round;
+        }
+
+        #borderimg_4 {
+          border: 10px solid transparent;
+          padding: 15px;
+          border-image: url('./../../images/border.png') 20% round;
+        }
+
+        #borderimg_5 {
+          border: 10px solid transparent;
+          padding: 15px;
+          border-image: url('./../../images/border.png') 30% round;
+        }
+      </style>
+
+      <p id="borderimg_3">border-image: url (border.png) 30 round;</p>
+      <p id="borderimg_4">border-image: url (border.png) 20% round;</p>
+      <p id="borderimg_5">border-image: url (border.png) 30% stretch;</p>
+
+
+<!-- CSS Border Image Properties
+=================================
+
+Property          	Description
+---------           -------------
+--------------------------------------------------------------------------------
+border-image 	        A shorthand property for setting all the
+                      border-image-* properties
+--------------------------------------------------------------------------------
+border-image-source 	Specifies the path to the image to be used as a border
+--------------------------------------------------------------------------------
+border-image-slice 	  Specifies how to slice the border image
+--------------------------------------------------------------------------------
+border-image-width 	  Specifies the widths of the border image
+--------------------------------------------------------------------------------
+border-image-outset 	Specifies the amount by which the border image area
+                      extends beyond the border box
+--------------------------------------------------------------------------------
+border-image-repeat 	Specifies whether the border image should be repeated,
+                      rounded or stretched
+ ------------------------------------------------------------------------------>
+  </body>
+</html>

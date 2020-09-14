@@ -1,0 +1,186 @@
+<!---------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+07 05 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+---------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout - Float</title>
+</head>
+<body>
+    <h1>CSS Layout - Float.</h1><hr/>
+
+
+<!--The CSS 'float' property specifies how an element should float.
+The CSS 'clear' property specifies what elements can't float beside 
+the float element and on which side.
+
+The float Property
+===================
+The 'float' property is used for positioning and formatting content, 
+e.g: let an image float left to the text in a container.
+
+The 'float' property can have one of the following values:
+
+  > left    - The element floats to the left of its container
+  > right   - The element floats to the right of its container
+  > none    - The element does not float (will be displayed just
+              where it occurs in the text). This is default
+  > inherit - The element inherits the float value of its parent
+
+In its simplest use, the 'float' property can be used to wrap text 
+around images.
+
+
+ Example - No float
+===================
+
+In the following example the image will be displayed just where it occurs
+in the text (float: none;): -->
+
+       <style>
+               #para-1{
+                       border: 1px solid green; 
+                       padding: 30px; 
+                       margin: 30px 0px;
+                       text-align: justify;
+               }
+
+               #image-1 {
+                       width:170px;
+                       height: 170px;
+                       float: none;
+               }
+               #image-2 {
+                       width:170px;
+                       height: 170px;
+                       float: none;
+               }
+               #image-3 {
+                       width:170px;
+                       height: 170px;
+                       float: none;
+               }
+
+       </style>
+      <p id="para-1">
+        <img id="image-1"src="./colorgradient.jpg" alt="Pineapple">
+           <b>No Float -</b>
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+           imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
+           scelerisque enim ligula venenatis dolor. Maecenas nisl est,
+           ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
+           augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+           lobortis in odio. Praesent convallis urna a lacus interdum ut
+           hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper
+           ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed
+           ornare turpis. Donec vitae dui eget tellus gravida venenatis.
+           Integer fringilla congue eros non fermentum. Sed dapibus pulvinar
+
+      </p>
+      <p id="para-1">
+        
+           <b>No Float -</b>
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+           imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
+           scelerisque enim ligula venenatis dolor. Maecenas nisl est,
+           ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
+           augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+           lobortis in odio. Praesent convallis urna a lacus interdum ut
+           hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper
+           ipsum dignissim ac. In at libero sed 
+           <img id="image-2"src="./colorgradient.jpg" alt="Pineapple">
+           
+           
+           nunc venenatis imperdiet sed
+           ornare turpis. Donec vitae dui eget tellus gravida venenatis.
+           Integer fringilla congue eros non fermentum. Sed dapibus pulvinar
+
+      </p>
+      <p id="para-1">
+        
+           <b>No Float -</b>
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+           imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
+           scelerisque enim ligula venenatis dolor. Maecenas nisl est,
+           ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
+           augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+           lobortis in odio. Praesent convallis urna a lacus interdum ut
+           hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper
+           ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed
+           ornare turpis. Donec vitae dui eget tellus gravida venenatis.
+           Integer fringilla congue eros non fermentum. Sed dapibus pulvinar
+
+           <img id="image-3"src="./colorgradient.jpg" alt="Pineapple">
+      </p>
+
+
+
+<!-- Example - float: right
+===========================
+
+The following example specifies that an image should float to 
+the right in a text: -->
+
+        <p style="border: 1px solid green; padding: 30px; margin: 30px 0px;
+                  text-align: justify;">
+           <img src="colorgradient.jpg" alt="Pineapple" style="width:170px;
+                   height:170px; margin-left:15px; float: right;">
+           <b> Float Right -</b>
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+           imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
+           scelerisque enim ligula venenatis dolor. Maecenas nisl est,
+           ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
+           augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+           lobortis in odio. Praesent convallis urna a lacus interdum ut
+           hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper
+           ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed
+           ornare turpis. Donec vitae dui eget tellus gravida venenatis.
+           Integer fringilla congue eros non fermentum. Sed dapibus pulvinar
+           nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+           imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
+           scelerisque enim ligula venenatis dolor. Maecenas nisl est,
+           ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
+           augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+           lobortis in odio. Praesent convallis urna a lacus interdum ut
+           hendrerit risus congue.
+        </p>
+
+<!-- Example - float: left
+==========================
+
+The following example specifies that an image should float to 
+the left in a text: -->
+
+        <p style="border: 1px solid green; padding: 30px; margin: 30px 0px;
+                  text-align: justify;">
+          <img src="colorgradient.jpg" alt="Pineapple" style="width:170px;
+                   height:170px; margin-right:15px; float: left;">
+             <b>Float Left -</b>
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+             imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
+             scelerisque enim ligula venenatis dolor. Maecenas nisl est,
+             ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
+             augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+             lobortis in odio. Praesent convallis urna a lacus interdum ut
+             hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper
+             ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed
+             ornare turpis. Donec vitae dui eget tellus gravida venenatis.
+             Integer fringilla congue eros non fermentum. Sed dapibus pulvinar
+             nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+             imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
+             scelerisque enim ligula venenatis dolor. Maecenas nisl est,
+             ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
+             augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+             lobortis in odio. Praesent convallis urna a lacus interdum ut
+             hendrerit risus congue.
+      </p>
+
+  </body>
+</html>

@@ -1,0 +1,188 @@
+<!-------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+23 06 2020
+CSS Advanced from: https://www.w3schools.com/css/
+ -------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS justify-content Property </title>
+  </head>
+  <body>
+    <h1>CSS justify-content Property.</h1><hr/>
+
+
+<!-- The justify-content property is used to align (distribute) 
+simultaneously all the flex items on the x-axis.
+
+CSS Syntax: 
+============
+
+justify-content: center| flex-start| flex-end| space-around| space-between
+
+Value           Description
+-----           -----------
+--------------------------------------------------------------------------------
+center          aligns the flex items at the center of the container
+--------------------------------------------------------------------------------
+flex-start      aligns the flex items at the beginning of the container(default)
+--------------------------------------------------------------------------------
+flex-end        aligns the flex items at the end of the container
+--------------------------------------------------------------------------------
+space-around    displays the flex items with space before, between,
+                and after the lines
+--------------------------------------------------------------------------------
+space-between   displays the flex items with space between the lines
+-------------------------------------------------------------------------------->
+
+<h2>justify-content Property</h2>
+<!-- ------------------------------------------------->
+
+      <h3>justify-content: center</h3>
+      <!--  center value aligns the flex items at the center of the container -->
+      <style>
+        .flex-container_11 {
+          display: flex;
+          background-color: dodgerblue;
+          justify-content: center;
+        }
+
+        .flex-container_11 > div {
+          background-color: #f1f1f1;
+          margin: 10px;
+          font-size: 30px;
+          width: 100px;
+          text-align: center;
+          line-height: 75px;
+        }
+
+      </style>
+      <div class="flex-container_11">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+
+      </div><br/><br/>
+
+      <!-------------------------------------------------->
+
+
+      <h3>justify-content: flex-start</h3>
+      <!-- flex-start value aligns the flex items at the beginning of the container (default) -->
+      <style>
+        .flex-container_12 {
+          display: flex;
+          background-color: dodgerblue;
+          justify-content: flex-start;
+        }
+
+        .flex-container_12 > div {
+          background-color: #f1f1f1;
+          margin: 10px;
+          font-size: 30px;
+          width: 100px;
+          text-align: center;
+          line-height: 75px;
+        }
+
+      </style>
+      <div class="flex-container_12">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+
+      </div><br/><br/>
+
+      <!-------------------------------------------------->
+
+
+      <h3>justify-content: flex-end</h3>
+      <!--  flex-end value aligns the flex items at the end of the container -->
+      <style>
+        .flex-container_13 {
+          display: flex;
+          background-color: dodgerblue;
+          justify-content: flex-end;
+        }
+
+        .flex-container_13 > div {
+          background-color: #f1f1f1;
+          margin: 10px;
+          font-size: 30px;
+          width: 100px;
+          text-align: center;
+          line-height: 75px;
+        }
+
+      </style>
+      <div class="flex-container_13">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+
+      </div><br/><br/>
+
+      <!-------------------------------------------------->
+
+
+      <h3>justify-content: space-around</h3>
+      <!--  space-around value displays the flex items with space before, between, 
+        and after the lines -->
+      <style>
+        .flex-container_14 {
+          display: flex;
+          background-color: dodgerblue;
+          justify-content: space-around;
+        }
+
+        .flex-container_14 > div {
+          background-color: #f1f1f1;
+          margin: 10px;
+          font-size: 30px;
+          width: 100px;
+          text-align: center;
+          line-height: 75px;
+        }
+
+      </style>
+      <div class="flex-container_14">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+
+      </div><br/><br/>
+
+      <!-------------------------------------------------->
+
+
+      <h3>justify-content: space-between</h3>
+      <!-- space-between value displays the flex items with space between the lines -->
+      <style>
+        .flex-container_15 {
+          display: flex;
+          background-color: dodgerblue;
+          justify-content: space-between;
+        }
+
+        .flex-container_15 > div {
+          background-color: #f1f1f1;
+          margin: 10px;
+          font-size: 30px;
+          width: 100px;
+          text-align: center;
+          line-height: 75px;
+        }
+
+      </style>
+      <div class="flex-container_15">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+
+      </div><br/><br/><hr/>
+
+  
+  </body>
+</html>

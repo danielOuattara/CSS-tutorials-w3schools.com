@@ -1,0 +1,243 @@
+<!---------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+12 05 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+---------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>CSS Opacity -Transparency</title>
+  </head>
+  <body>
+
+    <h1>CSS Opacity -Transparency.</h1><hr/>
+
+<!-- The 'opacity' property specifies the opacity of an element.
+Transparent objects have lower opacity values. 
+
+
+Transparent Image
+==================-->
+
+    <h2>Transparent Images</h2>
+
+
+    <style>
+
+      im
+      #img-1{
+        opacity: 0.7
+      }
+      #img-2{
+        opacity: 0.5
+      }
+      #img-3{
+        opacity: 0.3
+      }
+    </style>
+
+    <p>Image with 70% opacity:</p>
+    <img id="img-1" src="../../images/smiley-1.jpg" alt="Forest" width="75px"
+    height="75px">
+    <p>Image with 50% opacity:</p>
+    <img id="img-2" src="../../images/smiley-1.jpg" alt="Forest" width="75px"
+    height="75px">
+    <p>Image with 30% opacity:</p>
+    <img id="img-3" src="../../images/smiley-1.jpg" alt="Forest" width="75px"
+    height="75px">
+
+    <br/><br/><hr/><br/><br/>
+
+<!-- Transparent Hover Effect
+==============================
+
+The opacity property is often used together with the ':hover' selector to change
+the opacity on mouse-over: -->
+
+    <h2>Transparent Hover Effect</h2>
+
+    <style>
+
+      .img-4{
+        opacity: 0.6;
+        width: 200px;
+        height: 200px;
+      }
+
+      .img-4:hover{
+        opacity: 1.0
+      }
+
+    </style>
+
+    <img class="img-4" src="../../images/acacia_flowers.jpg" alt="For6est">
+    <img class="img-4" src="../../images/acacia-trees.jpg" alt="Forest">
+    <img class="img-4" src="../../images/girafe2.jpg" alt="Forest">
+
+    
+<!-- Example explained
+----------------------
+The first CSS block is similar to the code in Example 1. In addition,
+we have added what should happen when a user hovers over one of the images.
+In this case we want the image to NOT be transparent when the user hovers
+over it. The CSS for this is opacity:1;.
+When the mouse pointer moves away from the image, the image will be
+transparent again.
+
+An example of thereversed hover effect: -->
+
+    <br/>
+    <style>
+
+      .img-5{
+        opacity: 1.0;
+        width: 200px;
+        height: 200px;
+      }
+
+      .img-5:hover{
+        opacity: 0.5
+      }
+
+    </style>
+
+    <img class="img-5" src="../../images/acacia_flowers.jpg" alt="For6est">
+    <img class="img-5" src="../../images/acacia-trees.jpg" alt="Forest">
+    <img class="img-5" src="../../images/girafe2.jpg" alt="Forest">
+
+    <br/><br/><hr/><br/><br/>
+
+
+<!-- Transparent Box
+=====================
+
+When using the opacity property to add transparency to the background of an
+element, all of its child elements inherit the same transparency.
+This can make the text inside a fully transparent element hard to read:   -->
+
+
+    <h2>Transparent Box with opacity</h2>
+
+
+    <style>
+
+      div.zero {
+        background-color: #4CAF50;
+        padding: 10px;
+      }
+      div.first {
+        opacity: 0.1;
+      }
+      div.second {
+        opacity: 0.3;
+      }
+      div.third {
+        opacity: 0.6;
+      }
+
+    </style>
+    <div class="zero first"><p>Transparent BOX: opacity 0.1</p></div>
+    <div class="zero second"><p>Transparent BOX: opacity 0.3</p></div>
+    <div class="zero third"><p>Transparent BOX: opacity 0.6</p></div>
+    <div class="zero"><p>Transparent BOX: opacity 1 (default)</p></div>
+
+    <br/><br/><hr/><br/><br/>
+
+
+<!-- Transparency using RGBA
+============================
+
+If you do not want to apply opacity to child elements, like in our example
+above, use RGBA color values. The following example sets the opacity for
+the background color and not the text: -->
+
+      <h2>Transparency with RGBA : <br/><br/> opacity VS RGBA</h2>
+
+      <p>Opacity is 'contagious' but not 'transparency'</p>
+
+      <style>
+        div {
+        background: rgb(76, 175, 80);
+        padding: 10px;
+        }
+
+        div.first-2 {
+        background: rgba(76, 175, 80, 0.1);
+        }
+
+        div.second-2 {
+        background: rgba(76, 175, 80, 0.3);
+        }
+
+        div.third-2 {
+        background: rgba(76, 175, 80, 0.6);
+        }
+    </style>
+      
+      <h3>Transparent Box: with RGBA</h3>
+      <div class="first-2"><p>10% opacity</p></div>
+      <div class="second-2"><p>30% opacity</p></div>
+      <div class="third-2"><p>60% opacity</p></div>
+      <div><p>default</p></div>
+
+      <p>Notice how the text gets transparent as well as the background color
+        when using the opacity property.</p>
+
+
+<!-- You learned from our CSS Colors Chapter, that you can use RGB as a color
+value. In addition to RGB, you can use an RGB color value with an alpha
+channel (RGBA) - which specifies the opacity for a color.
+An RGBA color value is specified with: rgba(red, green, blue, alpha).
+The alpha parameter is a number between 0.0 (fully transparent) and
+1.0 (fully opaque).                                                     -->
+
+
+
+    <br/><br/><hr/><br/><br/>
+
+
+<!-- Text in Transparent Box -->
+
+
+    <style>
+      div.background {
+        background: url(../../images/acacia-leaves.jpg);
+        /*padding: 20px;*/
+        border: 2px solid green;
+      }
+      div.transbox {
+        margin: 30px;
+        background-color: #ffffff32;
+        border: 1px solid black;
+        /* opacity: 0.6; */
+      }
+      div.transbox p {
+        /* margin: 5%; */
+        font-weight: bold;
+        background-color: white;
+        display: inline;
+        /* color: #000000; */
+      }
+    </style>
+
+    <div class="background">
+      <div class="transbox">
+      <p>This is some text that is placed in the transparent box.</p>
+      </div>
+    </div>
+
+<!-- Example explained
+------------------------
+First, we create a <div> element (class="background") with a background image,
+and a border. Then we create another <div> (class="transbox") inside the first
+<div>. The <div class="transbox"> have a background color, and a border - the
+div is transparent. Inside the transparent <div>, we add some text inside a
+<p> element. -->
+
+
+
+  </body>
+</html>

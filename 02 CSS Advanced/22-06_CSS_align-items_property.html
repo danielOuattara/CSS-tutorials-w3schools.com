@@ -1,0 +1,193 @@
+<!-------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+23 06 2020
+CSS Advanced from: https://www.w3schools.com/css/
+ -------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS align-items Property </title>
+  </head>
+  <body>
+    <h1>CSS align-items Property.</h1><hr/>
+
+
+
+<!-- The align-items property is used to align (distribute) 
+simultaneously all the flex items ont the y-axis.
+
+
+CSS Syntax:
+===========
+align-items: center| flex-start| flex-end| stretch| baseline
+
+
+Value           Description
+-------         -----------
+--------------------------------------------------------------------------------
+center          aligns the flex items in the center of the container
+--------------------------------------------------------------------------------
+flex-start      aligns the flex items at the top of the container
+--------------------------------------------------------------------------------
+flex-end        aligns the flex items at the bottom of the container
+--------------------------------------------------------------------------------
+stretch         stretches the flex items to fill the container (default)
+--------------------------------------------------------------------------------
+baseline        aligns the flex items such as their baselines aligns
+------------------------------------------------------------------------------->
+
+   
+  <h2>align-items Property</h2>
+  <!-- ------------------------------------------------->
+      <h3>align-items: center</h3>
+      <!-- center value aligns the flex items in the middle of the container -->
+      <style>
+        .flex-container_16 {
+          display: flex;
+          height: 200px;
+          background-color: dodgerblue;
+          align-items: center;
+        }
+
+        .flex-container_16 > div {
+          background-color: #f1f1f1;
+          margin: 10px;
+          font-size: 30px;
+          width: 100px;
+          text-align: center;
+          line-height: 75px;
+        }
+
+      </style>
+      <div class="flex-container_16">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+
+      </div><br/><br/>
+
+      <!-------------------------------------------------->
+
+
+      <h3>align-items: flex-start</h3>
+      <!-- flex-start value aligns the flex items at the top of the container -->
+      <style>
+        .flex-container_17 {
+          display: flex;
+          height: 200px;
+          background-color: dodgerblue;
+          align-items: flex-start;
+        }
+        .flex-container_17 > div {
+          background-color: #f1f1f1;
+          margin: 10px;
+          font-size: 30px;
+          width: 100px;
+          text-align: center;
+          line-height: 75px;
+        }
+
+      </style>
+      <div class="flex-container_17">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+
+      </div><br/><br/>
+
+      <!-------------------------------------------------->
+
+
+      
+      <h3>align-items: flex-end</h3>
+      <!-- flex-end value aligns the flex items at the bottom of the container -->
+      <style>
+        .flex-container_18 {
+          display: flex;
+          height: 200px;
+          background-color: dodgerblue;
+          align-items: flex-end;
+        }
+
+        .flex-container_18 > div {
+          background-color: #f1f1f1;
+          margin: 10px;
+          font-size: 30px;
+          width: 100px;
+          text-align: center;
+          line-height: 75px;
+        }
+
+      </style>
+      <div class="flex-container_18">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+
+      </div><br/><br/>
+
+      <!-------------------------------------------------->
+
+
+      <h3>align-items: stretch</h3>
+      <!-- stretch value stretches the flex items to fill the container (this is default) -->
+      <style>
+        .flex-container_19 {
+          display: flex;
+          height: 200px;
+          background-color: dodgerblue;
+          align-items: stretch;
+        }
+
+        .flex-container_19 > div {
+          background-color: #f1f1f1;
+          margin: 10px;
+          font-size: 30px;
+          width: 100px;
+          text-align: center;
+          line-height: 75px;
+        }
+
+      </style>
+      <div class="flex-container_19">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+
+      </div><br/><br/>
+
+      <!-------------------------------------------------->
+
+      <h3>align-items: baseline</h3>
+      <!-- baseline value aligns the flex items such as their baselines aligns -->
+      <style>
+        .flex-container_20 {
+          display: flex;
+          height: 200px;
+          background-color: dodgerblue;
+          align-items: baseline;
+        }
+
+        .flex-container_20 > div {
+          background-color: #f1f1f1;
+          margin: 10px;
+          font-size: 30px;
+          width: 100px;
+          text-align: center;
+          line-height: 75px;
+        }
+
+      </style>
+      <div class="flex-container_20">
+        <div><h1>1</h1></div>
+        <div><h6>2</h6></div>
+        <div><h3>3</h3></div>
+        <div><small>4</small></div>
+
+      </div><br/>
+
+
+  </body>
+</html>

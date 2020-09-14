@@ -1,0 +1,393 @@
+<!---------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+07 05 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+---------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout - Float, Clear & ClearFix</title>
+</head>
+<body>
+    <h1>CSS Layout - Float, Clear & ClearFix.</h1><hr/>
+
+
+<!--The clear Property
+=======================
+
+The 'clear' property specifies what elements can float beside the cleared 
+element and on which side. The 'clear' property can have one of the 
+following values:
+
+  > none - (default) Allows floating elements on both sides. 
+  > left - No floating elements allowed on the left side
+  > right- No floating elements allowed on the right side
+  > both - No floating elements allowed on the left and the right side
+  > inherit - The element inherits the clear value of its parent
+
+The most common way to use the 'clear' property is after you have used 
+a 'float' property on an element A. When clearing floats, you should 
+match the clear to the float: if an element A is floated to the left, 
+then you should clear to the left. Your 'floated element' A will continue 
+to float, but the cleared element B will appear below it on the web page.
+
+The following example clears the float to the left. Means that no floating
+elements are allowed on the left side (of the div)-->
+
+
+<!--Example Without Clear Left
+===============================                                      -->
+
+      <h2>float: left + NO clear: Left</h2>
+
+      <style>
+        .div1 {
+          float: left; 
+          width: 300px; 
+          height: 200px;
+          margin-bottom: 10px;
+          border: 1px solid green;
+          background-color: rgba(0, 128, 0, 0.479);
+        }
+
+        .div2 {
+          border: 2px solid red; 
+          background-color: rgba(255, 0, 0, 0.342);
+          width: 500px; 
+          height: 150px;
+          margin-bottom: 100px;
+          /* position: relative; */
+          /* z-index: 1; */
+        }
+
+      </style>
+
+      <div class="div1">
+           <b>div1</b>
+      </div>
+
+      <div class="div2">
+        <p><b>div2</b><br/>- Notice that div2 is after div1 in the HTML 
+          code. However, since div1 floats to the left, the text in div2 
+          flows around div1.</p>
+      </div><hr/>
+
+
+<!--Example With Clear Left
+============================                                             -->
+      <h2>float: left + clear: left</h2>
+      <style>
+        .div3 {
+          float: left; 
+          width: 300px; 
+          height: 200px;
+          margin-bottom: 10px;
+          border: 1px solid green;
+          background-color: rgba(0, 128, 0, 0.479);
+        }
+
+        .div4 {
+          border: 2px solid red; 
+          background-color: rgba(255, 0, 0, 0.342);
+          width: 500px; 
+          height: 150px;
+          margin-bottom: 100px;
+          clear: left;
+          /* position: relative; */
+          /* z-index: 1; */
+        }
+      </style>
+
+      <div class="div3">
+          <b>div3</b><br/>
+      </div>
+
+      <div class="div4">
+        <b>div4</b><br/>- Here, clear: left; moves div4 down below
+        the floating div3. The value "left" clears elements floated to the left.
+        You can also clear "right" and "both".
+      </div><hr/>
+
+
+<!--Example Without Clear Right
+===============================   -->
+
+      <h2>float: right + NO clear: right</h2>
+      <style>
+        .div5 {
+          float: right; 
+          width: 300px; 
+          height: 200px;
+          margin-bottom: 10px;
+          border: 1px solid green;
+          background-color: rgba(0, 128, 0, 0.479);
+        }
+
+        .div6 {
+          border: 2px solid red; 
+          background-color: rgba(255, 0, 0, 0.342);
+          width: 500px; 
+          height: 150px;
+          margin-bottom: 100px;
+          /* position: relative; */
+          /* z-index: 1; */
+        }
+      </style>
+
+
+      <div class="div5">
+           <b>div5</b>
+      </div>
+
+      <div class="div6">
+        <b>div6</b><br/> - Notice that div2 is after div1 in the HTML code. However,
+        since div1 floats to the left, the text in div2 flows around div1.
+      </div><hr/>
+
+
+<!--Example With Clear Right
+===============================                                             -->
+       
+      <h2>float: right + clear: right</h2>
+      <style>
+        .div7 {
+          float: right; 
+          width: 300px; 
+          height: 200px;
+          margin-bottom: 10px;
+          border: 1px solid green;
+          background-color: rgba(0, 128, 0, 0.479);
+        }
+
+        .div8 {
+          border: 2px solid red; 
+          background-color: rgba(255, 0, 0, 0.342);
+          width: 500px; 
+          height: 150px;
+          margin-bottom: 100px;
+          clear: right;
+          /* position: relative; */
+          /* z-index: 1; */
+        }
+      </style>
+      <div class="div7">
+          <b>div7</b>
+      </div>
+
+      <div class="div8">
+        <b>div8</b><br/> - Here, clear: left; moves div4 down below
+        the floating div3. The value "left" clears elements floated to the left.
+        You can also clear "right" and "both".
+      </div><hr/>
+
+
+<!-- The clearfix Hack
+=======================
+
+If an element B is taller than the element A containing it, and if 
+element B is floated, then it will "overflow" outside of its container.
+Add 'overflow: auto' to the containing element A to fix this problem:-->
+
+
+<!-- Container: NO overflow: auto +  Containing: float right -->
+
+      <h2>float: right + NO overflow</h2>
+      <style>
+        #div-container-nooverflow-1 {
+          border: 3px solid #4CAF50; 
+          padding: 5px;
+          margin-bottom: 200px;
+        }
+
+        .image-float-right {
+          width: 170px;
+          height: 170px; 
+          float: right; 
+          margin: 20px 0px;
+        }
+
+        #para-advice-1 {
+          clear:right; 
+          border: 1px solid grey; 
+          padding: 10px;
+          margin: 20px 0px;
+        }
+
+      </style>
+      <div id="div-container-nooverflow-1">
+        <img class="image-float-right" src="colorgradient.jpg" alt="colorgradient"/>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+        imperdiet, nulla et dictum interdum ...
+      </div>
+
+      <p id="para-advice-1">
+        Add a clearfix class with overflow: auto; to the containing element,
+        to fix this problem:</p>
+
+
+<!-- Container: overflow: auto +  Containing: float right -->
+      
+      <h2> float right + overflow: auto</h2>
+      <style>
+
+
+        #div-container-overflow-auto {
+          border: 3px solid #4CAF50;
+          padding: 5px;
+          overflow: auto;
+          margin-bottom: 100px;
+        }
+
+      </style>
+
+      <div id="div-container-overflow-auto">
+        <img class="image-float-right" src="colorgradient.jpg" alt="colorgradient">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+        imperdiet, nulla et dictum interdum...
+      </div><br><br><hr/><br/>
+
+
+<!-- Container: NO overflow: auto + Containing: float left -->
+
+      <h2>float: left + NO overflow</h2>
+
+      <style>
+        #div-container-nooverflow-2 {
+          border: 3px solid #4CAF50; 
+          padding: 5px;
+          margin-bottom: 200px;
+          
+        }
+
+        #para-advice-2 {
+          clear:left; 
+          border: 1px solid grey; 
+          padding: 10px;
+          margin: 200px 0 50px 0;
+        }
+
+        
+        .image-float-left {
+          width: 170px;
+          height: 170px; 
+          float: left; 
+          margin: 20px 0px;
+        }
+
+      </style>
+      <div  id="div-contenaire-nooverflow-2" style="border: 3px solid #4CAF50; padding: 5px;">
+        <img class="image-float-left" src="colorgradient.jpg" alt="colorgradient">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+        imperdiet, nulla et dictum interdum...
+      </div>
+
+      <p id="para-advice-2">Add a clearfix class with overflow: auto; to the
+        containing element, to fix this problem:</p>
+
+
+<!-- Container: overflow: auto +  Containing: float right -->
+
+      <h2>clear left + overflow: auto</h2>
+
+      <style>
+        #clearfix {
+          border: 3px solid #4CAF50; 
+          padding: 5px;
+          overflow: auto;
+          margin-bottom: 150px;
+        }
+        
+
+      </style>
+
+      <div id="clearfix">
+        <img class="image-float-left" src="colorgradient.jpg" alt="colorgradient" >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+        imperdiet, nulla et dictum interdum...
+      </div>
+
+
+
+
+      <h1>=== New clearfix hack ====</h1>
+
+<!-- The 'overflow: auto' clearfix works well as long as you are able to keep
+control of your margins and padding, else you might see scrollbars.
+
+The new and modern clearfix hack however, is safer to use, and the following code
+is used for most webpages: -->
+
+
+<!-- Container: New clearfir hack + Containing - float: right  -->
+
+
+      <h2>With new ClearFix hack</h2>
+
+  
+      <style>
+
+        #new-clearfix-right {
+          border: 3px solid #4CAF50;
+          padding: 5px;
+        }
+
+        #new-clearfix-right::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+
+      </style>
+      <div id="new-clearfix-right">
+
+        <img class="image-float-right" src="colorgradient.jpg" alt="colorgradient">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+        imperdiet, nulla et dictum interdum...
+      </div><br><br><hr/><br/>
+
+
+<!-- Container: No new clearfir hack + Containing - float: left  -->
+
+      <h2>float left +  NO new ClearFix hack</h2>
+      <style>
+        #no-newclearfix-left{
+          border: 3px solid #4CAF50;
+          padding: 5px;
+          margin-bottom: 200px;
+        }
+
+      </style>
+      <div id="no-newclearfix-left">
+        <img class="image-float-left" src="colorgradient.jpg" alt="colorgradient">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+        imperdiet, nulla et dictum interdum...
+      </div>
+
+<!--Container: New clearfir hack + Containing - float: left  -->
+
+      <h2>float left + new ClearFix hack</h2>
+      <style>
+
+
+        #new-clearfix-left {
+          border: 3px solid #4CAF50;
+          padding: 5px
+        }
+
+        #new-clearfix-left {
+          content: "";
+          clear: both;
+          display: table;
+        }
+      </style>
+      <div id="new-clearfix-left">
+
+        <img class="image-float-left" src="colorgradient.jpg" alt="colorgradient">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+        imperdiet, nulla et dictum interdum...
+      </div>
+  </body>
+</html>

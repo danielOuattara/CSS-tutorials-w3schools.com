@@ -1,0 +1,198 @@
+<!-------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+15 06 2020
+CSS Advanced from: https://www.w3schools.com/css/
+ -------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS </title>
+  </head>
+  <body>
+    <h1>CSS </h1>
+
+<!-- With the CSS 'border-radius' property, you can give any element
+"rounded corners".
+
+
+CSS border-radius Property
+===========================
+
+The CSS 'border-radius' property defines the radius of an element's corners.
+
+Tip: This property allows you to add rounded corners to elements!
+====
+
+
+Rounded corners for an element with a specified background color:   
+=================================================================-->
+
+      <style>
+
+        #rcorners1 {
+          background: #73AD21;
+          padding: 20px;
+          width: 200px;
+          height: 150px;
+          border-radius: 30px;
+          text-align: center;
+        }
+
+        #rcorners2 {
+          border: 2px solid #73AD21;
+          padding: 20px;
+          width: 200px;
+          height: 150px;
+          border-radius: 25px;
+        }
+
+        #rcorners3 {
+          border-radius: 25px;
+          border: 2px solid green;
+          background-image: url("images/smiley-1.jpg") no-repeat;
+          background-position: left top;
+          background-repeat: repeat;
+          padding:100px;
+          width: 200px;
+          height: 150px;
+        }
+
+      </style>
+
+      <p>Rounded corners for an element with a specified background color:</p>
+      <p id="rcorners1">Rounded corners!</p>
+      <p>Rounded corners for an element with a border:</p>
+      <p id="rcorners2">Rounded corners!</p>
+      <p>Rounded corners for an element with a background image:</p>
+      <p id="rcorners3">Rounded corners!</p>
+
+
+
+<!-- Tip: The 'border-radius' property is actually a shorthand property
+     for the 'border-top-left-radius', 'border-top-right-radius',
+    'border-bottom-right-radius' and 'border-bottom-left-radius' properties.
+
+
+CSS border-radius - Specify Each Corner
+========================================
+
+The border-radius property can have from one to four values.
+Here are the rules:
+
+ > Four values : border-radius: 15px 50px 30px 5px;
+  - first value applies to top-left corner,
+  - second value applies to top-right corner,
+  - third value applies to bottom-right corner,
+  - fourth value applies to bottom-left corner
+
+> Three values - border-radius: 15px 50px 30px;
+  - first value applies to top-left corner,
+  - second value applies to top-right and bottom-left corners,
+  - third value applies to bottom-right corner
+
+> Two values - border-radius: 15px 50px;
+  - first value applies to top-left and bottom-right corners,
+  - second value applies to top-right and bottom-left corners
+
+> One value - border-radius: 15px;
+  - the value applies to all four corners, which are rounded equally -->
+
+    <br/><hr/><br/>
+    <style media="screen">
+        #rcorners1b {
+          border-radius: 15px 50px 30px 5px;
+          background: #73AD21;
+          padding: 20px;
+          width: 200px;
+          height: 150px;
+        }
+        #rcorners2b {
+          border-radius: 15px 50px 30px;
+          background: #73AD21;
+          padding: 20px;
+          width: 200px;
+          height: 150px;
+        }
+        #rcorners3b {
+          border-radius: 15px 50px;
+          background: #73AD21;
+          padding: 20px;
+          width: 200px;
+          height: 150px;
+        }
+        #rcorners4b {
+          border-radius: 25px;
+          background: #73AD21;
+          padding: 20px;
+          width: 200px;
+          height: 150px;
+        }
+    </style>
+
+      <p id="rcorners1b">Rounded corners!</p>
+      <p id="rcorners2b">Rounded corners!</p>
+      <p id="rcorners3b">Rounded corners!</p>
+      <p id="rcorners4b">Rounded corners!</p> <br/><hr/><br/>
+
+
+<!-- You could also create elliptical corners: -->
+
+        <style media="screen">
+
+          #rcorners1c {
+            border-radius: 50px / 15px;
+            background: #73AD21;
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+          }
+
+          #rcorners2c {
+            border-radius: 15px / 50px;
+            background: #73AD21;
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+          }
+
+          #rcorners3c {
+            border-radius: 65% ;
+            background: #73AD21;
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+            text-align: center;
+          }
+          </style>
+
+          <p id="rcorners1c">Rounded corners!</p>
+          <p id="rcorners2c">Rounded corners!</p>
+          <p id="rcorners3c">Rounded corners!</p>
+
+
+
+<!-- CSS Rounded Corners Properties
+=====================================
+
+Property     	              Description
+---------                   ------------
+--------------------------------------------------------------------------------
+border-radius 	            A shorthand property for setting all the four
+                            border-*-*-radius properties
+--------------------------------------------------------------------------------
+border-top-left-radius 	    Defines the shape of the border of the
+                            top-left corner
+--------------------------------------------------------------------------------
+border-top-right-radius 	  Defines the shape of the border of the
+                            top-right corner
+--------------------------------------------------------------------------------
+border-bottom-right-radius 	Defines the shape of the border of the
+                            bottom-right corner
+--------------------------------------------------------------------------------
+border-bottom-left-radius 	Defines the shape of the border of the
+                            bottom-left corner
+------------------------------------------------------------------------------->
+  </body>
+</html>

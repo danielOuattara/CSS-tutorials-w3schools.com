@@ -1,0 +1,140 @@
+<!-----------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+17 03 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS Box Model</title>
+        <style>
+            * {
+              padding: 0;
+               margin: 0;
+            }
+
+            .div1 {
+              background-color: lightgrey; 
+              width: 300px; 
+              padding: 50px;
+              margin: 100px; 
+              border: 30px solid green; 
+              height: 200px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>CSS Box Model</h1><hr/>
+
+
+<!-- CSS Box Model
+===================
+
+All HTML elements can be considered as boxes. In CSS, the term "box model"
+is used when talking about design and layout.
+
+The CSS box model is essentially a box that wraps around every HTML element.
+It consists of: margins, borders, padding, and the actual content. :
+
+    > Content - The content of the box, where text and images appear
+    > Padding - Clears an area around the content. The padding is transparent
+    > Border  - A border that goes around the padding and content
+    > Margin  - Clears an area outside the border. The margin is transparent
+
+The box model allows us to add a border around elements,
+and to define space between elements.-->
+
+        <style>
+          .margin-zone {
+            height: 400px; 
+            width:700px;
+            margin-left: 12%; 
+            position: relative; 
+            text-align: center;
+            font-size: 20px; 
+            background: lightgrey;
+          }
+
+          .border-zone {
+            height: 300px; 
+            width:600px; 
+            position: absolute;
+            border: 2px dashed grey; 
+            top: 50px; 
+            left: 50px;
+            background: lightgreen;
+          }
+
+          .padding-zone {
+            height: 200px; 
+            width:500px;
+            position: absolute;
+            border: 2px dashed grey; 
+            top: 50px; 
+            left: 50px;
+            background: lightgrey;}
+
+          .content-zone {
+            height: 100px; 
+            width:400px;
+            position: absolute;
+            border: 2px dashed grey; 
+            top: 50px; 
+            left: 50px;
+            background: white;
+          }
+
+
+        </style>
+
+
+
+        <div class="margin-zone" style="margin-bottom: 50px;" >
+          margin-zone
+          <div class="border-zone">
+            border-zone
+            <div class="padding-zone">
+              padding-zone
+              <div class="content-zone">
+                content-zone
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div1">
+            Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+
+
+<!-- Important ***:
+==================
+
+When you set the width and height properties of an element with CSS,
+you just set the width and height of the content area.
+
+To calculate the full size of an element, you must also add padding,
+borders and margins.
+
+
+> Total element width =
+    width + left padding + right padding + left border + right border +
+    + left margin + right margin
+
+> Total element height =
+    height + top padding + bottom padding + top border + bottom border +
+    + top margin + bottom margin                                            
+
+-->
+
+    </body>
+</html>

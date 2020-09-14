@@ -1,0 +1,86 @@
+<!------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+17 03 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+-------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS Outline Color</title>
+        <style>
+            p {
+                padding: 20px;
+                margin: 30px;
+              }
+            p.ex1 { 
+                border: 2px solid black;
+                outline-style: solid;
+                outline-color: red; 
+                }
+
+            p.ex2 { 
+                border: 2px solid black; 
+                outline-style: dotted;
+                outline-color: blue; 
+                }
+
+            p.ex3 { 
+                border: 2px solid black; 
+                outline-style: outset;
+                outline-color: grey; }
+
+            p.ex4 { 
+                outline-style: solid; 
+                outline-color: #ff0000; /* red */ 
+                }
+
+            p.ex5 { 
+                outline-style: solid;
+                outline-color: rgb(0, 0, 255); /* blue */ 
+            }
+
+            p.ex6 { 
+                outline-style: solid; 
+                outline-color: hsl(0, 100%, 50%); /* red */ 
+            }
+
+            p.ex7 { 
+                border: 4px solid green; 
+                outline-style: solid;
+                outline-color: invert; 
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <h1>CSS Outline Color</h1><hr/>
+
+
+<!--CSS Outline Color
+======================
+
+The 'outline-color' property is used to set the color of the outline.
+The color can be set by:
+
+  > name   - specify a color name, like "red"
+  > HEX    - specify a hex value, like "#ff0000"
+  > RGB    - specify a RGB value, like "rgb(255,0,0)"
+  > HSL    - specify a HSL value, like "hsl(0, 100%, 50%)"
+  > invert - performs a color inversion (which ensures that the outline
+             is visible, regardless of color background)
+
+Name Values -->
+
+        <p class="ex1">Name Value: solid red outline.</p>
+        <p class="ex2">Name Value: dotted blue outline.</p>
+        <p class="ex3">Name Value: outset grey outline.</p>
+        <p class="ex4">Hex Value:  solid red outline.</p>
+        <p class="ex5">RGB Value:  dotted blue outline.</p>
+        <p class="ex6">HSL Value:  outset grey outline.</p>
+        <p class="ex7">Invert :    solid red outline.</p>
+
+    </body>
+</html>

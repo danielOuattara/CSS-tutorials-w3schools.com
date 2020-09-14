@@ -1,0 +1,840 @@
+<!---------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+12 05 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+---------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>CSS Horizontal Navigation Bar</title>
+  </head>
+  <body>
+
+    <h1>CSS Horizontal Navigation Bar.</h1><hr/>
+
+<!-- There are two ways to create a horizontal navigation bar:
+  > using 'inline' list items
+  > using 'floating' list items
+
+
+Inline List Items
+=================
+
+One way to build a horizontal navigation bar is to specify the <li> elements
+as 'inline', in addition to the "standard" code from the previous page: -->
+  
+  
+     <h2>Inline List Items v1</h2>
+
+     <style>
+       ul.one {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+         margin: 30px 0;
+       }
+
+      .one li {
+        display: inline;
+      }
+
+     </style>
+     <ul class="one">
+       <li><a href="#home">Home</a></li>
+       <li><a href="#news">News</a></li>
+       <li><a href="#contact">Contact</a></li>
+       <li><a href="#about">About</a></li>
+       <li><a href="#archives">Archives</a></li>
+     </ul><hr/>
+
+<!-- Example explained:
+------------------------
+  >  display: inline;  - By default, <li> elements are block elements.
+                         Here, we remove the line breaks before and after each
+                         list item, to display them on one line.
+
+
+
+Floating List Items
+====================
+
+Another way of creating a horizontal navigation bar is to float the <li>
+elements, and specify a layout for the navigation <a> links: -->
+
+    <h2>Float List Items v2</h2>
+
+    <style>
+      ul.two {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        margin: 30px 0;
+      }
+
+     .two li {
+       float: left;
+     }
+
+     .two li a {
+       display: block;
+       padding: 8px;
+       background-color: #dddddd;
+     }
+
+    </style>
+    <ul class="two">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#archives">Archives</a></li>
+    </ul><hr/>
+
+<!--Note: 
+=========
+  
+> If a !DOCTYPE is not specified, floating items can produce unexpected results.
+
+> A 'background-color' is added to the links to show the link area.
+  The whole link area is clickable, not just the text.
+
+> 'overflow: auto' is added to the <ul> element to prevent <li> elements from 
+   going outside of the list.
+
+
+
+ Example explained:
+====================
+
+  > 'float: left'    - use 'float' to get block elements to slide next to each
+                       other
+
+  > 'display: block' - Displaying the links as block elements makes the whole
+                       link area clickable (not just the text), and it allows
+                       us to specify padding (and height, width, margins, etc.
+                       if you want)
+
+  > 'padding: 8px'   - Since block elements take up the full width available,
+                       they cannot float next to each other. Therefore, specify
+                       some padding to make them look good
+
+  > 'background-color: #dddddd' - Add a gray background-color to each a element -->
+
+
+    <h2>Float List Items v3</h2>
+
+    <style>
+      ul.three {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        background-color: #dddddd;  /* To color the whole line*/
+        margin: 30px 0;
+      }
+
+     .three li {
+       float: left;
+       text-align: center;
+     }
+
+     .three li a {
+       display: block;
+       padding: 15px 10px;
+       
+
+     }
+
+    </style>
+    <ul class="three">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#archives">Archives</a></li>
+    </ul><hr/>
+
+<!--NOTE:
+==========
+
+> A background color is added above to the list <ul> instead of each <a> 
+to create a full-width background color.
+
+> 'overflow: auto' is added to the <ul> element to prevent <li>
+elements from going outside of the list. 
+
+
+
+Horizontal Navigation Bar Examples
+===================================
+
+Create a basic horizontal navigation bar with a dark background color and
+change the background color of the links when the user moves the mouse
+over them: -->
+
+
+    <h2>Horizontal Navigation Bar Examples v4</h2>
+
+    <style>
+      ul.four {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        background-color: #444;
+        margin: 30px 0;
+      }
+
+     .four li {
+       float: left;
+       width: 10%;
+     }
+
+     .four li a{
+       display: block;
+       padding: 15px 0px;
+       color: white;
+       text-align: center;
+       text-decoration: none;
+     }
+
+     .four li a:hover {
+       background-color: #222;
+     }
+
+    </style>
+    <ul class="four">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#archives">Archives</a></li>
+    </ul><hr/>
+
+
+
+<!-- Active/Current Navigation Link
+====================================
+
+Add an "active" class to the current link to let the user know which page
+he/she is on: -->
+
+
+    <h2>Active/ Current Navigation Link v5</h2>
+
+    <style>
+      ul.five {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        background-color: #333333;
+        margin: 30px 0;
+      }
+
+     ul.five li {
+       float: left;
+       width: 10%;
+     }
+
+     ul.five li a {
+       display: block;
+       padding: 15px 0px;
+       color: white;
+       text-align: center;
+       text-decoration: none;
+     }
+
+     .five .active {
+       background-color: #008000;
+     }
+     .five .active:hover {
+       background-color: #00b400;
+     }
+
+     .five li a:not(.active):hover {
+       background-color: #666666;
+     }
+
+    </style>
+    <ul class="five">
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#archives">Archives</a></li>
+    </ul><hr/>
+
+
+<!-- Right-Align Links
+=======================
+
+Right-align links by floating the list items to the right (float:right;): -->
+
+    <h2>Active/ Right Aling Links v6</h2>
+
+    <style>
+      ul.six {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        background-color: #444;
+        margin: 30px 0;
+      }
+
+     ul.six li {
+       float: left;
+       width: 10%;
+     }
+
+     .six li:last-child {
+       float: right;
+     }
+
+     ul.six li a{
+       display: block;
+       padding: 15px 0px;
+       color: white;
+       text-align: center;
+       text-decoration: none;
+     }
+
+     .six .active {
+       background-color: green;
+       margin-right: 0;
+     }
+
+     .six li a:not(.active):hover {
+       background-color: #222;
+     }
+
+
+    </style>
+    <ul class="six">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a class="active" href="#archives">Archives</a></li>
+    </ul><hr/>
+
+
+<!-- Border Dividers
+=====================
+
+Add the border-right property to <li> to create link dividers: -->
+
+    <h2>Border Dividers v7</h2>
+
+    <style>
+      ul.seven {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        background-color: #444;
+        margin: 30px 0;
+      }
+
+     ul.seven li {
+       float: left;
+       width: 10%;
+       border-right: 1px solid white;
+     }
+
+     ul.seven li a{
+       display: block;
+       padding: 15px 0px;
+       color: white;
+       text-align: center;
+       text-decoration: none;
+     }
+
+     .seven .active {
+       background-color: green;
+     }
+
+     .seven li a:not(.active):hover {
+       background-color: #222;
+     }
+
+      /* Add a gray right border to all list items, except the
+       last item (last-child) */
+
+     /* .seven li:last-child {
+       border-right: none;
+     } */
+
+    </style>
+    <ul class="seven">
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#archives">Archives</a></li>
+    </ul><hr/>
+
+
+<!-- Fixed Navigation Bar
+============================
+
+Make the navigation bar stay at the top or the bottom of the page, even when
+the user scrolls the page:                                                   -->
+
+
+    <h2>Fixed Navigation Bar: Fixed Top v8</h2>
+
+    <style>
+
+      .global-1 {
+        position: relative;
+        /* height: 300px; */
+        margin: auto;
+        margin-bottom: 50px;
+        width: 90%;
+        text-align: justify;
+        border: 2px solid black;
+      }
+
+      .content-1 {
+        height: 300px;
+        overflow: auto;
+        background-color: lightgreen;
+        padding: 30px 70px 20px 70px;
+
+      }
+
+      ul.eight {
+        list-style-type: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        left: 0;
+        position: absolute;
+        overflow: auto;
+        background-color: #444;
+      }
+
+     ul.eight  li {
+       float: left;
+     }
+
+     ul.eight  li a{
+       display: block;
+       width: 100px;
+       padding: 15px 0px;
+       color: white;
+       text-align: center;
+       text-decoration: none;
+     }
+
+     .eight .active {
+       background-color: green;
+     }
+
+     .eight li a:not(.active):hover {
+       background-color: #222;
+     }
+     .eight li {
+       border-right: 1px solid white;
+     }
+      /* Add a gray right border to all list items, except the
+       last item (last-child) */
+     .eight li:last-child {
+       border-right: none;
+     }
+
+    </style>
+
+    <div class="global-1">
+
+        <ul class="eight">
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li style="float: right;"><a href="#archives">Archives</a></li>
+        </ul>
+
+        <div class="content-1">
+          <h2>Fixed Full-height Side Nav</h2>
+          <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
+          <p>Notice that this div element has a left margin of 25%. This is
+            because the side navigation is set to 25% width. If you remove the
+            margin, the sidenav will overlay/sit on top of this div.</p>
+          <p>Also notice that we have set overflow:auto to sidenav. This will add
+            a scrollbar when the sidenav is too long (for example if it has over
+            50 links inside of it).</p>
+          <p> <br/>Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris</p>
+          <p> <br/>Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris</p>
+          <p> <br/>Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris</p>
+          <p> <br/>Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris</p>
+        </div>
+    </div><hr/>
+
+
+
+          <h2>Fixed Navigation Bar: Fixed Bottom v9</h2>
+
+          <style>
+
+            .global-2 {
+              position: relative;
+              /* height: 300px; */
+              border: 2px solid black;
+              width: 90%;
+              margin: auto;
+            }
+
+            .content-2 {
+              height: 300px;
+              overflow: auto;
+              padding: 30px 70px 20px 70px;
+              background-color: lightgreen;
+            }
+
+            ul.nine {
+              list-style-type: none;
+              width: 100%;
+              margin: 0;
+              padding: 0;
+              overflow: auto;
+              background-color: #444;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+            }
+
+            ul.nine li {
+             float: left;
+           }
+
+           ul.nine  li a{
+             display: block;
+             width: 100px;
+             padding: 15px 0px;
+             color: white;
+             text-align: center;
+             text-decoration: none;
+           }
+
+           .nine .active {
+             background-color: green;
+           }
+
+           .nine li a:not(.active):hover {
+             background-color: #222;
+           }
+           .nine li {
+             border-right: 1px solid white;
+           }
+            /* Add a gray right border to all list items, except the
+             last item (last-child) */
+           .nine li:last-child {
+             border-right: none;
+           }
+
+          </style>
+
+
+          <div class="global-2">
+
+              <ul class="nine">
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li style="float: right;"><a href="#archives">Archives</a></li>
+              </ul>
+
+              <div class="content-2">
+                <h2>Fixed Full-height Side Nav</h2>
+                <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
+                <p>Notice that this div element has a left margin of 25%. This is
+                  because the side navigation is set to 25% width. If you remove the
+                  margin, the sidenav will overlay/sit on top of this div.</p>
+                <p>Also notice that we have set overflow:auto to sidenav. This will add
+                  a scrollbar when the sidenav is too long (for example if it has over
+                  50 links inside of it).</p>
+                <p> <br/>Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris</p>
+                <p> <br/>Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris</p>
+                <p> <br/>Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris</p>
+                <p> <br/>Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris</p>
+              </div>
+          </div>
+
+            <br/><br/><hr/><br/>
+
+            <p>Note: "position: fixed"  might not work properly on mobile devices.</p>
+
+
+<!-- Gray Horizontal Navbar
+============================
+
+An example of a gray horizontal navigation bar with a thin gray border: -->
+
+
+      <h2>Gray Horizontal Navbar v10</h2>
+
+      <style>
+
+        .global-3 {
+          /* position: relative; */
+          /* height: 300px; */
+          border: 2px solid black;
+        }
+
+        .content-3 {
+          /* clear: both; */
+          height: 300px;
+          overflow: auto;
+          background-color: lightgreen;
+          padding: 30px 70px 20px 70px;
+
+        }
+
+        ul.ten {
+          list-style-type: none;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          overflow: auto;
+          background-color: #e3e3e3;
+          border: 1px solid #e7e7e7;
+          /* position: absolute; */
+          /* top: 0; */
+        }
+
+       ul.ten li {
+         float: left;
+       }
+
+       ul.ten li a{
+         display: block;
+         width: 100px;
+         padding: 15px 0px;
+         color: #666;
+         text-align: center;
+         text-decoration: none;
+       }
+
+       .ten .active {
+         background-color: #4caf50;
+         color: white;
+       }
+
+       .ten li a:not(.active):hover {
+         background-color: #999;
+       }
+       .ten li {
+         border-right: 1px solid white;
+       }
+        /* Add a gray right border to all list items, except the
+         last item (last-child) */
+       .ten li:last-child {
+         border-right: none;
+       }
+
+      </style>
+
+
+      <div class="global-3">
+
+        <ul class="ten">
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li style="float: right;"><a href="#archives">Archives</a></li>
+        </ul>
+
+        <div class="content-3">
+          <h2>Fixed Full-height Side Nav</h2>
+          <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
+          <p>Notice that this div element has a left margin of 25%. This is
+            because the side navigation is set to 25% width. If you remove the
+            margin, the sidenav will overlay/sit on top of this div.</p>
+          <p>Also notice that we have set overflow:auto to sidenav. This will add
+            a scrollbar when the sidenav is too long (for example if it has over
+            50 links inside of it).</p>
+          <p> <br/>Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris</p>
+          <p> <br/>Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris</p>
+          <p> <br/>Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris</p>
+
+          <p> <br/>Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris</p>
+          <p> <br/>Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris</p>
+
+        </div>
+    </div>
+
+      <br/><br/><hr/><br/>
+
+
+<!--Sticky Navbar
+==================
+Add position: sticky; to <ul> to create a sticky navbar.
+A sticky element toggles between relative and fixed, depending on the scroll
+position. It is positioned relative until a given offset position is met in
+the viewport - then it "sticks" in place (like position:fixed).          -->
+
+
+
+      <h2>Horizontal Sticky Navbar v11</h2>
+
+      <style>
+
+        .global-4 {
+          position: relative;
+          height: 300px;
+          overflow: auto;
+        }
+
+        .header {
+          font-size: 28px;
+        }
+
+        .content-4 {
+          background-color: rgba(160, 255, 160, 0.6);
+          padding: 30px 70px 20px 70px;
+        }
+
+        ul.eleven {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: auto;
+          background-color: #ccc;
+          border: 1px solid #e7e7e7;
+          position: sticky;
+          position: -webkit-sticky; /* Safari */
+          top: 0;
+        }
+
+       ul.eleven  li {
+         float: left;
+       }
+
+       ul.eleven li a{
+         display: block;
+         width: 100px;
+         padding: 15px 0px;
+         color: #666;
+         text-align: center;
+         text-decoration: none;
+       }
+
+       .eleven .active {
+         background-color: #4caf50;
+         color: white;
+       }
+
+       .eleven li a:not(.active):hover {
+         background-color: #999;
+       }
+       .eleven li {
+         border-right: 1px solid white;
+       }
+        /* Add a gray right border to all list items, except the
+         last item (last-child) */
+       .eleven li:last-child {
+         border-right: none;
+       }
+
+      </style>
+
+      <div class="global-4">
+
+        <div class="header">
+          <h2>Scroll Down</h2>
+          <p>Scroll down to see the sticky effect.</p>
+        </div>
+
+        <ul class="eleven">
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li style="float: right;"><a href="#archives">Archives</a></li>
+        </ul>
+
+        <div class="content-4">
+          <h2>Fixed Full-height Side Nav</h2>
+          <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
+          <p>Notice that this div element has a left margin of 25%. This is
+            because the side navigation is set to 25% width. If you remove the
+            margin, the sidenav will overlay/sit on top of this div.</p>
+          <p>Also notice that we have set overflow:auto to sidenav. This will add
+            a scrollbar when the sidenav is too long (for example if it has over
+            50 links inside of it).</p>
+          <p> <br/>Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris</p>
+          <p> <br/>Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris</p>
+          <p> <br/>Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris</p>
+          <p> <br/>Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris</p>
+        </div>
+
+    </div>
+
+      <br/><br/><hr/><br/>
+
+
+
+
+  </body>
+</html>

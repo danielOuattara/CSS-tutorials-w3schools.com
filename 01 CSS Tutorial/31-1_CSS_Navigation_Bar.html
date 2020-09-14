@@ -1,0 +1,83 @@
+<!---------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+12 05 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+---------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>CSS Navigation Bar</title>
+  </head>
+  <body>
+
+    <h1>CSS Navigation Bar.</h1><hr/>
+
+
+<!-- Navigation Bars
+=====================
+
+Having easy-to-use navigation is important for any web site.
+With CSS you can transform boring HTML menus into good-looking navigation bars. 
+
+
+ Navigation Bar = List of Links
+=================================
+
+A navigation bar needs standard HTML as a base.
+In our examples we will build the navigation bar from a standard HTML list.
+A navigation bar is basically a list of links, so using the <ul> and <li>
+elements makes perfect sense: -->
+
+    <h2>Basics Navigation Bar v1</h2>
+
+    <ul class="one">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#archives">Archives</a></li>
+    </ul>
+
+<!-- Note: We use href="#" for test links. In a real web site this 
+would be specified URLs.-->
+
+      <h2>Basics Navigation Bar v2</h2>
+
+<!--Remove the bullets, margin and padding from the list.-->
+
+      <style>
+
+        ul.two {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          text-decoration-line: none;
+        }
+      </style>
+      
+      <ul class="two">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#archives">Archives</a></li>
+      </ul>
+
+<!-- Example explained:
+-----------------------
+
+   > list-style-type: none; - Removes the bullets. A navigation bar does not
+                      need list markers
+                      
+   > Set margin: 0; and padding: 0; to remove browser default settings
+
+The code in the example above is the standard code used in both vertical,
+and horizontal navigation bars, which you will learn more about in the next
+chapters. -->
+
+
+  </body>
+</html>

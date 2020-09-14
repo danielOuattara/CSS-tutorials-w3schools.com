@@ -1,0 +1,87 @@
+<!------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+17 03 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+-------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS Outline Width</title>
+        <style>
+            * { 
+              margin: 0;
+              padding: 0;
+            }
+
+            p {
+              padding: 20px;
+              margin: 30px;
+              text-align: center;
+            }
+
+            p.ex1 { 
+              border: 1px solid black;
+              outline-style: solid;
+              outline-color: red;
+              outline-width: thin;
+            }
+
+            p.ex2 { 
+              border: 1px solid black;
+              outline-style: solid;
+              outline-color: red;
+              outline-width: medium;
+            }
+
+            p.ex3 { 
+              border: 1px solid black;
+              outline-style: solid;
+              outline-color: red;
+              outline-width: thick;
+            }
+
+            p.ex4 {
+              border: 1px solid black;
+              outline-style: solid;
+              outline-color: red;
+              outline-width: 12px;
+            }
+
+            p.ex5 { 
+              position: relative;
+              width: 90%;
+              margin: auto ;
+              border: 1px solid black;
+              outline-style: solid;
+              outline-color: rgb(7, 167, 15);
+              outline-width: 50px;
+              z-index: -3;
+                  }
+
+        </style>
+    </head>
+    <body>
+        <h1>CSS Outline Width</h1><hr/>
+
+
+<!-- CSS Outline Width
+=======================
+
+The 'outline-width' property specifies the width of the outline,
+and can have one of the following values:
+  > thin (typically 1px)
+  > medium (typically 3px)
+  > thick (typically 5px)
+  > specific size (in px, pt, cm, em, etc)                             -->
+
+
+        <p class="ex1">ex1: A thin outline.~ 1px</p>
+        <p class="ex2">ex2: A medium outline.~ 3px</p>
+        <p class="ex3">ex3: A thick outline.~ 5px</p>
+        <p class="ex4">ex4: A 12px thick outline.</p>
+        <p class="ex5">ex4: A 25px thick outline.</p>
+
+    </body>
+</html>

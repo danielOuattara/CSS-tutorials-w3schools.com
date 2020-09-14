@@ -1,0 +1,176 @@
+<!---------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+12 05 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+---------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>CSS Horizontal Navigation Bar</title>
+
+  </head>
+  <body>
+    <style>
+       .drop-1 ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        background-color: #333;
+      }
+
+      .drop-1 li { float: left;}
+
+      .drop-1 li .dropdown {display: inline-block;}
+
+      .drop-1 li a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .drop-1 li a:hover, .dropdown:hover .dropbutton {
+        background-color: red;}
+
+     .drop-1 .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        
+        z-index: 1;
+      }
+
+      .drop-1 .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .drop-1 .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+
+      .dropdown:hover  .dropdown-content {
+        display: block;
+      }
+
+    </style>
+
+    <h1>CSS Dropdown Navbar.</h1><hr/>
+    <h2> Case 1: One dropping down</h2>
+
+    <div class="drop-2">
+      <ul class="drop-1">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li class="dropdown">
+              <a class="drop-button" href="javascript:void(0)">Dropdown</a>
+              <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+              </div>
+          </li>
+      </ul>
+    </div>
+
+    <h3>Dropdown Menu inside a Navigation Bar</h3>
+    <p>Hover over the "Dropdown" link to see the dropdown menu.</p><hr/>
+
+
+    <!--=====================================================================-->
+
+    <h2> Case 2: All dropping down</h2>
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        background-color: #333;
+      }
+
+      li { float: left;}
+
+      li .dropdown {display: inline-block;}
+
+      li a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover, .dropdown:hover .dropbutton {
+        background-color: red;}
+
+     .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+
+      .dropdown:hover  .dropdown-content {
+        display: block;
+      }
+
+    </style>
+
+  
+    <div class="drop-1">
+        <ul>
+          <li class="dropdown">
+              <a class="drop-button" href="javascript:void(0)">Home</a>
+              <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+              </div>
+          </li>
+          <li class="dropdown">
+              <a class="drop-button" href="javascript:void(0)">News</a>
+              <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+              </div>
+          </li>
+            <li class="dropdown">
+                <a class="drop-button" href="javascript:void(0)">Dropdown</a>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </li>
+        </ul>
+
+        <h3>Dropdown Menu inside a Navigation Bar</h3>
+        <p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+    </div>
+
+  </body>
+</html>

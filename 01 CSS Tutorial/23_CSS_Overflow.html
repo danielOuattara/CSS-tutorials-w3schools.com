@@ -1,0 +1,261 @@
+<!---------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+09 04 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+---------------------------------------------------->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>CSS Overflow</title>
+ </head>
+ <body>
+     <h1>CSS Overflow.</h1><hr/>
+
+
+ <!--The CSS 'overflow' property controls what happens to content that
+is too big to fit into an area, or to a large content we need to localize
+in an particular area.
+
+The 'overflow' property specifies whether to clip the content or to add 
+scrollbars when the content of an element is too big to fit in the 
+specified area.
+
+The overflow property has the following values:
+
+--------------------------------------------------------------
+visible - (default) The overflow is not clipped. The content
+          renders outside the element's box
+---------------------------------------------------------------
+hidden  - The overflow is clipped, and the rest of the content
+          will be invisible
+---------------------------------------------------------------
+scroll  - The overflow is clipped, and a scrollbar is added
+          to see the rest of the content
+---------------------------------------------------------------
+auto    - Similar to scroll, but it adds scrollbars only when
+          necessary
+---------------------------------------------------------------
+
+IMPORTANT: The overflow property only works for 'block elements'
+           with a specified height.
+
+
+
+ overflow: visible
+===================
+
+By default, the ''overflow' is visible, meaning that it is not
+clipped and it renders outside the element's box: -->
+
+
+        <h2>overflow visible</h2>
+        <style>
+
+            #div-container-1 {
+                border: 1px solid green; 
+                padding: 50px;
+                margin: 20px 0px 100px 10px;
+            }
+
+            #div-container-1 p {
+                color: blue;
+            }
+
+            #visible {
+                background-color: #eee; 
+                width: 200px;
+                height: 50px; 
+                border: 1px dotted black; 
+                overflow: visible; /*visible*/
+            }
+        </style>
+
+        <div id="div-container-1">
+          <p>By default, the overflow is visible, meaning that it is not
+             clipped and it renders outside the element's box:</p>
+
+          <div id="visible">
+               TEXT1: <br/>
+               You can use the overflow property when you want to have better
+               control of the layout. The overflow property specifies what
+               happens if content overflows an element's box.
+          </div>
+        </div><hr/>
+
+
+<!-- overflow: hidden
+=====================
+
+With the hidden value, the 'overflow' is clipped, and the rest of the 
+content is hidden:                                                    -->
+
+        <h2>overflow hidden</h2>
+        <style>
+            #div-container-2 {
+                border: 1px solid green; 
+                padding: 50px;
+                margin: 20px 0px 100px 10px;
+            }
+
+            #div-container-2 p {
+                color: blue;
+            }
+
+            #hidden {
+                background-color: #eee; 
+                width: 200px;
+                height: 50px; 
+                border: 1px dotted black; 
+                overflow: hidden; /*visible*/
+            }
+
+        </style>
+        <div id="div-container-2">
+          <p>With the hidden value, the overflow is clipped, and the rest
+             of the content is hidden:</p>
+          <p>Try to remove the overflow property to understand how it works.</p>
+
+          <div id="hidden">
+               TEXT2: <br/>
+               You can use the overflow property when you want
+               to have better control of the layout. The overflow property specifies
+               what happens if content overflows an element's box.
+          </div>
+        </div><hr/>
+
+
+<!--overflow: scroll
+=====================
+
+Setting the value to 'scroll', the overflow is clipped and a scrollbar 
+is added to scroll inside the box. 
+
+Note that this will add a scrollbar both horizontally and vertically 
+(even if not need it): -->
+
+
+          <h2>overflow scroll</h2>
+
+          <style>
+              #overflowScroll{
+                  background-color: green; 
+                  color: white;
+                  padding: 30px; 
+                  width: 70%; 
+                  height: 100px; 
+                  margin: auto;
+                  text-align: justify; 
+                  border: 1px solid #ccc; 
+                  overflow: scroll;
+
+              }
+          </style>
+          <div id="overflowScroll">
+          TEXT3: <br/>
+          This text is really long and the height of
+          its container is only 100 pixels. Therefore, a scrollbar is
+          added to help the reader to scroll the content. Lorem ipsum
+          dolor sit amet, consectetuer adipiscing elit, sed diam nonu-
+          mmy nibh euismod tincidunt ut laoreet dolore magna aliquam
+          erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+          exerci tation ullamcorper suscipit lobortis nisl ut aliquip
+          ex ea commodo consequat. Duis autem vel eum iriure dolor in
+          hendrerit in vulputate velit esse molestie consequat, vel
+          illum dolore eu feugiat nulla facilisis at vero eros et acc-
+          umsan et iusto odio dignissim qui blandit praesent luptatum
+          zzril delenit augue duis dolore te feugait nulla facilisi.
+          Nam liber tempor cum soluta nobis eleifend option congue ni-
+          hil imperdiet doming id quod mazim placerat facer possim assum.
+          Typi non habent claritatem insitam; est usus legentis in iis
+          qui facit eorum claritatem.
+      </div><br><hr/><br><br>
+
+
+
+<!-- overflow: auto
+====================
+The 'auto' value is similar to 'scroll', but it adds scrollbars only when
+necessary: -->
+ 
+        <h2>overflow: auto</h2>
+       <style>
+
+           #overflowAuto {
+               background-color: #eee;
+               padding: 30px; width: 50%; 
+               height: 100px; margin: auto;
+               text-align: justify; 
+               border: 1px dotted grey; 
+               overflow: auto;
+           }
+
+       </style>
+      <div id="overflowAuto">
+          TEXT4: <br/>
+          This text is really long and the height of
+          its container is only 100 pixels. Therefore, a scrollbar is
+          added to help the reader to scroll the content. Lorem ipsum
+          dolor sit amet, consectetuer adipiscing elit, sed diam nonu-
+          mmy nibh euismod tincidunt ut laoreet dolore magna aliquam
+          erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+          exerci tation ullamcorper suscipit lobortis nisl ut aliquip
+          ex ea commodo consequat. Duis autem vel eum iriure dolor in
+          hendrerit in vulputate velit esse molestie consequat, vel
+          illum dolore eu feugiat nulla facilisis at vero eros et acc-
+          umsan et iusto odio dignissim qui blandit praesent luptatum
+          zzril delenit augue duis dolore te feugait nulla facilisi.
+          Nam liber tempor cum soluta nobis eleifend option congue ni-
+          hil imperdiet doming id quod mazim placerat facer possim assum.
+          Typi non habent claritatem insitam; est usus legentis in iis
+          qui facit eorum claritatem.
+      </div><br><hr/><br><br>
+
+
+<!-- overflow-x and overflow-y
+===============================
+The 'overflow-x' and 'overflow-y' properties specifies whether to 
+change the overflow of content just horizontally or vertically (or both):
+
+'overflow-x' specifies what to do with the left/right edges of the content.
+'overflow-y' specifies what to do with the top/bottom edges of the content. -->
+
+
+         <h2>overflow-x and overflow-y</h2>
+
+         <style>
+             #overflow-x-overflow-y{
+                 background-color: green; 
+                 color: white;
+                 padding: 30px; 
+                 width: 50%; 
+                 height: 100px; 
+                 margin: auto;
+                 text-align: justify;
+                 border: 1px solid #ccc; overflow: scroll;
+             }
+         </style>
+
+         <div id="overflow-x-overflow-y">
+            TEXT5: <br/>This text is really long and the height of
+            its container is only 100 pixels. Therefore, a scrollbar is
+            added to help the reader to scroll the content. Lorem ipsum
+            dolor sit amet, consectetuer adipiscing elit, sed diam nonu-
+            mmy nibh euismod tincidunt ut laoreet dolore magna aliquam
+            erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+            exerci tation ullamcorper suscipit lobortis nisl ut aliquip
+            ex ea commodo consequat. Duis autem vel eum iriure dolor in
+            hendrerit in vulputate velit esse molestie consequat, vel
+            illum dolore eu feugiat nulla facilisis at vero eros et acc-
+            umsan et iusto odio dignissim qui blandit praesent luptatum
+            zzril delenit augue duis dolore te feugait nulla facilisi.
+            Nam liber tempor cum soluta nobis eleifend option congue ni-
+            hil imperdiet doming id quod mazim placerat facer possim assum.
+            Typi non habent claritatem insitam; est usus legentis in iis
+            qui facit eorum claritatem.
+        </div><hr/>
+
+   </body>
+ </html>

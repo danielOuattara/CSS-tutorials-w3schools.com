@@ -1,0 +1,336 @@
+<!---------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+12 05 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+---------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Responsive Navigation</title>
+
+  </head>
+  <body>
+
+    <h1>Responsive Top Navigation</h1><hr/>
+
+    <style>
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .global-top1 {
+        margin-bottom: 50px;
+        border: 1px solid violet;
+      }
+
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        background-color: #444;
+      }
+
+      .topnav li {
+        float: left;
+        width: 10%;}
+
+      .topnav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 16px;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .topnav li a:hover:not(.active) { background-color: #111;}
+
+      .topnav a.active { background-color: #4caf50;}
+
+      .topnav li.right {float:right;}
+
+      @media screen and (max-width: 600px) {
+        ul.topnav li.right, ul.topnav li {
+          float:none;
+          width: 100%;}
+      }
+    </style>
+
+    <div class="global-top1">
+        <ul class="topnav">
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="right"><a href="#about">About</a></li>
+        </ul>
+
+        <div style="padding:0 16px;">
+          <h2>Responsive Topnav Example</h2>
+          <p>This example use media queries to stack the topnav vertically when the
+            screen size is max-width: 600px.</p>
+
+          <p>You will learn more about media queries and responsive web design later
+            in our CSS Tutorial.</p>
+          <h4>Resize the browser window to see the effect.</h4>
+        </div>
+    </div>
+
+<!--==================================================================================-->
+
+
+        <h1>Responsive Side Navigation case 1</h1>
+
+        <style>
+
+          .global-side1 {
+            position: relative;
+            border: 1px solid red;
+            overflow: auto;
+            height: 500px;
+          }
+
+          ul.sidenav-1 {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 10%;
+            background-color: #444;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            overflow: auto;
+            border: 1px solid blue;
+          }
+
+          .content-side1 {
+            margin-left: 10%;
+            padding: 10px 16px;
+            overflow: auto;
+          }
+
+          .sidenav-1 li a {
+            display: block;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+          }
+
+          .sidenav-1 li a:hover:not(.active) {
+             background-color: #111;
+             color: white;}
+          .sidenav-1 a.active {
+             background-color: #4caf50;
+             color: white;}
+
+
+          @media screen and (max-width: 900px) {
+              ul.sidenav-1 {
+                width: 100%;
+                height: auto;
+                position: relative;
+              }
+
+              .sidenav-1 li a {
+                float: left;
+                padding: 15px;
+              }
+
+              .content-side1 {margin-left: 0}
+            }
+
+            @media screen and (max-width: 600px) {
+              .sidenav-1 li a {
+                text-align: center;
+                float: none;
+              }
+          }
+        </style>
+        <div class="global-side1">
+            <ul class="sidenav-1">
+              <li><a class="active" href="#home">Home</a></li>
+              <li><a href="#news">News</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#about">About</a></li>
+            </ul>
+
+            <div class="content-side1">
+              <h2>Responsive Sidenav Example</h2>
+              <p>This example use media queries to transform the sidenav to a top navigation bar when the screen size is 900px or less.</p>
+              <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
+              <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
+              <h3>Resize the browser window to see the effect.</h3>
+              <p> <br/>Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris</p>
+              <p> <br/>Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris</p>
+              <p> <br/>Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris</p>
+              <p> <br/>Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris</p>
+              <p> <br/>Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris</p>
+              <p> <br/>Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris</p>
+              <p> <br/>Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris</p>
+              <p> <br/>Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris</p>
+              <p> <br/>Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris</p>
+
+
+            </div>
+        </div>
+
+<!-- ==================================================================== -->
+
+        <h1>Responsive Side Navigation case 2</h1>
+
+        <style>
+          body {margin: 0;}
+
+          .global-side2 {
+            position: relative;
+            height: 100%;
+            border: 1px solid red;
+            /* overflow:auto; */
+          }
+
+          ul.sidenav-2 {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 15%;
+            background-color: #444;
+            position: absolute;
+            height: 100%;
+            overflow: auto;
+            border: 2px solid blue;
+          }
+
+
+          .content-side2 {
+            margin-left: 15%;
+            padding: 10px 30px;
+            height: 1000px;
+            overflow: auto;
+          }
+          .sidenav-2 li a {
+            display: block;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+          }
+
+          .sidenav-2 li a:hover:not(.active) {
+             background-color: #111;
+             color: white;
+           }
+          .sidenav-2 a.active {
+             background-color: #4caf50;
+             color: white;
+           }
+
+          @media screen and (max-width: 900px) {
+            
+              ul.sidenav-2 {
+                width: 100%;
+                height: auto;
+                position: relative;
+              }
+
+              .sidenav-2 li a {
+                float: left;
+                padding: 15px;
+              }
+
+              .content-side2 {margin-left: 0}
+          }
+
+          @media screen and (max-width: 400px) {
+            .sidenav-2 li a {
+              text-align: center;
+              float: none;
+            }
+          }
+        </style>
+        <div class="global-side2">
+            <ul class="sidenav-2">
+              <li><a class="active" href="#home">Home</a></li>
+              <li><a href="#news">News</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#about">About</a></li>
+            </ul>
+
+            <div class="content-side2">
+              <h2>Responsive Sidenav Example</h2>
+              <p>This example use media queries to transform the sidenav to a top navigation bar when the screen size is 900px or less.</p>
+              <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
+              <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
+              <h3>Resize the browser window to see the effect.</h3>
+              <p> <br/>Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris</p>
+              <p> <br/>Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris</p>
+              <p> <br/>Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris</p>
+              <p> <br/>Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris</p>
+              <p> <br/>Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris</p>
+              <p> <br/>Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris</p>
+              <p> <br/>Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris</p>
+              <p> <br/>Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris</p>
+              <p> <br/>Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris</p>
+            </div>
+        </div>
+
+
+  </body>
+</html>

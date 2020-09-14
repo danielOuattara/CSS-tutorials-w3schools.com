@@ -1,0 +1,114 @@
+<!---------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+21 05 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+---------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>CSS Website Layout.</title>
+  </head>
+  <body>
+    <h1>CSS Website Layout. </h1>
+
+    <h1>CSS.</h1>
+
+
+<!--Website Layout
+===================
+A website is often divided into headers, menus, content and a footer: 
+
+There are tons of different layout designs to choose from. However,
+the structure above, is one of the most common, and we will take a closer look
+at it in this tutorial. -->
+
+<!-- Header
+============
+A header is usually located at the top of the website (or right below a top
+navigation menu). It often contains a logo or the website name: -->
+      <style>
+        body {
+          margin: 0;
+        }
+
+        /* Style the Header 1 */
+        .header-1 {
+          background: #d3d3d3;
+          padding: 20px;
+          text-align: center;
+        }
+      </style>
+
+      <div class="header-1">
+        <h1>Header</h1>
+      </div>
+
+      <br><hr><br>
+
+<!-- Navigation Bar
+====================
+A navigation bar contains a list of links to help visitors navigating through
+ your website: -->
+
+      <style>
+        * {
+          box-sizing: border-box;
+        }
+        body {
+          margin: 0;
+        }
+        /* Style the Header 2 */
+        .header-2 {
+          background: #d3d3d3;
+          padding: 20px;
+          text-align: center;
+        }
+
+        .topnav-2 {
+          overflow: auto;
+          background: #777;
+        }
+        .topnav-2 a {
+          float: left;
+          display: block;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 18px 20px;
+          text-decoration: none;
+          font-size: 20px;
+        }
+
+        /* Change color on over*/
+        .topnav-2 a:hover {
+          background: #ddd;
+          color: black;
+        }
+      </style>
+
+      <div class="header-2">
+        <h1>Header 2</h1>
+      </div>
+
+      <div class="topnav-2">
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+      </div>
+
+
+
+
+<!-- Content
+=============
+The layout in this section, often depends on the target users. The most common
+layout is one (or combining them) of the following:
+
+  > 1-column (often used for mobile browsers)
+  > 2-column (often used for tablets and laptops)
+  > 3-column layout (only used for desktops)                                 -->
+
+  </body>
+</html>

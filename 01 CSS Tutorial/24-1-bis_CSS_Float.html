@@ -1,0 +1,73 @@
+<!---------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+07 05 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+---------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout - Float</title>
+</head>
+<body>
+    <h1>CSS Layout - Float.</h1><hr/>
+
+
+<!--The CSS 'float' property specifies how an element should float.
+The CSS 'clear' property specifies what elements can't float beside 
+the float element and on which side. -->
+
+       <style>
+               #div-container-1 {
+                       width: 50%;
+                       height: 500px;
+                       border: 2px solid black;
+                       background-color: rgba(0, 0, 0, 0.37);
+               }
+
+               #div-child-1 {
+                       border: 2px solid green;
+                       float: left;
+                       width: 32%;
+                       margin-bottom: 10px;
+               }
+               
+               
+               #div-child-2 {
+                       border: 2px solid rgb(0, 9, 128);
+                       /* float: left; */
+                       /* width: 32%; */
+                       clear: both;
+               }
+               
+               
+               #div-child-3 {
+                       border: 2px solid rgb(128, 41, 0);
+                       /* float: left; */
+                       /* width: 32%; */
+                       clear: both;
+               }
+       </style>
+
+
+       <div id="div-container-1">
+               <div id="div-child-1">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
+               </div>
+
+               <div id="div-child-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
+               </div>
+
+               <div id="div-child-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
+               </div>
+       </div>
+
+  </body>
+</html>

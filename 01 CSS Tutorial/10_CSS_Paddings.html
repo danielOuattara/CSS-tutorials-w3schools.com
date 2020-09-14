@@ -1,0 +1,181 @@
+<!------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+03 03 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+------------------------------------------------->
+
+ <!DOCTYPE html>
+ <html lang="en" dir="ltr">
+     <head>
+         <meta charset="utf-8">
+         <title>CSS Padding</title>
+         <style>
+
+             * {padding: 0; margin: 0}
+
+             p {border: 1px solid green;
+                 background-color: lightblue;
+                 margin: 30px 30px;}
+
+             p.one {padding-top: 100px; padding-bottom: 30px;
+                     padding-right: 50px; padding-left: 80px;}
+
+            p.two {padding: 100px 50px 30px 80px;
+                   /* 4 values: top, right, bottom, left */}
+
+            p.three {padding: 25px 50px 75px;}
+                     /* 3 values: top, right & left, bottom */
+
+            p.four {padding: 25px 50px;}
+                    /* 2 values: top & bottom - left & right */
+
+            p.five {padding: 50px;}
+                    /* 1 values: top & right & bottom & left */
+
+            p.six { width: 500px; margin:auto;}
+         </style>
+     </head>
+     <body>
+         <h1>CSS Padding</h1><hr/>
+
+<!-- CSS Padding:
+=================
+
+The CSS padding properties are used to generate space around an element's
+content, inside of any defined borders.
+
+With CSS, you have full control over the padding. There are properties for
+setting the padding for each side of an element (top, right, bottom, and left).
+
+
+Padding - Individual Sides.
+=============================== -->
+         <p class="one">p.one This p element has a padding-top of 50px,
+            a padding-right of 30px, a padding-bottom of 50px, and a
+            padding-left of 80px.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+            risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+            nec, ultricies sed, dolor. Cras elementum ultrices diam.</p>
+
+<!--
+CSS has properties for specifying the padding for each side of an element:
+  > padding-top
+  > padding-right
+  > padding-bottom
+  > padding-left
+
+All the padding properties can have the following values:
+  > length  - specifies a padding in px, pt, cm, etc.
+  > %       - specifies a padding in % of the width of the containing element
+  > inherit - specifies that the padding should be inherited from the parent
+              element
+
+Note: Negative values are not allowed.
+
+
+# Padding - Shorthand Property.
+===============================                                              -->
+            <p class="two"> p.two padding: 25px 50px 75px 100px;
+               /* 4 values: top, right, bottom, left */
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+               risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+               nec, ultricies sed, dolor. Cras elementum ultrices diam</p>
+
+            <p class="three">p.three padding: 25px 50px 75px ;
+               /* 3 values: top, right & left, bottom */
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+               risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+               nec, ultricies sed, dolor. Cras elementum ultrices diam</p>
+
+            <p class="four">p.four padding: 25px 50px;
+              /* 4 values: top, right, bottom, left */
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+              risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+              nec, ultricies sed, dolor. Cras elementum ultrices diam</p>
+
+            <p class="five">p.five padding: 50px;
+              /* 4 values: top, right, bottom, left */
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+              risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+              nec, ultricies sed, dolor. Cras elementum ultrices diam</p>
+
+            <p class="six">p.six padding: auto; width: 500px
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+              risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+              nec, ultricies sed, dolor. Cras elementum ultrices diam</p>
+
+<!-- # Padding and Element Width.
+=================================  -->
+
+            <style>
+
+              div.ex0 {
+                border: 1px solid red; 
+                padding-left: 50px;
+                padding-top: 100px;
+              }
+              
+              div.ex0 > p {
+                padding-left: inherit; 
+                border: 1px solid black;
+              }
+              
+              div.ex1 {
+                width: 300px; 
+                background-color: yellow; 
+                margin: 50px 0px;
+              }
+
+              div.ex2 {
+                width: 300px; 
+                padding: 25px; 
+                background-color: lightblue;
+                margin: 50px 0px;
+              }
+
+              div.ex3 {
+                width: 300px; 
+                padding: 25px; 
+                margin:50px 0;
+                box-sizing: border-box; 
+                background-color: lightgreen;
+              }
+
+            </style>
+            <div class="ex0">
+               border: 1px solid red; padding-left: 100px; padding-top: 100px;
+              <p> padding-left: inherit; boder: 1px solid black;
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+                risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
+                nec, ultricies sed, dolor. Cras elementum ultrices diam</p>
+            </div>
+
+            <div class="ex1">This div is 300px wide.</div>
+
+            <div class="ex2">The Total width of this div is 350px =
+             'width (300px)' + 'left padding(25px)' + 'right padding (25px)'.</div>
+
+            <div class="ex3">The width of this div remains at 300px,
+                 in spite of the 50px of total left and right padding,
+                  because of the box-sizing: border-box property.
+            </div>
+
+<!--All CSS Padding Properties.
+===============================
+
+Property     	   Description
+---------        ------------
+--------------------------------------------------------------------------------
+padding 	       A shorthand property for setting all the padding properties
+                 in one declaration
+--------------------------------------------------------------------------------
+padding-top 	   Sets the top padding of an element
+--------------------------------------------------------------------------------
+padding-right 	 Sets the right padding of an element
+--------------------------------------------------------------------------------
+padding-bottom 	 Sets the bottom padding of an element
+--------------------------------------------------------------------------------
+padding-left 	   Sets the left padding of an element
+------------------------------------------------------------------------------->
+     </body>
+ </html>

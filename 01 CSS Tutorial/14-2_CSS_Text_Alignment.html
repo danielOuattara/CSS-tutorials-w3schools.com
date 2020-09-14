@@ -1,0 +1,131 @@
+<!------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+19 03 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS Text Alignment & Direction</title>
+        <style media="screen">
+
+            * {margin:0; padding: 0}
+            
+            p { color: blue; }
+            
+            #demo1{ text-align: left; }  /* Default*/
+            
+            #demo2{ text-align: right; }
+            
+            #demo3{ text-align: center; }
+            
+            #demo4{ text-align: justified; }
+            
+            div p{ 
+                margin: 30px ;
+                border: solid 1px blue; 
+                padding: 20px 0; 
+                text-align: justify; 
+            }
+            
+            p.ex1 { 
+                direction: rtl; 
+                unicode-bidi: bidi-override; 
+            }
+            
+            p.ex2 { 
+                direction: rtl; 
+                unicode-bidi: bidi-override;
+                text-align: justify; 
+                padding: 30px; 
+                border: solid 1px green; 
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <h1>CSS Text Alignment</h1><hr/>
+
+<!-- Text Alignment.
+====================
+The text-align property is used to set the horizontal alignment of a text.
+     > left
+     > right
+     > centered
+     > justified  -->
+
+         <p id="demo1">This is an ordinary paragraph</p>
+         <p id="demo2">This is an ordinary paragraph</p>
+         <p id="demo3">This is an ordinary paragraph</p>
+         <p id="demo4">This is an ordinary paragraph
+                       This is an ordinary paragraph
+                       This is an ordinary paragraph
+                       This is an ordinary paragraph</p>
+         <div>
+             <p>
+               In my younger and more vulnerable years my
+               father gave me some advice that I've been
+               turning over in my mind ever since.
+               'Whenever you feel like criticizing anyone,'
+               he told me, 'just remember that all the people
+               in this world haven't had the advantages that you've had.'
+               </p>
+        </div>
+
+        <h1>CSS Text Direction</h1>
+
+<!-- The direction and unicode-bidi properties can be
+used to change the text direction of an element: -->
+
+        <p class="ex1">This is right-to-left text direction.</p>
+
+        <p class="ex2">
+          In my younger and more vulnerable years my father gave me some advice that I've been
+          turning over in my mind ever since. 'Whenever you feel like criticizing anyone,'
+          he told me, 'just remember that all the people in this world haven't had the advantages that you've had.' </p>
+
+          <style media="screen">
+
+          </style>
+
+<!-- All CSS Text Properties.
+=============================
+
+Property 	      Description
+------------      -------------
+color 	          Sets the color of text
+------------------------------------------------------------------------------------
+direction 	      Specifies the text direction/writing direction
+------------------------------------------------------------------------------------
+letter-spacing    Increases or decreases the space between characters in a text
+------------------------------------------------------------------------------------
+line-height 	  Sets the line height
+------------------------------------------------------------------------------------
+text-align 	      Specifies the horizontal alignment of text
+------------------------------------------------------------------------------------
+text-decoration   Specifies the decoration added to text
+------------------------------------------------------------------------------------
+text-indent 	  Specifies the indentation of the first line in a text-block
+------------------------------------------------------------------------------------
+text-shadow 	  Specifies the shadow effect added to text
+------------------------------------------------------------------------------------
+text-transform    Controls the capitalization of text
+------------------------------------------------------------------------------------
+text-overflow 	  Specifies how overflowed content that is not displayed should 
+                  be signaled to the user
+------------------------------------------------------------------------------------
+unicode-bidi 	  Used together with the direction property to set or return 
+                  whether the text should be overridden to support multiple 
+                  languages in the same document
+------------------------------------------------------------------------------------
+                  vertical-align    Sets the vertical alignment of an element
+------------------------------------------------------------------------------------
+white-space 	  Specifies how white-space inside an element is handled
+------------------------------------------------------------------------------------
+word-spacing 	  Increases or decreases the space between words in a text 
+------------------------------------------------------------------------------------>
+    </body>
+</html>

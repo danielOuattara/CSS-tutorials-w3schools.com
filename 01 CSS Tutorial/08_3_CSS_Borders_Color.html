@@ -1,0 +1,85 @@
+<!-------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+10 03 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+-------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Borders Colors</title>
+        <style>
+            * {padding: 0; margin: 0}
+            p { margin: 30px 10px;}
+            p.one { border-style: solid; border-color: red; }
+            p.two { border-style: solid; border-color: green; }
+            p.three { border-style: dotted; border-color: blue; }
+            p.four { border-style: solid;
+                     border-color: red green blue yellow;}
+                     /* red top, green right, blue bottom and yellow left */
+        </style>
+    </head>
+    <body>
+        <h1>Borders Colors</h1><hr/>
+
+<!-- CSS Border Colors:
+
+    name - specify a color name, like "red"
+    HEX - specify a HEX value, like "#ff0000"
+    RGB - specify a RGB value, like "rgb(255,0,0)"
+    HSL - specify a HSL value, like "hsl(0, 100%, 50%)" transparent
+
+*** NOTE: If border-color is not set, it inherits the color of the element. -->
+
+            <p>This property specifies the color of the four borders:</p>
+            <p class="one">A solid red border</p>
+            <p class="two">A solid green border</p>
+            <p class="three">A dotted blue border</p>
+
+            <p><b>Note:</b> The "border-color" property does not work if it is used alone.
+               First use the "border-style" property to set the borders.</p>
+
+            <!-- Specific Side Colors -->
+
+            <p>The border-color property can have from one to four values
+               (for the top border, right border, bottom border, and the left border):</p>
+
+            <p class="four">A solid multicolor border</p>
+
+
+<!-- ATENTION :The border-style property is used in the example above.
+    However, it also works with border-width and border-color. -->
+
+<!--All CSS Border Properties:
+==============================
+
+Property 	          Description
+-----------         ----------------
+border 	             Sets all the border properties in one declaration
+border-color 	     Sets the color of the four borders
+border-radius 	     Sets all the four border-*-radius properties for rounded corners
+border-style 	     Sets the style of the four borders
+border-width 	     Sets the width of the four borders
+
+border-bottom 	     Sets all the bottom border properties in one declaration
+border-bottom-color  Sets the color of the bottom border
+border-bottom-style  Sets the style of the bottom border
+border-bottom-width  Sets the width of the bottom border
+
+border-left 	     Sets all the left border properties in one declaration
+border-left-color 	 Sets the color of the left border
+border-left-style 	 Sets the style of the left border
+border-left-width 	 Sets the width of the left border
+
+border-right 	     Sets all the right border properties in one declaration
+border-right-color 	 Sets the color of the right border
+border-right-style 	 Sets the style of the right border
+border-right-width 	 Sets the width of the right border
+
+border-top 	         Sets all the top border properties in one declaration
+border-top-color 	 Sets the color of the top border
+border-top-style 	 Sets the style of the top border
+border-top-width 	 Sets the width of the top border                  -->
+    </body>
+</html>

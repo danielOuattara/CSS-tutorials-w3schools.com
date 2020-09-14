@@ -1,0 +1,286 @@
+<!----------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+03 03 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+ ---------------------------------------------------->
+
+ <!DOCTYPE html>
+ <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSSLayout - Position Property</title>
+    </head>
+    <body>
+        <h1>CSSLayout - Position Property.</h1><hr/>
+
+<!--The position Property.
+==========================
+
+The 'position' property specifies the type of positioning method used for
+an element. There are five different position values:
+  > static
+  > relative
+  > fixed
+  > absolute
+  > sticky.
+
+Elements are then positioned using the 'top', 'bottom', 'left', and 'right'
+properties. 
+
+However, these properties will not work unless the position 'property' 
+is set first. They also work differently depending on the
+position value.
+
+
+position: static.
+==================
+
+All HTML elements are positioned static by default. 
+Static positioned elements are not affected by the 'top', 'bottom', 'left', 
+and 'right' properties. An element with 'position: static' is not positioned 
+in any special way: it is always positioned according to the normal flow of 
+the page                                                                 -->
+
+         <h2>Position statique</h2><hr/>
+        <style>
+            div.static { 
+                position: static; 
+                border: 2px solid green; 
+                padding: 15px;
+            }
+        </style>
+        <p>An element with position: static; is not positioned in any special
+        way; it is always positioned according to the normal flow of
+        the page:</p>
+
+        <div class="static">
+            div1 :This div element has position: static;
+        </div><br/><hr/><br/>
+
+
+
+<!-- position: relative.
+========================
+
+An element with 'position: relative' is positioned relative to its normal
+position. Setting the 'top', 'right', 'bottom', and 'left' properties of
+a relatively-positioned element will cause it to be adjusted away from its
+normal position. 
+Other and adjacent element will NOT be adjusted to fit into any gap left
+by the position-relative element. -->
+    <h2>Position relative</h2><hr/>
+    <style>
+        .relative-1 {
+            position: relative; 
+            left: 50px;
+            border: 2px solid green; 
+            padding: 20px;
+        }
+
+        .relative-2 {
+            position: relative; 
+            left: 10%; 
+            margin: 20px 0px;
+            max-width: 400px;
+            padding: 20px; 
+            border: 2px solid green;
+        }
+
+        .relative-3 {
+            position: relative; 
+            left: 30%; 
+            margin: 20px 0px;
+            padding: 20px; 
+            border: 2px solid green;
+        }
+
+        </style>
+
+        <div class="relative-1">
+            div2: position: relative; left: 50px
+        </div>
+
+        <div class="relative-2"> 
+            div3: position: relative; left: 10%
+        </div>
+
+        <div class="relative-3">
+            div4: position: relative; left 30%
+        </div><br/><hr/><br/>
+
+
+
+<!-- position: fixed
+=====================
+
+An element with 'position: fixed' is positioned relative to the viewport,
+which means it always stays in the same place even if the page is scrolled.
+The top, right, bottom, and left properties are used to position the element.
+A fixed element does not leave a gap in the page where it would normally
+have been located.                                                      -->
+      
+        <h2>Position fixed</h2><hr/>
+        <style>
+            .fixed-1 {
+                position: fixed; 
+                right: 0px; 
+                top: 513px;
+                border: 2px solid green; 
+                background: rgba(0, 128, 0, 0.315);
+            }
+            .fixed-container {
+                /* position: relative; */
+                background: #0000ff56;
+                padding: 15px;
+            }
+            .fixed-2 {
+                position: fixed; 
+                left: 0px; 
+                top: 513px;
+                border: 2px solid red;
+                background: rgba(255, 0, 0, 0.233); 
+                padding: 15px;
+            }
+        </style>
+        <div class="fixed-1">
+        div5: This div element has position: fixed;
+        </div><br/><hr/><br/>
+
+
+
+        <div class="fixed-container">
+
+        <div class="fixed-2">
+                div5: This div element has position: fixed;
+        </div>
+
+        </div><br/><hr/><br/>
+
+
+<!-- position: absolute.
+========================
+An element with 'position: absolute' is positioned relative to the nearest
+positioned ancestor (instead of positioned relative to the viewport, like fixed).
+
+However if an absolute positioned element has no positioned ancestors,
+it uses the document body, and moves along with page scrolling.
+
+Note: A "positioned" element is one whose position is anything except static.-->
+ 
+    <h2>Position absolute</h2><hr/>
+    <style>
+        .relative-parent {
+            position: relative; 
+            width: 500px; 
+            height: 200px;
+            border: 2px solid rgb(128, 0, 122); 
+            background-color: rgba(128, 0, 122, 0.274); 
+            left: 50px;
+
+        }
+
+        .absolute-child-1 {
+            position: absolute; 
+            top: 80px ; 
+            right: 0px ;
+            width: 200px; 
+            height: 100px; 
+            border: 2px solid rgb(128, 126, 0);
+            background-color: rgba(128, 115, 0, 0.418);
+            
+
+        }
+        .absolute-child-2{
+            position: absolute; 
+            top: 30px; 
+            left: 0px ;
+            width: 200px; 
+            height: 100px; 
+            border: 2px solid green;
+
+        }
+    </style>
+    <div class="relative-parent">
+        div6: This div element has position: relative;
+
+        <div class="absolute-child-1">
+          div7: This div element has position: absolute;
+        </div>
+
+        <div class="absolute-child-2" >
+          div8: This div element has position: absolute;
+        </div>
+
+    </div>
+
+<!-- position: sticky
+======================
+
+An element with 'position: sticky' is positioned based on the user's 
+scroll position. A sticky element toggles between relative and fixed, 
+depending on the scroll position. It is positioned relative until 
+a given offset position is met in the viewport - then it "sticks" in 
+place (like position:fixed).                                  -->
+
+    <p>Try to <b>scroll</b> inside this frame to understand how sticky
+       positioning works.</p>
+    <p>Note: IE/Edge 15 and earlier versions do not support sticky position.</p>
+
+    <div class="sticky" style="position: -webkit-sticky /* Safari needs*/; position: sticky;
+                top: 0; padding: 5px; background-color: lightgreen;
+                border: 2px solid green;"> div10: I am sticky!</div>
+
+    <div style="padding-bottom:500px">
+        <p>In this example, the sticky element sticks to the top of the page
+            (top: 0), when you reach its scroll position.</p>
+        <p>Scroll back up to remove the stickyness.</p>
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum
+           definitiones no quo, maluisset concludaturque et eum, altera fabulas
+           ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
+           Affert laboramus repudiandae nec et. Inciderint efficiantur his ad.
+           Eum no molestiae voluptatibus.</p>
+
+        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum
+           definitiones no quo, maluisset concludaturque et eum, altera fabulas
+           ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
+           Affert laboramus repudiandae nec et. Inciderint efficiantur his ad.
+           Eum no molestiae voluptatibus.</p>
+    </div>
+
+<!-- Overlapping Elements.
+==========================
+When elements are positioned, they can overlap other elements. The 'z-index'
+property specifies the stack order of an element (which element should be placed
+in front of, or behind, the others). An element can have a positive or negative
+stack order. An element with greater stack order is always in front of an element
+with a lower stack order.
+
+Note: If two positioned elements overlap without a z-index specified,
+the element positioned last in the HTML code will be shown on top.           -->
+
+        <div>
+          <h3>This is a heading</h3>
+          <img src="../../images/html5.png"  alt="HTML5 Logo"width="100" height="140"
+               style="position: absolute; z-index: -1; /*position: absolute;
+                      left: 0px; top: 0px;*/">
+          <p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+        </div>
+
+<!-- All CSS Positioning Properties.
+====================================
+
+Property    Description
+--------    ------------
+bottom 	    Sets the bottom margin edge for a positioned box
+clip 	    Clips an absolutely positioned element
+left 	    Sets the left margin edge for a positioned box
+position    Specifies the type of positioning for an element
+right 	    Sets the right margin edge for a positioned box
+top 	    Sets the top margin edge for a positioned box
+z-index     Sets the stack order of an element                               -->
+
+
+
+ </body>
+ </html>

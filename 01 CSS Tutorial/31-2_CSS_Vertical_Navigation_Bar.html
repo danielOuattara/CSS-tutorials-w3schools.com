@@ -1,0 +1,470 @@
+<!---------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+12 05 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+---------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>CSS Vertical Navigation Bar</title>
+  </head>
+  <body>
+
+    <h1>CSS Vertical Navigation Bar.</h1><hr/>
+
+<!-- To build a vertical navigation bar, you can style the <a> elements inside
+the list, in addition to the code from the previous page: -->
+
+      <h2>Vertical Navigation Bar v1</h2>
+
+      <style>
+
+
+        .one li a {
+          display: block; /*inline-block: better ? */
+          width: 120px;
+          background-color: #dddddd;
+        }
+
+      </style>
+
+      <ul class="one">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#archives">Archives</a></li>
+      </ul>
+
+      <p>A background color is added to the links to show the link area.</p>
+      <p>Notice that the whole link area is clickable, not just the text.</p><hr/>
+
+
+<!-- Example explained:
+-----------------------
+    > display: block; - Displaying the links as 'block' elements makes the whole
+                        link area clickable (not just the text). 
+                        It allows us to specify a width, a padding, a margin, an height,
+                        ... etc (if needed).
+
+    > width: 120px;    - block elements take up the full width available by
+                        default. We want to specify a 120px width
+
+Note:  You can also set the width of <ul>, and remove the width of <a>,
+-----  as they will take up the full width available when displayed as
+       block elements. This will produce the same result as our previous example: -->
+
+
+       <h2>Vertical Navigation Bar v2</h2>
+       <p>Remove the bullets, margin and padding from the list.</p>
+
+       <style>
+         ul.two {
+           list-style-type: none;
+           margin: 0;
+           padding: 0;
+           width: 120px;
+         }
+
+         .two li a {
+           display: block;
+           background-color: #dddddd;
+         }
+
+       </style>
+       <ul class="two">
+         <li><a href="#home">Home</a></li>
+         <li><a href="#news">News</a></li>
+         <li><a href="#contact">Contact</a></li>
+         <li><a href="#about">About</a></li>
+         <li><a href="#archives">Archives</a></li>
+       </ul><hr/>
+
+
+<!-- Vertical Navigation Bar Examples
+======================================
+
+Create a basic vertical navigation bar with a gray background color and change
+the background color of the links when the user moves the mouse over them: -->
+
+      <h2>Vertical Navigation Bar v3</h2>
+
+      <style>
+        ul.three {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          width: 120px;
+          background-color: #f1f1f1;
+        }
+
+        .three li a {
+          display: block;
+          color: #000;
+          padding: 8px 16px;
+          text-decoration: none;
+        }
+
+        .three li a:hover {
+          color: white;
+          background-color: #777;
+        }
+      </style>
+      <ul class="three">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#archives">Archives</a></li>
+      </ul><hr/>
+
+
+      <h2>Vertical Navigation Bar v4</h2>
+
+      <style>
+        ul.four {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          width: 120px;
+          background-color: #f1f1f1;
+        }
+
+        .four li a {
+          display: block;
+          color: #000;
+          padding: 8px 16px;
+          text-decoration: none;
+        }
+
+        .four li a:hover {
+          color: white;
+        }
+
+        .four li a.home:hover {
+          background-color: #111;
+        }
+        .four li a.news:hover {
+          background-color: #333;
+        }
+        .four li a.contact:hover {
+          background-color: #555;
+        }
+        .four li a.about:hover {
+          background-color: #777;
+        }
+        .four li a.archives:hover {
+          background-color: #999;
+        }
+      </style>
+
+      <ul class="four">
+        <li><a class="home" href="#home">Home</a></li>
+        <li><a class="news" href="#news">News</a></li>
+        <li><a class="contact" href="#contact">Contact</a></li>
+        <li><a class="about" href="#about">About</a></li>
+        <li><a class="archives" href="#archives">Archives</a></li>
+      </ul> <hr/>
+
+
+      <h2>Vertical Navigation Bar v5</h2>
+
+      <style>
+        ul.five {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          width: 120px;
+          background-color: #f1f1f1;
+        }
+
+        ul.five li a {
+          display: block;
+          color: #000;
+        padding: 8px 16px 8px 16px;
+          text-decoration: none;
+        }
+
+        ul.five li a.home:hover {
+          color: white;
+          background-color: #555;
+          border-left: 5px solid red;
+          padding: 8px 16px 8px 11px;
+        }
+        .five li a.news:hover {
+          color: white;
+          background-color: #666;
+          border-left: 5px solid green;
+          padding: 8px 16px 8px 11px;
+        }
+        .five li a.contact:hover {
+          color: white;
+          background-color: #777;
+          border-left: 5px solid blue;
+          padding: 8px 16px 8px 11px;
+        }
+        .five li a.about:hover {
+          color: white;
+          background-color: #888;
+          border-left: 5px solid yellow;
+          padding: 8px 16px 8px 11px;
+        }
+        .five li a.archives:hover {
+          color: white;
+          background-color: #999;
+          border-left: 5px solid brown;
+          padding: 8px 16px 8px 11px;
+        }
+      </style>
+      <ul class="five">
+        <li><a class="home" href="#home">Home</a></li>
+        <li><a class="news" href="#news">News</a></li>
+        <li><a class="contact" href="#contact">Contact</a></li>
+        <li><a class="about" href="#about">About</a></li>
+        <li><a class="archives" href="#archives">Archives</a></li>
+      </ul><hr/>
+
+      <h2>Vertical Navigation Bar v5 Bis</h2> <!-- Navigation 5 Bis -->
+      <style>
+        ul.five-bis {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          width: 120px;
+          background-color: #f1f1f1;
+        }
+
+        .five-bis li a {
+          display: block;
+          color: #000;
+          padding: 8px 16px 8px 16px;
+          text-decoration: none;
+          /* border: 1px solid black; */
+        }
+
+        .five-bis li a.home:hover {
+          color: white;
+          background-color: #555;
+          border-bottom: 5px solid red;
+          padding: 8px 16px 3px 16px;
+        }
+        .five-bis li a.news:hover {
+          color: white;
+          background-color: #666;
+          border-bottom: 5px solid green;
+          padding: 8px 16px 3px 16px;
+        }
+        .five-bis li a.contact:hover {
+          color: white;
+          background-color: #777;
+          border-bottom: 5px solid blue;
+          padding: 8px 16px 3px 16px;
+        }
+        .five-bis li a.about:hover {
+          color: white;
+          background-color: #888;
+          border-bottom: 5px solid yellow;
+          padding: 8px 16px 3px 16px;
+        }
+        .five-bis li a.archives:hover {
+          color: white;
+          background-color: #999;
+          border-bottom: 5px solid brown;
+          padding: 8px 16px 3px 16px;
+        }
+      </style>
+      <ul class="five-bis">
+        <li><a class="home" href="#home">Home</a></li>
+        <li><a class="news" href="#news">News</a></li>
+        <li><a class="contact" href="#contact">Contact</a></li>
+        <li><a class="about" href="#about">About</a></li>
+        <li><a class="archives" href="#archives">Archives</a></li>
+      </ul><hr/>
+
+
+    <h2>Active/Current Navigation Link v6</h2>
+    <p>Add an "active" class to the current link to let the user know which
+      page he/she is on:</p>
+
+      <style>
+        ul.six {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          width: 120px;
+          background-color: #f1f1f1;
+        }
+
+        .six li a {
+          display: block;
+          color: #000;
+          padding: 8px 16px;
+          text-decoration: none;
+        }
+        .six li a.active {
+          background-color: green;
+          color: white;
+        }
+        .six li a:not(.active):hover {
+          background-color: #777;
+          color: white;
+        }
+
+      </style>
+      <ul class="six">
+        <li><a class="home active" href="#home">Home</a></li>
+        <li><a class="news" href="#news">News</a></li>
+        <li><a class="contact" href="#contact">Contact</a></li>
+        <li><a class="about" href="#about">About</a></li>
+        <li><a class="archives" href="#archives">Archives</a></li>
+      </ul><hr/>
+
+
+<!-- Center Links & Add Borders
+================================
+
+> Add 'text-align:center' to <li> or <a> to center the links.
+> Add the 'border' property to <ul> to add a border around the navbar.
+If you also want borders inside the navbar, add a border-bottom to all
+<li> elements, except for the last one: -->
+
+    <h2>Center Links & Add Borders V7.</h2>
+
+    <style>
+      ul.seven {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 120px;
+        background-color: #f1f1f1;
+        border: 1px solid #555;
+    /*  border-bottom: none; */
+      }
+      .seven li a {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+      .seven li {
+        text-align: center;
+        border-bottom: 1px solid #555;
+      }
+
+      .seven li:last-child {
+        border-bottom: none;
+      }
+
+      .seven li a.active {
+        background-color: green;
+        color: white;
+      }
+      .seven li a:not(.active):hover {
+        background-color: #777;
+        color: white;
+      }
+
+    </style>
+    <ul class="seven">
+      <li><a class="home active" href="#home">Home</a></li>
+      <li><a class="news" href="#news">News</a></li>
+      <li><a class="contact" href="#contact">Contact</a></li>
+      <li><a class="about" href="#about">About</a></li>
+      <li><a class="archives" href="#archives">Archives</a></li>
+    </ul><hr/>
+
+    <br/>
+
+<!-- Full-height Fixed Vertical Navbar
+=======================================
+
+Create a full-height, "sticky" side navigation: -->
+
+    <h2>Full-height Fixed Vertical Navbar V8.</h2>
+
+    <style>
+
+      .global {
+        /* position: relative; */ /*unuseful*/
+        height: 300px;
+      }
+
+      ul.eight {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 20%;
+        background-color: #f1f1f1;
+        /* position: absolute;*/  /*unuseful*/
+        /*left: 0; */  /*unuseful*/
+        height: 100%;
+        /* overflow: auto; */
+        float: left;
+      }
+
+      main {
+        /* margin-left:25%; */  /*unuseful*/
+        padding:1px 16px;
+        height:300px;
+        overflow: auto;
+        background-color: lightgreen;
+      }
+      
+      .eight li a {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+      .eight li a.active {
+        background-color: green;
+        color: white;
+      }
+      .eight li a:not(.active):hover {
+        background-color: #777;
+        color: white;
+      }
+
+    </style>
+    <div class="global">
+
+      <nav>
+          <ul class="eight">
+            <li><a class="home active" href="#home">Home</a></li>
+            <li><a class="news" href="#news">News</a></li>
+            <li><a class="contact" href="#contact">Contact</a></li>
+            <li><a class="about" href="#about">About</a></li>
+            <li><a class="archives" href="#archives">Archives</a></li>
+          </ul>
+      </nav>
+
+      <main>
+          <h2>Fixed Full-height Side Nav</h2>
+          <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
+          <p>Notice that this div element has a left margin of 25%. This is
+            because the side navigation is set to 25% width. If you remove the
+            margin, the sidenav will overlay/sit on top of this div.</p>
+          <p>Also notice that we have set overflow:auto to sidenav. This will add
+            a scrollbar when the sidenav is too long (for example if it has over
+            50 links inside of it).</p>
+          <p> <br/>Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris</p>
+          <p> <br/>Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris</p>
+          <p> <br/>Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris</p>
+      </main>
+    </div>
+    <br/><br/><hr/><br/><br/>
+
+  </body>
+</html>

@@ -1,0 +1,322 @@
+<!---------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+17 05 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+---------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>CSS Dropdowns</title>
+  </head>
+
+  <body>
+
+    <h1>CSS Dropdowns.</h1>
+
+<!-- Create a hoverable dropdown with CSS. -->
+
+
+<!-- Basic Dropdown
+====================
+
+Create a dropdown box that appears when the user moves the mouse over an element. -->
+
+    <h2>Hoverable Dropdown.</h2>
+
+    <style>
+
+      .dropdown-1 {
+        position: relative;  /*Useful ?*/
+        display: inline-block;
+      }
+      .dropdown-content-1 {
+        display: none;
+        position: absolute;  /*Useful ?*/
+        background-color: #c5c5c5;
+        min-width: 160px;
+        box-shadow: 10px 8px 16px 0 rgba(0, 0, 0, 0.4);
+        padding: 10px;
+        z-index: 1;
+      }
+      .dropdown-1:hover .dropdown-content-1 {
+        display: block;
+      }
+
+    </style>
+    <div class="dropdown-1">
+        <p>Mouse over me !</p>
+        <div class="dropdown-content-1">
+          <span>Hello World !</span>
+        </div>
+    </div><hr/>
+
+<!-- Example Explained
+=======================
+
+HTML:   - Use any element to open the dropdown content, e.g. a <span>, or a
+====      <button> element.
+        - Use a container element (like <div>) to create the dropdown content
+          and add whatever you want inside of it.
+        - Wrap a <div> element around the elements to position the dropdown
+          content correctly with CSS.
+
+CSS:   - The '.dropdown' class uses 'position:relative', which is needed when
+====     we want the dropdown content to be placed right below the dropdown
+         button (using 'position:absolute').
+
+       - The '.dropdown-content' class holds the actual dropdown content.
+         It is hidden by default, and will be displayed on hover (see below).
+         Note the 'min-width' is set to 160px. Feel free to change this.
+         Tip: If you want the width of the dropdown content to be as wide as
+         the dropdown button, set the 'width' to 100% (and 'overflow:auto'
+         to enable scroll on small screens).
+
+       - Instead of using a 'border', we have used the CSS 'box-shadow' property
+         to make the dropdown menu look like a "card".
+
+       - The ':hover' selector is used to show the dropdown menu when the user
+         moves the mouse over the dropdown button.
+
+
+---------------------------------------------------------------------------------
+
+
+ Dropdown Menu
+===============
+
+Create a dropdown menu that allows the user to choose an option from a list:
+This example is similar to the previous one, except that we add links inside
+the dropdown box and style them to fit a styled dropdown button:             -->
+
+        <h2>Dropdown Menu.</h2>
+
+        <style>
+
+          .dropdown-2 {
+            display: inline-block;
+            position: relative;
+          }
+          
+          /* Style The Dropdown Button */
+          .drop-button-2 {
+            background-color: #4caf50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+          }
+
+          .dropdown-content-2 {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 132.5px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+          }
+
+          .dropdown-content-2 a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+          }
+
+          .dropdown-content-2 a:hover {background-color: #d4d4d4}
+
+          .dropdown-2:hover .dropdown-content-2 {
+            display: block;
+          }
+
+          .dropdown-2:hover .drop-button-2 {
+            background-color: #3e8e41;
+          }
+
+
+        </style>
+
+        <div class="dropdown-2">
+
+          <button class="drop-button-2"> Mouse hover !</button>
+
+          <div class="dropdown-content-2">
+            <a href="#">Link1</a>
+            <a href="#">Link2</a>
+            <a href="#">Link3</a>
+          </div>
+
+        </div><hr/>
+    
+<!-- ------------------------------------------------------------------------------------- -->
+
+
+        <h2>Right-aligned Dropdown Content</h2>
+
+        <style>
+
+          .dropdown-3-left {
+            float: left;
+            position: relative;
+          }
+
+          .dropdown-3-right {
+            float: right;
+            position: relative;
+          }
+
+          .dropdown-content-3 {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f9f9f9;
+            min-width: 132px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+          }
+          .dropdown-3-left .dropdown-content-3  {
+            left: 0;
+          }
+
+          .drop-button-3 {
+            color: white;
+            padding: 16px;
+            background-color:#4caf50;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+          }
+
+
+
+          .dropdown-content-3 a {
+            display: block;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+          }
+
+          .dropdown-content-3 a:hover {background-color: #dadada;}
+
+          .dropdown-3-left:hover .dropdown-content-3 ,
+          .dropdown-3-right:hover .dropdown-content-3 {
+            display: block;
+          }
+
+
+        </style>
+
+        <div class="dropdown-3-left">
+          <button class="drop-button-3">Left</button>
+          <div class="dropdown-content-3">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+
+
+        <div class="dropdown-3-right">
+          <button class="drop-button-3">Right</button>
+          <div class="dropdown-content-3">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+
+        <p style="clear: both;">Paragraph test</p><hr/>
+
+
+  <!-- ----------------------------------------------------------------------------------- -->
+
+
+        <h2>Dropdown Image -case 1</h2>
+        <p>How to add an image and other content inside the dropdown box.</p>
+
+
+        <style>
+
+          #container-1 {
+            position: relative;
+          }
+          #image-1 {
+            width: 100px;
+            display: inline-block;
+            /* position: absolute; */
+          }
+
+          #image-1:hover {
+            width: 500px;
+            position: absolute;
+            z-index: 1;
+          }
+
+        </style>
+
+
+        <div id="container-1">
+          <img id="image-1" src="../../images/girafe2.jpg" alt="picture of facing girafe">
+        </div>
+        <p>Test paragprah </p><hr/>
+  <!-- ----------------------------------------------------------------------------------- -->
+
+
+        <h2>Dropdown Image -case 2</h2>
+        <p>How to add an image and other content inside the dropdown box.</p>
+
+
+        <style>
+
+          div#container-2 {
+            position: relative;
+            display: inline-block;
+            /* margin: 100px 0; */
+          }
+
+          #image-2-1 {
+            width: 100px;
+          }
+
+          div#dropdown-image-block {
+            position: absolute;
+            top: 100px;
+            display: none;
+          }
+
+          div#container-2:hover div#dropdown-image-block {
+            display: block;
+          }
+          div#dropdown-image-block #image-2-2{
+            width: 500px;
+          }
+
+          p#test-paragraph-2 {
+            display: block;
+            background-color: #4caf50;
+          }
+
+
+          
+
+        </style>
+
+
+        <div id="container-2">
+          <img id="image-2-1" src="../../images/girafe2.jpg" alt="picture of facing girafe">
+          <div id="dropdown-image-block">
+            <img id="image-2-2" src="../../images/girafe2.jpg" alt="picture of facing girafe">
+          </div>
+
+          <p id="test-paragraph-2">Test paragprah</p>
+        </div>
+
+
+
+
+
+  </body>
+</html>

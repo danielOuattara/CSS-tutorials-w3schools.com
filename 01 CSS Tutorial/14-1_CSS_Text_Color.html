@@ -1,0 +1,80 @@
+<!------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+18 03 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS Text Color</title>
+        <style media="screen">
+           * { 
+               padding: 0; 
+               margin: 0;
+            }
+            body {background-color: lightgrey; }
+            p { margin:20px;
+                padding: 10px;
+                text-align:center;
+            }
+
+            #demo1 { color: blue; }
+
+            #demo2 { 
+                padding: 10px; 
+                background-color: #555; 
+                color: white; 
+            }
+            
+            #demo3 {padding: 10px; 
+                background:lightgreen;
+                color: darkgreen;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>CSS Text</h1><hr/>
+
+
+<!-- Text Color.
+================
+
+The color is specified by:
+    > a color name - like "red"
+    > a HEX value - like "#ff0000"
+    > an RGB value - like "rgb(255,0,0)"  -->
+         <p id="demo1">This is an ordinary paragraph. Notice that this text is blue.
+          The default text color for a page is defined in the body selector.</p>
+         <p id="demo2">Another paragraph.</p>
+         <p id="demo3">This page has a lightgreen background color and a green text.</p>
+
+
+<!-- Note:  For W3C compliant CSS: If you define the color property,
+==========  you must also define the background-color.                       -->
+
+
+ <!-- All CSS Text Properties.
+ =============================
+
+ Property 	      Description
+ ------------     -------------
+ color 	          Sets the color of text
+ direction 	      Specifies the text direction/writing direction
+ letter-spacing   Increases or decreases the space between characters in a text
+ line-height 	    Sets the line height
+ text-align 	    Specifies the horizontal alignment of text
+ text-decoration  Specifies the decoration added to text
+ text-indent 	    Specifies the indentation of the first line in a text-block
+ text-shadow 	    Specifies the shadow effect added to text
+ text-transform   Controls the capitalization of text
+ text-overflow 	  Specifies how overflowed content that is not displayed should be signaled to the user
+ unicode-bidi 	  Used together with the direction property to set or return whether the text should be overridden to support multiple languages in the same document
+ vertical-align   Sets the vertical alignment of an element
+ white-space 	    Specifies how white-space inside an element is handled
+ word-spacing 	  Increases or decreases the space between words in a text -->
+
+    </body>
+</html>

@@ -1,0 +1,422 @@
+<!---------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+09 05 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+---------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>CCSS Layout - Horizontal and Vertical Align</title>
+  </head>
+  <body>
+
+    <h1>CSS Layout - Horizontal & Vertical Align.</h1><hr/>
+
+<!-- Center Align Elements
+==========================
+
+To horizontally center a block element (like <div>), use 'margin: auto';
+Setting the width of the element will prevent it from stretching out to
+the edges of its container.
+
+The element will then take up the specified width, and the remaining space
+will be split equally between the two margins:                               -->
+
+    <h2>Center Align Elements</h2>
+
+<!-- To horizontally center the content of a block element (like div), 
+use 'margin: auto' -->
+
+    <style>
+      .center-1 {
+        border: 2px solid green; 
+        padding: 10px; 
+        width: 90%; 
+        margin: auto;
+        text-align: center;  /* Placing 'text-align: center' here or in 
+                              <p> element is acceptable */
+        margin-bottom: 70px;
+      }
+
+      .center-1 p {
+        text-align: center;
+      }
+
+    </style>
+    <div class="center-1">
+    <p><b>Note: </b>Using margin:auto will not work in IE8, unless a !DOCTYPE
+      is declared.</p>
+    </div>
+
+<!-- Note: Center aligning has no effect if the width property is not set
+or set to 100%.
+
+
+
+Center Align Text
+=================
+To just center the text inside an element, use 'text-align: center';  -->
+
+    <h2>Center Text</h2>
+
+    <style>
+
+      .center-text { 
+        border: 2px solid green; 
+        text-align: center; 
+        margin-bottom: 70px;
+      }
+
+    </style>
+
+    <div class="center-text">
+      <p>This text is centered.</p>
+    </div>
+
+
+
+<!-- Center an Image
+=====================
+
+To center an image, set left and right margin to 'auto' and place it into
+a 'block element': -->
+
+    <h2>Center an Image</h2>
+
+    <style>
+      #image-container {
+        border: 2px solid green;
+        padding: 15px;
+
+      }
+      .image-1 {
+        margin-left: auto; 
+        margin-right: auto; 
+        display: block;
+        width: 30%;
+      }
+    </style>
+
+    <div id="image-container">
+        <img class="image-1" src="../../images/photo.jpg" alt="neutral identity pic.">
+    </div>
+
+
+
+<!-- Left and Right Align - Using position
+===========================================
+
+One method for aligning elements is to use 'position: absolute';
+
+Note: Absolute positioned elements are removed from the normal flow,
+and can overlap elements.                                                    -->
+
+
+    <h2>Right Align - position: absolute</h2>
+
+    <style>
+      .right-pos-absolute {
+        border: 2px solid green; 
+        padding: 10px; 
+        width: 200px;
+        position: absolute; 
+        right: 0px; 
+      }
+    </style>
+
+    <div class="right-pos-absolute">
+      <p>In my younger and more vulnerable years my father gave me some advice
+         that I've been turning over in my mind ever since.</p>
+    </div>
+
+
+    <h2>Left Align - position: absolute</h2>
+    <style>
+      .left-pos-absolute {
+        border: 2px solid green; 
+        padding: 10px; 
+        width: 200px;
+        position: absolute; 
+        left: 0px; 
+      }
+
+    </style>
+    <div class="left-pos-absolute">
+      <p>In my younger and more vulnerable years my father gave me some advice
+         that I've been turning over in my mind ever since.</p>
+    </div>
+
+
+<!--Left and Right Align - Using float
+======================================
+
+Another method for aligning elements is to use the float property:  -->
+
+
+    <h2 style="margin-top: 200px;"> Right Align - with float</h2>
+    <style>
+
+      .right-floating {
+        border: 2px solid red; 
+        padding: 10px; 
+        float: right;
+        width: 250px; 
+        margin-bottom: 100px 0;
+      }
+
+    </style>
+
+    <div class="right-floating">
+      <p>My container is float: right.<br/>
+        In my younger and more vulnerable years my father gave me some
+      advice that I've been turning over in my mind ever since.</p>
+    </div>
+
+
+    <h2 style="clear: right;"> Left Align - with float</h2>
+
+    <style>
+      .left-floating {
+        border: 2px solid red; 
+        padding: 10px; 
+        float: left;
+        width: 250px;
+        margin-bottom: 100px; 
+      }
+
+    </style>
+
+    <div class="left-floating">
+      <p>In my younger and more vulnerable years my father gave me some advice
+        that I've been turning over in my mind ever since.</p>
+    </div>
+
+
+<!--Note: If an element is taller than the element containing it, and it is
+floated, it will overflow outside of its container. You can use the
+"clearfix" hack to fix this (see example below) where we can add
+'overflow: auto' to the containing element to fix this problem: -->
+
+      <h2 style="clear: left;">No clearfix Hack because of Float</h2>
+
+      <p>In this example, the image is taller than the element containing it,
+         and it is floated, so it overflows outside of its container:</p>
+
+      <style>
+        .no-clearfix { 
+          border: 2px solid green; 
+          padding: 5px;
+        }
+
+        .image-2-a {
+          float: right;
+          width: 170px; 
+          height: 170px;
+        }
+
+        #explain-1 {
+          clear: right; 
+          background: orange; 
+          padding: 10px; 
+          margin: 170px 0 50px 0;
+
+        }
+
+      </style>
+
+      <div class="no-clearfix">
+        <img class="image-2-a" src="../../images/workplace.jpg" alt="Photo">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Phasellus imperdiet, nulla et dictum interdum...
+      </div>
+
+      <p id="explain-1">Add a clearfix
+        class with 'overflow: auto' to the containing element, to fix this
+        problem:</p>
+
+
+      <h2>No clearfix Hack because of Float</h2>
+
+      <style>
+
+        .clearfix {
+          overflow: auto; 
+          border: 2px solid green;
+        }
+
+        .image-2-b {
+          float: right;
+          width: 170px ;
+          height: 170px;
+        }
+      </style>
+      <div class="clearfix">
+        <img class="image-2-b" src="../../images/workplace.jpg" alt="Photo"
+>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Phasellus imperdiet, nulla et dictum interdum...
+      </div>
+
+
+<!-- Center Vertically And/Or- Using padding
+=======================================
+
+There are many ways to center an element vertically in CSS. 
+A simple solution is to use 'padding-top' and 'bottom-padding' -->
+
+      <h2>Center Vertically:  padding </h2>
+
+      <p>In this example, we use the padding property to center the div element
+         vertically:</p>
+
+      <style>
+
+        .center-2-a { 
+          padding: 70px 0; 
+          border: solid 2px green;
+        }
+
+      </style>
+
+      <div class="center-2-a">
+      <p>I am vertically centered.</p>
+      </div>
+
+      <h2>Center Horizontally</h2>
+
+      <p>In this example, we use the 'text-align: center' property to center
+         the content of the 'div' element vertically:</p>
+
+      <style>
+        .center-2-b {
+          border: solid 2px green; 
+          text-align: center;
+        }
+      </style>
+
+      <div class="center-2-b">
+      <p>I am horizontally centered centered.</p>
+      </div>
+
+      <h2>Center Horizontally & Vertically</h2>
+
+      <p>To center both vertically and horizontally, use padding and
+          text-align: center:</p>
+
+      <style>
+
+        .center-2-c {
+          border: solid 2px green; 
+          padding: 70px 0; 
+          text-align: center;
+        }
+
+      </style>
+
+      <div class="center-2-c">
+      <p>I am vertically AND  horizontally centered.</p>
+      </div>
+
+
+<!-- Center Vertically - Using line-height
+==========================================
+
+Another trick is to use the 'line-height' property with a value that is equal
+to the 'height' property: -->
+
+      <h2> Centering Vertically: Using line-height</h2>
+
+      <p>In this example, we use the 'line-height' property with a value that
+        is equal to the height property to center the div element:</p>
+
+      <style>
+        .center-3 {
+              border: 2px solid green;
+              text-align: center;
+              height: 200px;
+              line-height: 200px;
+        }
+
+        /* If the text has multiple lines, add the following: */
+        .center-3 p {
+              line-height: 1.5;
+              display: inline-block;
+              vertical-align: middle;
+        }
+
+      </style>
+      <div class="center-3">
+        <p>I am vertically and horizontally centered.<br/>
+           I am vertically and horizontally centered.<br/>
+           I am vertically and horizontally centered.<br/>
+           I am vertically and horizontally centered.<br/>
+           I am vertically and horizontally centered.<br/>
+           I am vertically and horizontally centered.<br/>
+           I am vertically and horizontally centered.<br/>
+           I am vertically and horizontally centered.<br/></p>
+      </div>
+
+
+<!-- Center Vertically - Using position & transform
+====================================================
+If 'padding' and 'line-height' are not options, another solution is to use
+'positioning' and the 'transform' property: -->
+
+    <h2> Center Vertically - Using position & transform</h2>
+
+    <p>In this example, we use positioning and the transform property to
+       vertically and horizontally center the div element:</p>
+
+      <style>
+        .center-4 {
+          height: 200px;
+          position: relative;
+          border: 2px solid green;
+        }
+        .center-4 p {
+          margin: 0; 
+          position: absolute; 
+          top: 50%; 
+          left: 50%;
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%)
+        }
+
+      </style>
+      <div class="center-4">
+          <p>I am vertically and horizontally centered.</p>
+      </div>
+
+
+<!-- Center Vertically - Using Flexbox
+=======================================
+You can also use flexbox to center things. Just note that flexbox is not
+supported in IE10 and earlier versions: -->
+
+    <h2>Center Vertically - Using Flexbox </h2>
+
+    <p>A container with both the justify-content and the align-items
+       properties set to <em>center</em> will align the item(s) in
+       the center (in both axis).</p>
+
+    <style>
+      .center-5 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        border: 2px solid green;
+      }
+    </style>
+    <div class="center-5">
+        <p>I am vertically and horizontally centered.</p>
+    </div>
+
+
+
+
+  </body>
+</html>

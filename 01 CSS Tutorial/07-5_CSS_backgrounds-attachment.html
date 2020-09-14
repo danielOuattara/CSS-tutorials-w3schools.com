@@ -1,0 +1,146 @@
+<!-------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+10 03 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+-------------------------------------------------->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Background Attachment</title>
+</head>
+<body>
+
+        <h1>CSS Background Attachment.</h1><hr/>
+
+<!--CSS background-attachment
+==============================
+
+The 'background-attachment' property specifies whether the background 
+image should scroll or be fixed (will not scroll with the rest of 
+the page): 
+
+
+CSS Syntax
+===========
+background-attachment: scroll| fixed| local| initial| inherit;
+
+
+Value 	  Description
+------------------------------------------------------------
+scroll 	  The background image will scroll with the page. 
+          (default)
+------------------------------------------------------------
+fixed 	  The background image will not scroll with the page
+------------------------------------------------------------
+local 	  The background image will scroll with the element's 
+          contents
+------------------------------------------------------------
+initial 	Sets this property to its default value. 
+          Read about initial
+------------------------------------------------------------
+inherit 	Inherits this property from its parent element. 
+          Read about inherit
+------------------------------------------------------------>
+
+
+        <style>
+          div#one {
+            /*background-color: lightblue;*/
+            width: 700px;
+            height: 500px;
+            /* border: 2px solid green; */
+            overflow:hidden;
+            background-image: url("./../../images/butterfly.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+          }
+        </style>
+
+        <div id="one">DIV1
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p></div>
+
+
+        <style>
+         
+          div#two {
+            width: 700px;
+            height: 500px;
+            /* border: 2px solid green; */
+            /* overflow: auto; */
+            margin-top: 100px;
+            background-image: url("./../../images/butterfly.jpg");
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-position: right top;
+          }
+        </style>
+                <div id="two"> DIV2
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p>
+        <p>The background-image is fixed. Try to scroll down the page.</p></div>
+
+    </body>
+</html>

@@ -1,0 +1,111 @@
+<!-------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+10 03 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+-------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        
+        <meta charset="utf-8">
+        <title>CSS background-position </title>
+    </head>
+    <body>
+        <h1>CSS background-position.</h1><hr/>
+
+<!-- CSS background-position:
+============================= 
+
+The 'background-position' property is used to specify 
+the position of the background image. 
+
+
+CSS Syntax
+===========
+
+background-position: value;
+
+
+Value 	         Description
+----------------------------------------------------------------------
+left top         If you only specify one keyword, the other  
+left center      value will be "center"
+left bottom
+right top
+right center
+right bottom
+center top
+center center
+center bottom 		
+----------------------------------------------------------------------
+x% y% 	         The first value is the horizontal position and 
+                 the second value is the vertical. The top left corner 
+                 is 0% 0%. The right bottom corner is 100% 100%. 
+                 If you only specify one value, the other value will be 
+                 50%. . Default is: 0% 0% 	
+----------------------------------------------------------------------
+xpos ypos 	     The first value is the horizontal position and the 
+                 second value is the vertical. The top left corner 
+                 is 0 0. Units can be pixels (0px 0px) or any other 
+                 CSS units. If you only specify one value, the other 
+                 value will be 50%. You can mix % and positions 	
+----------------------------------------------------------------------
+initial 	     Sets this property to its default value. 
+                 Read about initial 	
+----------------------------------------------------------------------
+inherit 	     Inherits this property from its parent element. 
+                 Read about inherit                                 
+                 ----------------------------------------------------->
+
+
+
+        <style>
+        * {padding: 0; margin: 0}
+        div#one {
+            height: 600px;
+            width: 600px;
+            border: 2px solid black;
+            background-image: url("./../../images/butterfly.jpg");
+            background-repeat: no-repeat;
+            background-position: right top;  
+        }
+        div#two {
+            height: 600px;
+            width: 600px;
+            border: 2px solid black;
+            background-image: url("./../../images/butterfly.jpg");
+            background-repeat: no-repeat;
+            background-position: left top;  
+        }
+        div#three {
+            height: 600px;
+            width: 600px;
+            border: 2px solid black;
+            background-image: url("./../../images/butterfly.jpg");
+            background-repeat: no-repeat;
+        background-position: 25% 75%;  
+        }
+        div#four{
+            height: 600px;
+            width: 600px;
+            border: 2px solid black;
+            background-image: url("./../../images/butterfly.jpg");
+            background-repeat: no-repeat;
+        background-position: 500px 300px;  
+        }
+
+        </style>
+        <div id="one"> div#one</div>
+        <div id="two"> div#two</div>
+        <div id="three"> div#three</div>
+        <div id="four"> div#four</div>
+
+
+
+
+
+
+ 
+    </body>
+</html>

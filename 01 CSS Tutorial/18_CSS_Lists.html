@@ -1,0 +1,91 @@
+<!------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+07 04 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Lists</title>
+</head>
+<body>
+    <h1>CSS Lists</h1><hr/>
+
+<!-- Unordered Lists, Ordered Lists: -->
+
+<!-- HTML Lists and CSS List Properties -->
+
+<!-- Different List Item Markers.
+=================================
+
+The 'list-style-type' property specifies the type of list item 
+marker.
+
+The following example shows some of the available list item 
+markers:
+
+Note: Some of the values are for unordered lists, and some for 
+ordered lists.-->
+
+    <p>Example of unordered lists:</p>
+        <ul class="a">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+        </ul>
+
+        <ul class="b">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Coca Cola</li>
+        </ul>
+
+
+    <p>Examle of ordered lists:</p>
+    <ol class="c">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ol>
+
+    <ol class="d">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ol>
+
+    <style>
+        ul.a {list-style-type: circle; }
+        ul.b {list-style-type: square; }
+
+        ol.c {list-style-type: upper-roman; }
+        ol.c {list-style-type: lower-alpha;}
+    </style>
+
+
+<!-- An Image as The List Item Marker.
+======================================
+The 'list-style-image' property specifies an image as the list item marker: -->
+
+    <style> 
+        ul.a2 {list-style-image: url("index.png")
+    }; 
+    </style>
+
+    <ul class = a2>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ul>
+
+
+<!-- List inside list -->
+
+   
+
+
+  </body>
+</html>

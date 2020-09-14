@@ -1,0 +1,232 @@
+<!---------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+08 05 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+---------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>CSS Layout - display: inline-block</title>
+  </head>
+  <body>
+
+    <h1>CSS Layout - display: inline-block</h1><hr/>
+
+
+<!-- The display: inline-block Value
+=====================================
+
+> display: inline-block VS display: inline
+------------------------------------------
+'display: inline-block' allows to set a 'width', 'height', 'top', 'bottom', 
+'margin', and 'padding' on elements. But 'display: inline' doesn't.
+
+
+> display: inline-block VS display: block
+------------------------------------------
+'display: inline-block' does not add a line-break after the element, 
+so the element can position next to other elements.
+
+The following example shows the different behavior of :
+- display: inline
+- display: inline-block
+- display: block:                                                            -->
+
+        <h1>The Display Property</h1>
+
+
+        <h2>dipplay: inline</h2>
+        
+        <style>
+
+          #span-inline { 
+            display: inline;  /* the defaults for <span> element */
+            /* width: 100px; property ignored due to display: inline */
+            /* height: 100px; property ignored due to display: inline */
+            border: 1px solid blue; 
+            background: yellow;
+          }
+
+          #span-inline-block { 
+            display: inline-block; 
+            width: 100px; 
+            height: 100px; 
+            padding: 5px;
+            border: 1px solid blue; 
+            background: yellow;
+          }
+
+          #span-block { 
+            display: block; 
+            width: 100px; 
+            height: 100px; 
+            padding: 5px;
+            border: 1px solid blue; 
+            background: yellow;
+          }
+
+        </style>
+
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Vestibulum consequat scelerisque elit sit amet consequat.
+          Aliquam erat volutpat. <span id="span-inline">Aliquam</span>
+          <span id="span-inline">venenatis</span> gravida nisl sit amet
+          facilisis. Nullam cursus fermentum velit sed laoreet.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Vestibulum consequat scelerisque elit sit amet consequat.
+        </div><hr/>
+
+
+        <h2>dipplay: inline-block</h2>
+
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Vestibulum consequat scelerisque elit sit amet consequat.
+          Aliquam erat volutpat. <span id="span-inline-block">Aliquam</span>
+          <span id="span-inline-block">venenatis</span> gravida nisl sit amet
+          facilisis. Nullam cursus fermentum velit sed laoreet.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Vestibulum consequat scelerisque elit sit amet consequat.
+
+        </div><hr/>
+
+
+        <h2>dipplay: block</h2>
+
+        <div style="margin-bottom: 50px;">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Vestibulum consequat scelerisque elit sit amet consequat.
+          Aliquam erat volutpat. <span id="span-block">Aliquam</span>
+          <span id="span-block">venenatis</span> gravida nisl sit amet
+          facilisis. Nullam cursus fermentum velit sed laoreet.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Vestibulum consequat scelerisque elit sit amet consequat.
+
+        </div><hr/>
+
+
+<!-- Using inline-block to Create Navigation Links
+==================================================
+
+One common use for 'display: inline-block' is to display list items 
+horizontally instead of vertically. 
+
+The following example creates horizontal navigation links                                                                        -->
+
+        <h1>Horizontal Navigation Links: Example 1-a</h1>
+        <p>By default, list items are displayed vertically. In this example
+          we use display: inline-block to display them horizontally
+          (side by side).</p>
+        <p>Note: If you resize the browser window, the links will automatically
+           break when it becomes too crowded.</p>
+
+        <style>
+          .nav-1 { 
+            background: orange; 
+            list-style-type: none; 
+            margin: 0; 
+            padding: 0;
+            margin-bottom: 70px;
+            border: 1px solid black;
+          }
+
+          .nav-1 li { 
+            display: inline-block; 
+            font-size: 20px; 
+            padding: 15px;
+          }
+
+        </style>
+        <ul class="nav-1">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#clients">Clients</a></li>
+          <li><a href="#contacts">Contacts</a></li>
+          <li><a href="#archives">Archives</a></li>
+        </ul>
+
+
+
+          <h1>Horizontal Navigation Links: Example 1-b</h1>
+
+        <style>
+          .nav-1b {
+            background: orange; 
+            list-style-type: none; 
+            margin: 0;
+            padding:0; 
+            margin-bottom: 70px;
+          }
+          .nav-1b li {
+            display: inline-block; 
+            font-size: 20px;
+            padding: 15px;
+          }
+
+          .nav-1b li a {
+            text-decoration: none;
+            color: #555;
+          }
+
+          .nav-1b li:hover {
+            background: rgba(85, 85, 85, 0.274); 
+          }
+          .nav-1b li a:hover {
+            /* background: lightgreen;  */
+            color: white;
+          }
+        </style>
+        <ul class="nav-1b">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#clients">Clients</a></li>
+          <li><a href="#contacts">Contacts</a></li>
+          <li><a href="#archives">Archives</a></li>
+        </ul>
+<!-- ---------------------------------------------------------------------- -->
+
+
+
+        <h1>Horizontal Navigation Links: Example 2</h1>
+
+        <style>
+          .nav-2 { 
+            background: orange; 
+            list-style-type: none; 
+            margin: 0; 
+            padding:0;
+            overflow: hidden;
+            margin-bottom: 70px;
+          }
+
+          .nav-2 li {float: left;}
+
+          .nav-2 li a { 
+            display: inline-block; 
+            font-size: 20px; 
+            padding: 15px;
+            text-decoration: none; 
+            color:#444;
+            
+          }
+
+          .nav-2 li a:hover {
+            background: rgb(255, 145, 0); 
+            color: white;
+          }
+
+        </style>
+        <ul class="nav-2">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#clients">Clients</a></li>
+          <li><a href="#contacts">Contacts</a></li>
+          <li><a href="#archives">Archives</a></li>
+        </ul>
+
+  </body>
+</html>

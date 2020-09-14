@@ -1,0 +1,742 @@
+<!------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+07 04 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Table</title>
+    </head>
+    <body>
+        <h1>CSS Table</h1><br/><br/><hr/><br/>
+
+
+<!--CSS Table Properties.
+=========================
+
+Property 	     Description
+---------        ------------
+border 	         Sets all the border properties in one declaration
+border-collapse  Specifies whether or not table borders should be collapsed
+border-spacing 	 Specifies the distance between the borders of adjacent cells
+caption-side 	 Specifies the placement of a table caption
+empty-cells 	 Specifies whether or not to display borders and background on empty cells in a table
+table-layout     Sets the layout algorithm to be used for a table                -->
+
+<!-- The look of an HTML table can be greatly improved with CSS: -->
+
+<!-- Introduction Example.
+========================== -->
+
+<style>
+    #customers {
+        font-family: "Trebuchet MS","Arial", "Helvetica","sans-serif";
+        border-collapse: collapse; 
+        width: 100%; 
+        margin-bottom: 50px;
+    }
+
+    #customers th {
+        padding-top: 12px; 
+        padding-bottom: 12px; 
+        text-align: left;
+        background-color: #4caf50; 
+        color: white; 
+    }
+
+    #customers tr:nth-child(even) {background-color: #f2f2f2;}
+
+    #customers tr:hover {background-color: #ddd; }
+
+    #customers td, #customers th {
+        border: 1px solid #ddd;  
+        padding: 8px; 
+    
+    }
+</style>
+
+    <table id="customers">
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anfers</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Berglunds Snabbköp</td>
+            <td>Christina Berglund</td>
+            <td>Sweden</td>
+        </tr>
+        <tr>
+            <td>Centro Commercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+        </tr>
+        <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+        </tr>
+        <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Königlich Essen</td>
+            <td>Philpp Cramer</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Yoshi Tannamuri</td>
+            <td>Canada</td>
+        </tr>
+        <tr>
+            <td>Maggazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+        </tr>
+        <tr>
+            <td>North/South</td>
+            <td>Simon Crowther</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Paris Spécialités</td>
+            <td>Marie Bertrand</td>
+            <td>France</td>
+        </tr>
+
+    </table><hr/>
+
+
+<!-- Table with recent HTML requirements: thead, tbody, tfoot -->
+
+    <table id="customers">
+
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>country</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anfers</td>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <td>Berglunds Snabbköp</td>
+                <td>Christina Berglund</td>
+                <td>Sweden</td>
+            </tr>
+            <tr>
+                <td>Centro Commercial Moctezuma</td>
+                <td>Francisco Chang</td>
+                <td>Mexico</td>
+            </tr>
+            <tr>
+                <td>Ernst Handel</td>
+                <td>Roland Mendel</td>
+                <td>Austria</td>
+            </tr>
+            <tr>
+                <td>Island Trading</td>
+                <td>Helen Bennett</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td>Königlich Essen</td>
+                <td>Philpp Cramer</td>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <td>Laughing Bacchus Winecellars</td>
+                <td>Yoshi Tannamuri</td>
+                <td>Canada</td>
+            </tr>
+            <tr>
+                <td>Maggazzini Alimentari Riuniti</td>
+                <td>Giovanni Rovelli</td>
+                <td>Italy</td>
+            </tr>
+            <tr>
+                <td>North/South</td>
+                <td>Simon Crowther</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td>Paris Spécialités</td>
+                <td>Marie Bertrand</td>
+                <td>France</td>
+            </tr>
+        </tbody>
+
+        <tfoot></tfoot>
+
+    </table><hr/>
+
+
+<!-- Table Borders.
+===================
+
+To specify table borders in CSS, use the 'border' property      -->
+
+    <style>
+        #table02, #table02 td, #table02 th {border: 1px solid black; }
+    </style>
+
+    <table id="table02">
+        <caption>table02</caption>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+        </tr>
+
+        <tr>
+            <td>Peter</td>
+            <td>Griffin</td>
+        </tr>
+        <tr>
+            <td>Lois</td>
+            <td>Griffin</td>
+        </tr>
+    </table><br/><br/><hr/>
+
+
+<!-- Collapse Table Borders.
+============================
+
+The 'border-collapse' property sets whether the table
+borders should be collapsed into a single border: -->
+
+    <style>
+        #table03, #table03 th, #table03 td {border: 1px solid black; }
+        #table03{ border-collapse: collapse;}
+
+    </style>
+    <table id="table03">
+        <caption>table03</caption>
+        <tr>
+            <th>City</th>
+            <th>Country</th>
+            <tr>
+                <td>Gao</td>
+                <td>Mali</td>
+            </tr>
+            <tr>
+                <td>Dori</td>
+                <td>Burkina Faso</td>
+            </tr>
+        </tr>
+    </table><br/><br/><hr/><br/>
+
+
+<!-- If you only want a border around the table,
+ only specify the border property for <table>  -->
+
+    <style>
+        #table04 {border: 1px solid black; }
+        /* #table04{ border-collapse: collapse;} */
+
+    </style>
+    <table id="table04">
+        <caption>table04</caption>
+        <tr>
+            <th>City</th>
+            <th>Country</th>
+            <tr>
+                <td>Gao</td>
+                <td>Mali</td>
+            </tr>
+            <tr>
+                <td>Dori</td>
+                <td>Burkina Faso</td>
+            </tr>
+        </tr>
+    </table><br/><br/><hr/><br/>
+
+
+<!-- Table Width and Height.
+============================
+
+Width and height of a table are defined by the 'width' and 'height' properties. -->
+
+    <style>
+        #table05, #table05 th, #table05 td {border: 1px solid black; }
+        #table05 {border-collapse: collapse; width: 100%;  }
+        #table05 th {height: 40px; }
+        #table05 td { height: 30px}
+
+    </style>
+    <table id="table05">
+        <caption>table05</caption>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Salary</th>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+                <td>$93000</td>
+            </tr>
+            <tr>
+                <td>Johana</td>
+                <td>Lee</td>
+                <td>$108000</td>
+            </tr>
+            <tr>
+                <td>Martin</td>
+                <td>Pecheur</td>
+                <td>€32000</td>
+            </tr>
+        </tr>
+    </table><br/><br/><hr/><br/>
+
+
+<!-- Horizontal Alignment.
+==========================
+
+The 'text-align' property sets the horizontal alignment
+('left', 'right', 'center') of the content in <th> or <td>.
+
+By default, the content of <th> elements are center-aligned
+and the content of <td> elements are left-aligned. -->
+
+    <style>
+        #table06, #table06 th, #table06 td {border: 1px solid black; }
+        #table06 {border-collapse: collapse; width: 100%;  }
+        #table06 th {text-align: center; }
+        #table06 td { text-align: left;}
+
+    </style>
+    <table id="table06">
+        <caption>table06</caption>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Salary</th>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+                <td>$93000</td>
+            </tr>
+            <tr>
+                <td>Johana</td>
+                <td>Lee</td>
+                <td>$108000</td>
+            </tr>
+            <tr>
+                <td>Martin</td>
+                <td>Pecheur</td>
+                <td>€32000</td>
+            </tr>
+        </tr>
+    </table><br/><br/><hr/><br/>
+
+
+
+<!-- Vertical Alignment.
+========================
+
+The vertical-align property sets the vertical alignment ('top', 'bottom', or 'middle') 
+of the content in <th> or <td>.
+By default, the vertical alignment of the content in a table is middle
+for both <th> and <td> elements.                                                -->
+
+
+    <style>
+        #table07, #table07 th, #table07 td {border: 1px solid black; }
+        #table07 {border-collapse: collapse; width: 100%;  }
+        #table07 th {text-align: left; }
+        #table07 td {vertical-align: bottom; height: 50px;}
+
+    </style>
+    <table id="table07">
+        <caption>table07</caption>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Salary</th>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+                <td>$93000</td>
+            </tr>
+            <tr>
+                <td>Johana</td>
+                <td>Lee</td>
+                <td>$108000</td>
+            </tr>
+            <tr>
+                <td>Martin</td>
+                <td>Pecheur</td>
+                <td>€32000</td>
+            </tr>
+        </tr>
+    </table><br/><br/><hr/><br/>
+
+
+<!-- Table Padding.
+===================
+
+To control the space between the border and the content in a table,
+use the padding property on <td> and <th> elements:                           -->
+
+    <style>
+        #table08, #table08 th, #table08 td {
+            border: 1px solid #b9b8b8;
+            text-align: left;
+        }
+        
+        #table08 {
+            border-collapse: collapse; 
+            width: 100%;  
+        }
+
+        #table08 th, #table08 td {padding: 15px; }
+
+    </style>
+    <table id="table08">
+        <caption>table08</caption>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Salary</th>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+                <td>$93000</td>
+            </tr>
+            <tr>
+                <td>Johana</td>
+                <td>Lee</td>
+                <td>$108000</td>
+            </tr>
+            <tr>
+                <td>Martin</td>
+                <td>Pecheur</td>
+                <td>€32000</td>
+            </tr>
+        </tr>
+    </table><br/><br/><hr/><br/>
+
+
+
+    <style>
+        #table09 th, #table09 td {
+            padding: 11px; 
+            border-bottom: 1px solid #b9b8b8; 
+            text-align: left;
+        }
+
+        #table09 {
+            border-collapse: collapse;
+             width: 100%;  
+        }
+
+    </style>
+    <table id="table09">
+        <caption>table09</caption>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Salary</th>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+                <td>$93000</td>
+            </tr>
+            <tr>
+                <td>Johana</td>
+                <td>Lee</td>
+                <td>$108000</td>
+            </tr>
+            <tr>
+                <td>Martin</td>
+                <td>Pecheur</td>
+                <td>€32000</td>
+            </tr>
+        </tr>
+    </table><br/><br/><hr/><br/>
+
+
+<!-- Hoverable Table.
+=====================
+
+Use the :hover selector on <tr> to highlight table rows on mouse over: -->
+
+    <style>
+        #table10 th, #table10 td {
+            border-bottom: 1px solid #b9b8b8; 
+            text-align: left;
+        }
+        #table10 {
+            border-collapse: collapse; 
+            width: 100%; 
+         }
+        #table10 th, #table10 td {padding: 11px; }
+        #table10 tr:hover {background-color: #a1f3a5;}
+
+    </style>
+    <table id="table10">
+        <caption>table10</caption>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Salary</th>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+                <td>$93000</td>
+            </tr>
+            <tr>
+                <td>Johana</td>
+                <td>Lee</td>
+                <td>$108000</td>
+            </tr>
+            <tr>
+                <td>Martin</td>
+                <td>Pecheur</td>
+                <td>€32000</td>
+            </tr>
+        </tr>
+    </table><br/><br/><hr/><br/>
+
+
+<!-- Striped Tables.
+====================
+
+For zebra-striped tables, use the nth-child() selector and
+add a background-color to all even (or odd) table rows:-->
+
+    <style>
+        #table11 th, #table11 td {text-align: left;padding: 12px;}
+        #table11 {border-collapse: collapse; width: 100%;  }
+        #table11 tr:nth-child(even) {background-color: #d8e4d9;}
+        #table11 tr:nth-child(odd) {background-color: #d3c9e9;}
+
+    </style>
+    <table id="table11">
+        <caption>table11</caption>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Salary</th>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+                <td>$93000</td>
+            </tr>
+            <tr>
+                <td>Johana</td>
+                <td>Lee</td>
+                <td>$108000</td>
+            </tr>
+            <tr>
+                <td>Martin</td>
+                <td>Pecheur</td>
+                <td>€32000</td>
+            </tr>
+        </tr>
+    </table><br/><br/><hr/><br/>
+
+
+<!-- Table Color.
+=================
+
+The example below specifies the background color and text color of <th> elements:-->
+
+    <style>
+        #table12 th, #table12 td {
+            text-align: left; 
+            padding: 12px;
+        }
+
+        #table12 {
+            border-collapse: collapse; 
+            width: 100%;  
+        }
+
+        #table12 tr:nth-child(even) {background-color: #d8e4d9; }
+        #table12 tr:nth-child(odd) {background-color: #d3c9e9; }
+        #table12 th {color: white; background-color: #4caf50;}
+
+    </style>
+    <table id="table12">
+        <caption>table12</caption>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Salary</th>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+                <td>$93000</td>
+            </tr>
+            <tr>
+                <td>Johana</td>
+                <td>Lee</td>
+                <td>$108000</td>
+            </tr>
+            <tr>
+                <td>Martin</td>
+                <td>Pecheur</td>
+                <td>€32000</td>
+            </tr>
+        </tr>
+    </table><br/><br/><hr/><br/>
+
+
+<!--- Responsive Table.
+=======================
+
+A responsive table will display a horizontal scroll bar
+if the screen is too small to display the full content:
+Add a container element (like <div>) with 'overflow-x:auto'
+around the <table> element to make it responsive: -->
+
+
+    <style>
+        div#responsive-table-13 {
+            overflow-x: auto;
+        }
+        #table13 {
+            border-collapse: collapse; 
+            width: 100%;
+        }
+        #table13 th, #table13 td {
+            padding: 12px; 
+            text-align: center;
+        }
+        #table13 th {
+            color: white;
+             background-color: #3a9b3d;
+            }
+        #table13 tr:nth-child(even) {background-color: #c9cec9;}
+    </style>
+
+
+    <div id="responsive-table-13">
+        <table id="table13">
+            <caption>table13</caption>
+
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Score 1</th>
+                <th>Score 2</th>
+                <th>Score 3</th>
+                <th>Score 4</th>
+                <th>Score 5</th>
+                <th>Score 6</th>
+                <th>Score 7</th>
+                <th>Score 8</th>
+                <th>Score 9</th>
+                <th>Score 10</th>
+                <th>Score 11</th>
+                <th>Score 12</th>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>54</td>
+                <td>65</td>
+                <td>76</td>
+                <td>72</td>
+                <td>50</td>
+                <td>87</td>
+                <td>93</td>
+                <td>41</td>
+                <td>67</td>
+                <td>87</td>
+                <td>34</td>
+                <td>65</td>
+            </tr>
+            <tr>
+                <td>Will</td>
+                <td>Smith</td>
+                <td>45</td>
+                <td>75</td>
+                <td>76</td>
+                <td>42</td>
+                <td>30</td>
+                <td>83</td>
+                <td>95</td>
+                <td>45</td>
+                <td>65</td>
+                <td>90</td>
+                <td>30</td>
+                <td>62</td>
+            </tr>
+            <tr>
+                <td>Jo</td>
+                <td>Garango</td>
+                <td>50</td>
+                <td>60</td>
+                <td>70</td>
+                <td>29</td>
+                <td>43</td>
+                <td>80</td>
+                <td>92</td>
+                <td>47</td>
+                <td>64</td>
+                <td>84</td>
+                <td>38</td>
+                <td>60</td>
+            </tr>
+        </table>
+    </div><br/><br/><hr/><br/>
+
+    <style>
+        #table14, #table14 th, #table14 td {
+            border: 1px solid black; 
+        }
+        #table14 {
+            border-collapse: collapse; 
+            width: 100%;  
+        }
+        #table14 th {height: 50px; }
+        #table14 td { height: 30px}
+        #table14 {caption-side: bottom;}
+
+    </style>
+    <table id="table14">
+        <caption>table14</caption>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Salary</th>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+                <td>$93000</td>
+            </tr>
+            <tr>
+                <td>Johana</td>
+                <td>Lee</td>
+                <td>$108000</td>
+            </tr>
+            <tr>
+                <td>Martin</td>
+                <td>Pecheur</td>
+                <td>€32000</td>
+            </tr>
+        </tr>
+    </table><br/><br/><hr/><br/>
+
+  </body>
+</html>

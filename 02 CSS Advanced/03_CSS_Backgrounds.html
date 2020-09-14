@@ -1,0 +1,262 @@
+<!-------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+15 06 2020
+CSS Advanced from: https://www.w3schools.com/css/
+ -------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Multiple Backgrounds</title>
+  </head>
+  <body>
+    <h1>CSS Multiple Backgrounds.</h1><hr/>
+
+<!-- In this chapter you will learn how to add multiple background images
+to one element.
+
+You will also learn about the following properties:
+
+    > background-size
+    > background-origin
+    > background-clip
+
+CSS Multiple Backgrounds
+=========================
+
+CSS allows you to add multiple background images for an element, through
+the 'background-image' property.
+
+The different background images are separated by commas, and the images are
+stacked on top of each other, where the first image is closest to the viewer.
+
+The following example has two background images, the first image is aligned to
+the bottom and right, and the second image is aligned to the top-left corner-->
+
+          <style>
+            #example1 {
+              border: 1px solid black;
+              background-image:url('./../../images/red-fish.jpg'), url('./../../images/sky_1.jpg') ;
+              background-position: right bottom, left top;
+              background-repeat: no-repeat, repeat;
+
+              /* overflow: hidden; */
+              padding: 50px;
+            }
+            </style>
+
+          <p>The following div element has two background images:</p>
+
+          <div id="example1">
+          <h3>Lorem Ipsum Dolor</h3>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+            diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+            aliquam erat volutpat.</p>
+
+          <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation
+            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+            consequat.</p>
+
+          </div>
+
+<!-- Multiple background images can be specified using either the individual
+background properties (as above) or the background shorthand property.
+
+The following example uses the background shorthand property (same result as
+example above): -->
+
+
+          <style>
+            #example2 {
+              border: 1px solid black;
+              background: url('./../../images/red-fish.jpg') right bottom
+                no-repeat , url('./../../images/sky_1.jpg') left top  repeat;
+
+              overflow: hidden;
+              padding: 50px;
+            }
+            </style>
+
+          <p>The following div element has two background images:</p>
+
+          <div id="example2">
+          <h3>Lorem Ipsum Dolor</h3>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+            diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+            aliquam erat volutpat.</p>
+
+          <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation
+            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+            consequat.</p>
+
+          </div>
+
+
+<!-- CSS Background Size
+========================
+
+The CSS background-size property allows you to specify the size of
+background images.
+The size can be specified in 'lengths', 'percentages', or by using one of the
+two keywords: 'contain' or 'cover'.
+
+The following example resizes a background image to much smaller than
+the original image (using pixels): -->
+
+          <style>
+            #example3 {
+              border: 1px solid black;
+              background: url('./../../images/red-fish.jpg') right bottom
+                no-repeat;
+              background-size: 150px 120px;
+
+              overflow: hidden;
+              padding: 50px;
+            }
+            </style>
+
+          <p>The following div element has two background images:</p>
+
+          <div id="example3">
+          <h3>Lorem Ipsum Dolor</h3>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+            diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+            aliquam erat volutpat.</p>
+
+          </div>
+
+<!-- The two other possible values for background-size are 'contain' and 'cover'.
+
+The 'contain' keyword scales the background image to be as large as possible
+(but both its width and its height must fit inside the content area).
+As such, depending on the proportions of the background image and the
+background positioning area, there may be some areas of the background which
+are not covered by the background image.
+
+The 'cover' keyword scales the background image so that the content area is
+completely covered by the background image (both its width and height are
+equal to or exceed the content area). As such, some parts of the background
+image may not be visible in the background positioning area.
+
+The following example illustrates the use of contain and cover: -->
+
+          <style>
+            #example4 {
+              border: 1px solid black;
+              height: 300px;
+              width: 300px;
+              background: url('./../../images/red-fish.jpg');
+              background-size: contain;
+              background-repeat: no-repeat;
+            }
+            </style>
+
+          <div id="example4">
+            <h3>background-size: countain</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+               diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+               aliquam erat volutpat.</p>
+          </div>
+
+          <style>
+            #example5 {
+              border: 1px solid black;
+              height: 300px;
+              width: 300px;
+              background: url('./../../images/red-fish.jpg');
+              background-size: cover;
+              background-repeat: no-repeat;
+            }
+            </style>
+
+          <div id="example5">
+          <h3>background-size: cover</h3>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+            diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+            aliquam erat volutpat.</p>
+          </div>
+
+          <style>
+            #example6 {
+              border: 1px solid black;
+              height: 300px;
+              width: 300px;
+              background: url('./../../images/red-fish.jpg');
+              /* background-size: cover; */
+              background-repeat: no-repeat;
+            }
+            </style>
+
+          <div id="example6">
+          <h3>background-size: no specified(default)</h3>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+            diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+            aliquam erat volutpat.</p>
+          </div>
+
+<!-- Define Sizes of Multiple Background Images
+================================================
+
+The 'background-size' property also accepts multiple values for background
+size (using a comma-separated list), when working with multiple backgrounds.
+
+The following example has three background images specified, with different
+background-size value for each image: -->
+
+          <style>
+            #example7 {
+              border: 1px solid black;
+              background: url('./../../images/red-fish.jpg') right bottom no-repeat,
+                 url('./../../images/smiley-2.jpg') top left no-repeat,
+                 url('./../../images/sky_1.jpg') left top repeat;
+              padding: 15px;
+              background-size: 100px, 120px, auto;
+            }
+          </style>
+
+          <div id="example7">
+          <h1>Lorem Ipsum Dolor</h1>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+            diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+            aliquam erat volutpat.</p>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+            diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+            aliquam erat volutpat.</p>
+          </div>
+
+
+<!-- Full Size Background Image
+================================
+
+Now we want to have a background image on a website that covers the entire
+browser window at all times. The requirements are as follows:
+
+  > Fill the entire page with the image (no white space)
+  > Scale image as needed
+  > Center image on page
+  > Do not cause scrollbars
+
+The following example shows how to do it; Use the '<html>' element (the <html>
+element is always at least the height of the browser window). Then set a fixed
+and centered background on it. Then adjust its size with the background-size
+property:
+______________________________________________________
+html {
+  background: url(img_man.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+______________________________________________________
+
+
+Hero Image
+============
+
+You could also use different background properties on a <div> to create a
+hero image (a large image with text), and place it where you want.        -->
+
+
+
+
+  </body>
+</html>

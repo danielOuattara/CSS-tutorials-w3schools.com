@@ -1,0 +1,145 @@
+<!-------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+10 03 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+-------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+       
+        <meta charset="utf-8">
+        <title>CSS background & background-color </title>
+    </head>
+    <body>
+        <h1>CSS background & background-color</h1><hr/>
+
+ <!-- The CSS background properties are used to define the background 
+effects for elements.
+
+In these chapters, you will learn about the following CSS background 
+properties:
+
+    > background-color
+    > background-image
+    > background-repeat
+    > background-attachment
+    > background-position
+
+    
+    CSS background-color
+    =====================
+      
+The 'background-color' property specifies the background color of 
+an element.  
+
+CSS Syntax
+============
+
+background-color: color|transparent|initial|inherit;
+
+Value 	     Description
+---------------------------------------------------------------------
+color 	     Specifies the background color. Look at CSS Color 
+             values for a complete list of possible color values. 	
+---------------------------------------------------------------------
+transparent  Specifies that the background color should be transparent. 
+             (default)
+---------------------------------------------------------------------
+initial 	   Sets this property to its default value. 
+             Read about initial 	
+---------------------------------------------------------------------
+inherit 	   Inherits this property from its parent element. 
+             Read about inherit
+--------------------------------------------------------------------->
+
+      <style>
+        * {
+          padding: 0; 
+          margin: 0
+        }
+        body { 
+          background-color: rgb(219, 227, 255); 
+        }
+      </style>
+
+    
+<!-- With CSS, a color is most often specified by:
+
+   > a valid color name - like "red"
+   > a HEX value - like "#ff0000"
+   > an RGB value - like "rgb(255,0,0)  
+   > an HSL value   like  "hsl(0, 100%, 50%")-->
+
+      <style>
+       
+        h3 { 
+          background-color: lightgreen; 
+          
+        }
+        div { 
+          background-color: orange; 
+          padding: 30px; 
+          margin: 30px; 
+        }
+        div p { background-color: yellow; 
+          font-size: 20px; 
+        }
+      </style>
+
+        <h3>CSS background-color example!</h3>
+        <div>
+        This is a text inside a div element.
+          <p>This paragraph has its own background color.</p>
+        We are still in the div element.
+        </div>
+
+<!-- Opacity .VS. Transparency 
+===========================-->
+      <style>
+        #opacity1 {
+          background-color: green;
+        }
+
+        #opacity2 {
+          background-color: green;
+          opacity: 0.1;
+        }
+        #opacity3 {
+          background-color: green;
+          opacity: 0.3;
+        }
+        #opacity4 {
+          background-color: green;
+          opacity: 0.7;
+        }
+
+        #transparency1 {
+          background-color: rgba(128, 9, 0, 1);
+        }
+
+        #transparency2 {
+          background-color: rgba(128, 9, 0, 0.7);
+        }
+
+        #transparency3 {
+          background-color: rgba(128, 9, 0, 0.3);
+        }
+
+        #transparency4 {
+          background-color: rgba(128, 9, 0, 0.1);
+        }
+      </style>
+
+      <div id="opacity1">Testing Opacity: opacity1</div>
+      <div id="opacity2">Testing Opacity: opacity2</div>
+      <div id="opacity3">Testing Opacity: opacity3</div>
+      <div id="opacity4">Testing Opacity: opacity4</div>
+
+      <div id="transparency1">Testing Transparency with rgba</div>
+      <div id="transparency2">Testing Transparency with rgba</div>
+      <div id="transparency3">Testing Transparency with rgba</div>
+      <div id="transparency4">Testing Transparency with rgba</div>
+
+    </body>
+</html>

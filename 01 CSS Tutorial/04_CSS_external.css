@@ -1,0 +1,23 @@
+/*-------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+03 03 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+
+External CSS linked to: 04_CSS_How_To_Add.html
+ -------------------------------------------------*/
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: lightblue;
+}
+
+.h2_external { color: navy; margin-left: 20px;
+               padding: 20px; border: 1px solid black 
+}
+
+.p1_external { color: darkcyan; margin-left: 50px; 
+}

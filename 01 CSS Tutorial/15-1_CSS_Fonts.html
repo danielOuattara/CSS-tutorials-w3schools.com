@@ -1,0 +1,236 @@
+<!------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+19 03 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS Fonts</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style >
+            p.times_new_roman { font-family: "Times New Roman" }
+            p.arial { font-family: "Arial"}
+            p.times { font-family: "times"; }
+            p.serif { font-family: "serif"; }
+            p.helvetica { font-family: "Helvetica"; }
+            p.sansserif { font-family: "sans-serif"; }
+
+            p.normal { font-style: normal; }
+            p.italic { font-style: italic; }
+            p.oblique { font-style: oblique; }
+
+            p.font_size_pixels-1 { font-size: 40px; }
+            p.font_size_pixels-2 { font-size: 30px; }
+            p.font_size_pixels-3 { font-size: 20px; }
+            p.font_size_pixels-4 { font-size: 14px; }
+
+            p.font_size_em-1 { font-size: 2em; /* 32px /16 = 2 em */}
+            p.font_size_em-2 { font-size: 1.5em; }
+            p.font_size_em-3 { font-size: 0.75em; }
+            p.font_size_em-4 { font-size: 3em; }
+            p.font_size_em-5 { font-size: 5em; }
+
+            p.font_weight-1{ font-weight: normal; }
+            p.font_weight-2{ font-weight: lighter; }
+            p.font_weight-3{ font-weight: bold; }
+            p.font_weight-4{ font-weight: 900; }
+
+            p.responsive_font_weight-1 { font-size: 10vw;}
+            p.responsive_font_weight-2 { font-size: 5vw;}
+            p.responsive_font_weight-3 { font-size: 3vw;}
+            p.responsive_font_weight-4 { font-size: 1vw;}
+
+            p.normal2 { font-variant: normal; }
+            p.small2 { font-variant: small-caps; }
+
+            p.ex1 { font: 20px arial, sans-serif;}
+            p.ex2 { font: italic bold 12px/30px, Georgia, serif;}
+        </style>
+    </head>
+    <body>
+        <h1>CSS Fonts: font-family, boldness, size, style.</h1><hr/>
+
+<!-- Difference between Serif & Sans-serif Fonts:
+================================================ 
+
+OK ! -->
+
+
+<!-- CSS Font Families:
+=======================
+
+In CSS, there are two types of font family names:
+
+  > generic family -
+  ------------------
+    a group of font families with a similar look, some example:
+    "Serif", "Monospace", "Sans-serif",...etc.
+
+  > specific font family - 
+  ------------------------
+    a specific font family, some example:
+    type serif: "Times New Roman", "Georgia", ...etc
+    type sans-serif: "Arial", "Verdana", ...etc
+    type Monospace: "Courier New", "Lucida console",....etc
+
+
+*** Note:
+========
+On computer screens, sans-serif fonts are considered easier to read
+than serif fonts. -->
+
+
+        <h2>CSS Font Families</h2><hr/>
+
+<!-- Font Family.
+================
+
+The font of a text is set with the 'font-family' property.
+The 'font-family' property should hold several font names as a
+"fallback" system. If the browser does not support the first font,
+it tries the next font, and so on.                                           -->
+
+      <p class="times_new_roman">This paragraph is shown in the Times New
+         Roman-serif font.</p>
+      <p class="arial">This paragraph is shown in the Arial-sans-serif font.</p>
+      <p class="times">This paragraph is shown in the Times-serif font.</p>
+      <p class="serif">This paragraph is shown in serif font.</p>
+      <p class="helvetica">This paragraph is shown in Helvetica_sans-serif
+         font.</p>
+      <p class="sansserif">This paragraph is shown in sans-serif font.</p>
+
+      <h2>CSS Font style</h2><hr/>
+
+
+<!-- The 'font-style'.
+=====================
+
+This property has three values:
+    > normal - The text is shown normally
+    > italic - The text is shown in italics
+    > oblique - The text is "leaning" (oblique is very similar to italic,
+     but less supported)  -->
+
+        <p class="normal">This is a paragraph in normal style.</p>
+        <p class="italic">This is a paragraph in italic style.</p>
+        <p class="oblique">This is a paragraph in oblique style.</p>
+
+
+<!-- Font-size 
+=============== -->
+
+        <h2>Font Size With Pixels</h2><hr/>
+
+<!-- Note: Normal = standard font-size : 16px -->
+
+        <p class="font_size_pixels-1">This is a paragraph written to explain font-size property with pixels 40px.</p>
+        <p class="font_size_pixels-2">This is a paragraph written to explain font-size property with pixels 30px.</p>
+        <p class="font_size_pixels-3">This is a paragraph written to explain font-size property with pixels 20px.</p>
+        <p class="font_size_pixels-4">This is a paragraph written to explain font-size property with pixels 14px.</p>
+
+
+        <h2>Set Font Size With Em</h2><hr/>
+        
+<!-- To allow users to resize the text (in the browser menu)
+1em =  the current font size. The default text size in browsers is 16px.
+So, the default size of 1em is 16px. -->
+
+<!--IMPORTANT:em
+ The size can be calculated from pixels to em using this formula: pixels/16=em -->
+
+        <p class="font_size_em-1">This is a paragraph written to explain font-size property with 2 em .</p>
+        <p class="font_size_em-2">This is a paragraph written to explain font-size property with 1.5 em .</p>
+        <p class="font_size_em-3">This is a paragraph written to explain font-size property with 0.75em .</p>
+        <p class="font_size_em-4">This is a paragraph written to explain font-size property with 3 em .</p>
+        <p class="font_size_em-5">This is a paragraph written to explain font-size property with 5 em .</p>
+
+<!--NOTE.
+=========
+use: body { font-size: 100% }: for better usage of 'em' in all browsers. -->
+
+
+        <h3>Font Weight</h3><hr/>
+        <p class="font_weight-1">This is a paragraph written to explain font-weight property with: normal .</p>
+        <p class="font_weight-2">This is a paragraph written to explain font-weight property with: lighter .</p>
+        <p class="font_weight-3">This is a paragraph written to explain font-weight property with: bold .</p>
+        <p class="font_weight-4">This is a paragraph written to explain font-weight property with: 900 .</p>
+
+
+        <p>Responsive Font Size</p>
+
+<!--The text size can be set with a 'vw' = "viewport width" unit.
+Viewport is the browser window size. 1vw = 1% of viewport width.
+If the viewport is 50cm wide, 1vw is 0.5cm. -->
+
+        <p class="responsive_font_weight-1">This is a paragraph written to explain Responsive font size property with: 10vw .</p>
+        <p class="responsive_font_weight-2">This is a paragraph written to explain Responsive font size property with: 5vw .</p>
+        <p class="responsive_font_weight-3">This is a paragraph written to explain Responsive font size property with: 3vw.</p>
+        <p class="responsive_font_weight-4">This is a paragraph written to explain Responsive font size property with: 1vw.</p>
+
+
+        <h3>Font Variant</h3><hr/>
+
+        <p class="normal2">My name is Hege Refsnes in font-variant: normal</p>
+        <p class="small2">My name is Hege Refsnes in font-variant: small-caps.</p>
+
+
+        <h3>Font Shorthand</h3><hr/>
+
+        <p class="ex1">This is a paragraph. This is a paragraph. This is a paragraph.
+                       This is a paragraph. This is a paragraph. This is a paragraph.
+                       This is a paragraph. This is a paragraph.</p>
+
+        <p class="ex2">This is a paragraph. This is a paragraph. This is a paragraph.
+                       This is a paragraph. This is a paragraph. This is a paragraph.
+                       This is a paragraph. This is a paragraph.</p>
+
+<!-- All CSS Font Properties
+Property 	  Description
+---------     -------------
+font 	      Sets all the font properties in one declaration
+font-family   Specifies the font family for text
+font-size     Specifies the font size of text
+font-style    Specifies the font style for text
+font-variant  Specifies whether or not a text should be displayed in a small-caps font
+font-weight   Specifies the weight of a font 
+
+
+Shorthand : font
+=================
+
+Constituent properties
+
+This property is a shorthand for the following CSS properties:
+
+    font-family (required)
+    font-size   (required)
+    font-stretch
+    font-style
+    font-variant
+    font-weight
+    line-height
+
+Syntax
+-------
+
+The font properties may be specified as either a single keyword, which will 
+select a system font, or as a shorthand for various font-related properties.
+
+If font is specified as a system keyword, it must be one of: caption, icon, 
+menu, message-box, small-caption, status-bar.
+
+If font is specified as a shorthand for several font-related properties.
+
+
+    font-style, font-variant and font-weight must precede font-size
+    font-variant may only specify the values defined in CSS 2.1, that is normal and small-caps
+    font-stretch may only be a single keyword value.
+    line-height must immediately follow font-size, preceded by "/", like this: "16px/3"
+    font-family must be the last value specified.
+
+Values-->
+    </body>
+</html>

@@ -1,0 +1,442 @@
+<!---------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+07 05 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+---------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout - Float Examples</title>
+</head>
+<body>
+    <h1>CSS Layout - Float Examples.</h1><hr/>
+
+
+<!-- Commom float examples are exposed in this page.
+
+
+Grid of Boxes / Equal Width Boxes
+==================================
+
+With the 'float' property, it is easy to float boxes of content side by side -->
+
+    <h2>Grid of Boxes</h2>
+    <p>Float boxes side by side:</p>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      #div-contenaire-1::after { 
+        content:""; 
+        clear: both; 
+        display: table;
+      }
+
+      .box {
+        float: left; 
+        max-width: 33.33%; 
+        padding: 20px;
+      }
+    </style>
+
+    <div id="div-contenaire-1">
+
+        <div class="box" style="background: #bbb;padding:5px 0px;">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+          imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
+          scelerisque enim ligula venenatis dolor.</p>
+        </div>
+
+        <div class="box" style="background: #ccc;">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+          imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
+          scelerisque enim ligula venenatis dolor.</p>
+        </div>
+
+        <div class="box" style="background: #ddd;padding: 30px;">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+          imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
+          scelerisque enim ligula venenatis dolor.</p>
+        </div>
+
+    </div>
+
+    <p style="border: 1px solid grey; padding: 5px;">Note that we also use 
+       the clearfix hack to take care of the layout flow, and that add the 
+       box-sizing property to make sure that the box doesn't break due to extra 
+       padding. Try to remove this code to see the effect.</p>
+
+
+<!-- What is box-sizing ?
+========================
+
+You can easily create three floating boxes side by side. However, when you add
+something that enlarges the width of any the content box (like padding or borders),
+that box will break.
+
+The 'box-sizing' property allows us to include the padding and border in the
+box's total width and height, making sure that the padding stays inside of
+the box and that it does not break.
+
+
+Images Side By Side
+===================
+
+The grid of boxes can also be used to display images side by side: -->
+
+        <style>
+          * {box-sizing: border-box;} /* already defined */
+
+          #div-image-album{
+            border: 5px dotted green;
+            background-color: rgba(0, 128, 0, 0.247);
+            margin: 15px 0 70px 0;
+          }
+
+          #div-image-album::after {
+            content: "";
+            clear: both;
+            display: table;
+          }
+
+          #div-image-container {
+            float: left;
+            width: 33.333%;
+            padding: 5px;
+          }
+
+        </style>
+
+        <h2>Images Side by side</h2>
+        <p>Float images side by side:</p>
+
+        <div id="div-image-album">
+
+          <div id="div-image-container">
+            <img src="../../images/acacia_gthorn.jpg" alt="acacia g thorns"
+                 style="width: 100%; border: 1px solid grey;">
+          </div>
+
+          <div id="div-image-container">
+            <img src="../../images/image_food.jpg" alt="image of vegetables"
+                 style="width: 100%; border: 1px solid grey;">
+          </div>
+
+          <div id="div-image-container">
+            <img src="../../images/acacia_flowers.jpg" alt="acacia in flowers"
+                 style="width: 100%; border: 1px solid grey;">
+          </div>
+        </div>
+
+
+<!-- Equal Height Boxes
+========================
+
+In the previous example, you learned how to float boxes side by side with
+an equal width.
+However, it is not easy to create floating boxes with equal
+heights. A quick fix however, is to set a fixed height, like in the example
+below: -->
+
+        <h2>Equal Height Boxes</h2>
+        <p>Floating boxes with equals heigths:</p>
+
+        <style media="screen">
+
+          * {box-sizing: border-box;} /* already defined */
+
+          #contenaire-3 {
+            border: 5px dotted blue;
+            background-color: rgba(0, 0, 255, 0.185);
+            height: 350px;
+            margin: 15px 0 30px 0;
+          }
+          #contenaire-3::after {
+            content:""; 
+            clear: both; 
+            display: table;
+         }
+          .box2 {
+            float:left; 
+            width: 45%; 
+            padding: 50px; 
+            height: 300px;
+            color: white;
+          }
+
+          #para-2 {
+            border: 3px solid grey;
+            margin: 30px 0 70px 0;
+          }
+        </style>
+
+        <div id="contenaire-3">
+
+          <div class="box2" style="background: rgb(146, 146, 146);">
+            <h2>Box1</h2>
+            <p>Some content, some content, some content</p>
+
+          </div>
+
+          <div class="box2" style="background: rgb(105, 105, 105);">
+            <h2>Box2</h2>
+            <p>Some content, some content, some content
+               Some content, some content, some content
+               Some content, some content, some content</p>
+          </div>
+        </div>
+
+        <p id="para-2" >This example not very flexible. It is ok to use
+           CSS height if you can guarantee that the boxes will
+           always have the same amount of content in them, but
+           that's not always the case. If you try the example
+           above on a mobile phone (or resize the browser window),
+           you will see that the second box's content will be
+           displayed outside of the box.<br/> Go back to the tutorial
+           and find another solution, if this is not what you want.</p>
+
+
+<!-- However, this is not very flexible. It is ok if you can guarantee that
+the boxes will always have the same amount of content in them. But many times,
+the content is not the same. If you try the example above on a mobile phone,
+you will see that the second box's content will be displayed outside of the box.
+
+This is where CSS3 'Flexbox' comes in handy - as it can automatically stretch
+boxes to be as long as the longest box:                                      -->
+
+        <h2>Equal Boxes Heigth with Flexbox</h2>
+
+        <style>
+          * { box-sizing: border-box;}  /* already defined */
+
+          #flex-container { 
+            display: flex; 
+            flex-wrap: nowrap; 
+            background: grey; 
+          }
+
+          #flex-container .box { 
+            background:#cecece; 
+            width: 33.333%;
+            margin: 5px; 
+            text-align: center; 
+            padding: 25px;
+          }
+
+          #para-flexbox {
+            margin-bottom: 70px;
+          }
+        </style>
+
+        <div id="flex-container">
+          <div class="box">
+            <b>Box1</b>-<br/> This is some text to make sure tjat the content gets
+            really tall.This is some text to make sure tjat the content gets
+            really tall.This is some text to make sure tjat the content gets
+            really tall.
+          </div>
+
+          <div class="box">
+            <b>Box2</b>-<br/>My height will follow Box1 height.
+          </div>
+
+          <div class="box">
+            <b>Box3</b>-<br/> This is some text to make sure tjat the content gets
+            really tall.This is some text to make sure tjat the content gets
+            really tall.This is some text to make sure tjat the content gets
+            really tall.This is some text to make sure tjat the content gets
+            really tall.This is some text to make sure tjat the content gets
+            really tall.This is some text to make sure tjat the content gets
+            really tall.This is some text to make sure tjat the content gets
+            really tall.This is some text to make sure tjat the content gets
+            really tall.This is some text to make sure tjat the content gets
+            really tall.This is some text to make sure tjat the content gets
+            really tall.This is some text to make sure tjat the content gets
+            really tall.This is some text to make sure tjat the content gets
+            really tall.
+          </div>
+
+        </div>
+
+        <p id="para-flexbox">Try to resize the browser window to see the 
+          flexible layout. <br/><br/>
+          <strong>Note:</strong> Flexbox is not supported in Internet Explorer
+          10 or earlier versions</p>
+        
+
+
+<!-- Navigation Menu
+=====================
+
+Use float with a list of hyperlinks to create a horizontal menu: -->
+
+        <h2>Navigation Menu</h2>
+
+        <style media="screen">
+
+          ul.nav-menu {
+            list-style-type: none; 
+            padding: 0px; 
+            background: #333; 
+            overflow: hidden;
+            margin: 50px 0px;
+          }
+
+          li.nav-menu {float: left;}
+
+          li.nav-menu a {
+            display: inline-block; 
+            color: white;
+            text-decoration: none; 
+            padding: 14px 16px; 
+            text-align: center;
+          }
+
+          li.nav-menu a:hover {background: #111;}
+
+          .active {background: red;}
+
+        </style>
+
+        <ul class="nav-menu">
+          <li class="nav-menu"><a href="#Home" class="active">Home</a></li>
+          <li class="nav-menu"><a href="#News">News</a></li>
+          <li class="nav-menu"><a href="#Contacts">Contact</a></li>
+          <li class="nav-menu"><a href="#About">About</a></li>
+          <li class="nav-menu"><a href="#Archives">Archives</a></li>
+        </ul>
+
+<!-- NavBar By Using CSS flexbox  (TO OPTIMIZE !)-->
+
+        <style>
+          * {box-sizing: border-box;}
+
+          .menu-nav-2 {
+            list-style-type: none;
+            background: #333;
+            display: flex;
+            padding: 0;
+            margin-bottom: 100px;
+            
+          }
+
+          .menu-nav-2 li {
+            padding:14px 16px;
+            text-align: center;
+          }
+          
+          .menu-nav-2 a {
+            text-decoration: none;
+            color: #ffffff;  
+          }
+          
+          .menu-nav-2 li:hover {
+            background-color: #111;
+          }
+
+          .active-2 {background: red;}
+
+
+        </style>
+
+        <ul class="menu-nav-2">
+          <li class="nav-menu-2 active-2"><a href="#Home">Home</a></li>
+          <li class="nav-menu-2"><a href="#News">News</a></li>
+          <li class="nav-menu-2"><a href="#Contacts">Contact</a></li>
+          <li class="nav-menu-2"><a href="#About">About</a></li>
+          <li class="nav-menu-2"><a href="#Archives">Archives</a></li>
+        </ul>
+
+
+
+
+
+
+
+<!-- Web Layout Example
+========================
+
+It is also common to do entire web layouts using the float property:       -->
+
+
+        <h2>Web Layout Example</h2>
+
+        <style media="screen">
+
+          * {box-sizing: border-box;}
+
+          .header, .footer {
+            background: grey; 
+            color: white;
+          }
+
+          .header {padding: 15px;}
+
+          .footer {padding: 10px;}
+
+          .clearfix-web::after { 
+            content: ""; 
+            clear: both; 
+            display: table;
+          }
+
+          .column {
+            float:left; 
+            padding: 15px;
+          }
+          .menu {width: 25%;}
+
+          .content {width: 75%;}
+
+          .menu ul.web {
+            list-style-type: none; 
+            margin: 0px; 
+            padding: 0px;
+          }
+
+          .menu ul.web li.web {
+            padding: 8px; 
+            margin-bottom: 8px;
+            background: #33b5e5; 
+            color: #ffffff;}
+
+          .menu ul.web li.web:hover {background: #0099cc;}
+
+        </style>
+
+        <div class="header">
+          <h2>Chania</h2>
+        </div>
+
+        <div class="clearfix-web">
+          <div class="column menu">
+            <ul class="web">
+              <li class="web">The Flight</li>
+              <li class="web">The City</li>
+              <li class="web">The Island</li>
+              <li class="web">The Food</li>
+            </ul>
+          </div>
+
+          <div class="column content">
+            <h2>The city</h2>
+            <p>Chania is the capital of the Chania region on the island
+              of Crete. The city can be divided in two parts, the old
+              town and the modern city.</p>
+            <p>You will learn more about web layout and responsive web
+              pages in a later chapter.</p>
+          </div>
+
+        </div>
+
+        <div class="footer">
+          <p>Footer Text</p>
+        </div>
+
+  </body>
+</html>

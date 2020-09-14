@@ -1,0 +1,165 @@
+<!---------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+11 05 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+---------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>CSS Combinators</title>
+  </head>
+  <body>
+
+<!--All CSS Combinator Selectors
+=================================
+
+Selector 	        Example 	    Example description
+--------          --------      --------------------
+element element 	div p 	      Selects all <p> elements inside <div> elements
+--------------------------------------------------------------------------------
+element>element 	div > p 	    Selects all <p> elements where the parent is
+                                a <div> element
+--------------------------------------------------------------------------------
+element+element 	div + p 	    Selects all <p> elements that are placed
+                                immediately after <div> elements
+--------------------------------------------------------------------------------
+element1~element2 	p ~ ul 	    Selects every <ul> element that are preceded
+                                by a <p> element
+------------------------------------------------------------------------------->
+
+
+    <h1>CSS Combinators.</h1><hr/>
+
+
+<!--  A 'combinator' is something that explains the relationship between the
+'selectors'.
+
+A 'CSS selector' can contain more than one simple selector. Between the simple
+selectors, we can include a combinator.
+
+There are four different combinators in CSS:
+
+    > descendant selector (space)
+    > child selector (>)
+    > adjacent sibling selector (+)
+    > general sibling selector (~)
+
+
+Descendant selector
+====================
+
+The 'descendant selector' matches all elements that are descendants of
+a specified element.
+
+The following example selects all <p> elements inside <div> elements:  -->
+
+    <h2>Descendant selector</h2>
+    <style>
+      .div-1 p { background: orange;}
+    </style>
+
+    <div class="div-1">
+      <p>Paragraph 1 in the div.</p>
+      <p>Paragraph 2 in the div.</p>
+      <section>
+        <p>Paragraph 3 in the div.</p>
+      </section>
+    </div>
+
+    <p>Paragraph 4. Not in a div.</p>
+    <p>Paragraph 5. Not in a div.</p>
+
+
+
+<!-- Child Selector
+====================
+
+The child selector selects all elements that are direcet children of a
+specified element.
+
+The following example selects all <p> elements that are children of a
+<div> element: -->
+
+    <h2>Child Selector</h2>
+
+    <style>
+      .div-2 > p {
+        background: lightgreen;
+      }
+    </style>
+
+    <div class= "div-2">
+      <p>Paragraph 1 in the div.</p>
+      <p>Paragraph 2 in the div.</p>
+      <section>
+        <p>Paragraph 3 in the div.</p>
+      </section> <!-- not Child but Descendant: not selected -->
+      <p>Paragraph 4 in the div.</p>
+    </div>
+
+    <p>Paragraph 5. Not in a div.</p>
+    <p>Paragraph 6. Not in a div.</p>
+
+
+<!-- Adjacent Sibling Selector
+===============================
+
+The 'adjacent sibling' selector selects all elements that are the adjacent
+siblings of a specified element.
+
+Sibling elements must have the same parent element, and "adjacent" means
+"immediately following".
+
+The following example selects all <p> elements that are placed immediately
+after <div> elements: -->
+
+    <h2>Adjacent Sibling Selector</h2>
+
+    <style>
+      .div-3 + p {
+      background-color: yellow;
+      }
+    </style>
+
+    <div class="div-3">
+    <p>Paragraph 1 in the div.</p>
+    <p>Paragraph 2 in the div.</p>
+    </div>
+
+    <p>Paragraph 3. Not in a div.</p>
+    <p>Paragraph 4. Not in a div.</p>
+
+
+<!-- General Sibling Selector
+==============================
+
+The general sibling selector selects all elements that are siblings of
+a specified element.
+
+The following example selects all <p> elements that are siblings
+of <div> elements:  -->
+
+    <h2>General Sibling Selector</h2>
+
+    <style>
+      
+      .div-4 ~ p {
+        background-color: magenta;
+      }
+    </style>
+
+    <p>Paragraph 1.</p>
+
+    <div class="div-4">
+      <p>Paragraph 2.</p>
+    </div>
+
+    <p>Paragraph 3.</p>
+    <code>Some code.</code>
+    <p>Paragraph 4.</p>
+    
+  </body>
+</html>

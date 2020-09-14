@@ -1,0 +1,102 @@
+<!------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+19 03 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS Text Shadow</title>
+        <style media="screen">
+            #p1 { font-size: 50px; text-shadow: 1px 1px red; }
+            #p2 { font-size: 50px; text-shadow: 2px 2px red; }
+            #p3 { font-size: 50px; text-shadow: 3px 3px red; }
+            #p4 { font-size: 50px; text-shadow: 4px 2px red; }
+
+
+            .white-text-with-blue-shadow {  /* Multiple shadows*/
+                text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.5em blue;
+                color: white;
+                font: 1.5em Georgia, serif;
+                }
+        </style>
+
+    </head>
+    <body>
+        <h1>CSS Text Shadow</h1><hr/>
+
+<!-- Text shadow
+==================
+The text-shadow property adds shadow to text.
+The following example specifies the position of:
+> horizontal shadow (3px),
+> vertical shadow (2px)
+> color of the shadow (red):                                               
+
+Syntax
+========
+
+/* offset-x | offset-y | blur-radius | color */
+text-shadow: 1px 1px 2px black; 
+
+/* color | offset-x | offset-y | blur-radius */
+text-shadow: #fc0 1px 0 10px; 
+
+/* offset-x | offset-y | color */
+text-shadow: 5px 5px #558abb;
+
+/* color | offset-x | offset-y */
+text-shadow: white 2px 5px;
+
+/* offset-x | offset-y
+/* Use defaults for color and blur-radius */
+text-shadow: 5px 10px;
+
+/* Global values */
+text-shadow: inherit;
+text-shadow: initial;
+text-shadow: unset;
+
+
+
+
+-->
+         <p id="p1">Text Shadow effect</p>
+         <p id="p2">Text Shadow effect</p>
+         <p id="p3">Text Shadow effect</p>
+         <p id="p4">Text Shadow effect</p>
+         <p class="white-text-with-blue-shadow">Sed ut perspiciatis unde omnis iste
+            natus error sit voluptatem accusantium doloremque laudantium,
+            totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+
+        
+        
+
+
+<!-- All CSS Text Properties.
+=============================
+
+Property 	        Description
+------------      -------------
+color 	          Sets the color of text
+direction 	      Specifies the text direction/writing direction
+letter-spacing    Increases or decreases the space between characters in a text
+line-height 	    Sets the line height
+text-align 	      Specifies the horizontal alignment of text
+text-decoration   Specifies the decoration added to text
+text-indent 	    Specifies the indentation of the first line in a text-block
+text-shadow 	    Specifies the shadow effect added to text
+text-transform    Controls the capitalization of text
+text-overflow 	  Specifies how overflowed content that is not displayed
+                  should be signaled to the user
+unicode-bidi 	    Used together with the direction property to set or return
+                  whether the text should be overridden to support multiple
+                  languages in the same document
+vertical-align    Sets the vertical alignment of an element
+white-space 	    Specifies how white-space inside an element is handled
+word-spacing 	    Increases or decreases the space between words in a text -->
+
+    </body>
+</html>

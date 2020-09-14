@@ -1,0 +1,166 @@
+<!-------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+15 06 2020
+CSS Advanced from: https://www.w3schools.com/css/
+ -------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Box Sizing </title>
+  </head>
+  <body>
+    <h1>CSS Box Sizing.</h1><hr/>
+
+<!-- CSS Box Sizing
+=====================
+
+The CSS 'box-sizing' property allows us to include the 'padding' and 'border'
+in an element's 'width' and 'height'.
+
+
+Without the CSS box-sizing Property
+====================================                                        -->
+
+       <h2>Without box-sizing.</h2>
+
+<!-- By default, the total 'width' and 'height' of an element is calculated
+like this:
+
+ > width of an element = 'content width' + 'paddings' + 'borders'
+ > height of an element = 'content height' + 'paddings' + 'borders'
+
+This means: When you set the width/height (of the content), the element
+may appear bigger than you have set, because the element's border and
+padding are added to the element's total width/height .
+
+The following illustration shows two <div> elements with the same specified
+width and height. The two <div> elements end up with different sizes in the
+ result (because div2 has a padding specified):                                      -->
+
+    <style media="screen">
+      .div1 {
+        width: 300px;  /*width of the content area only*/
+        height: 100px;
+        border: 1px solid blue;
+      }
+
+      .div2 {
+        width: 300px;  /* width of the content area only*/
+        height: 100px;
+        padding: 50px;
+        border: 1px solid red;
+      }
+    </style>
+
+    <div class="div1">This div is smaller
+      (width is 300px and height is 100px).
+    </div><br>
+
+    <div class="div2">This div is bigger
+      (width is also 300px and height is 100px).
+    </div>
+
+
+<!--With the CSS box-sizing Property
+======================================                                       -->
+
+       <h2>With box-sizing.</h2>
+
+<!-- The 'box-sizing' property allows us to include the 'padding' and 'border'
+in the element 'width' and 'height'.
+
+If you set 'box-sizing: border-box' on an element, then 'padding' and 'border'
+are included in the width and height: both divs are the same size now!
+
+Here is the same example as above, with 'box-sizing: border-box'  added to
+both <div> elements:                                                         -->
+
+       <style media="screen">
+         .div1b {
+           box-sizing: border-box;
+           width: 300px;
+           height: 100px;
+           border: 1px solid blue;
+           text-align: center;
+         }
+
+         .div2b {
+           box-sizing: border-box;
+           width: 300px;
+           height: 100px;
+           padding: 50px;
+           border: 1px solid red;
+           text-align: center;
+         }
+
+       </style>
+
+      <div class="div1b">Both divs are the same size now!</div>
+      <br>
+
+      <div class="div2b">Hooray!</div>
+
+
+<!-- Since the result of using the 'box-sizing: border-box' is so much better,
+ many developers want all elements on their pages to work this way.
+
+The code below ensures that all elements are sized in this more intuitive way.
+Many browsers already use 'box-sizing: border-box' for many form elements
+(but not all - which is why inputs and text areas look different at
+width: 100%;).
+
+Applying this to all elements is safe and wise:
+_________________________________
+* {
+  box-sizing: border-box;
+}
+_________________________________
+
+
+
+Summary:
+=========
+
+ > Without 'box-sizing: border-box'
+ --------------------------------
+ .box {width: 350px; border: 10px solid black;}
+ renders a box that is 370px wide.
+
+ > With box-sizing: border-box
+ ------------------------------
+ .box {width: 350px; border: 10px solid black;}
+ renders a box that is 350px wide, with the area for content being
+ 330px wide.
+ The content box can't be negative and is floored to 0, making it impossible
+ to use border-box to make the element disappear.
+
+
+CSS Box Sizing Property
+============================
+
+Property 	       Description
+----------       -------------
+box-sizing 	     Defines how the 'width' and 'height' of an element are
+                 calculated: should they include padding and borders, or not
+
+
+Property Values  Description
+---------------  ------------
+--------------------------------------------------------------------------------
+content-box 	   Default. The width and height properties (and min/max
+                 properties) includes only the content. Border and padding are
+                 not included
+--------------------------------------------------------------------------------
+border-box 	     The width and height properties (and min/max properties)
+                 includes content, padding and border
+--------------------------------------------------------------------------------
+initial 	       Sets this property to its default value. Read about initial
+--------------------------------------------------------------------------------
+inherit 	       Inherits this property from its parent element. Read about
+                 inherit
+------------------------------------------------------------------------------->
+
+  </body>
+</html>

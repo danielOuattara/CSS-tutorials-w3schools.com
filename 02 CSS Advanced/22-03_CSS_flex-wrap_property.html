@@ -1,0 +1,154 @@
+<!-------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+23 06 2020
+CSS Advanced from: https://www.w3schools.com/css/
+ -------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS FlexBox </title>
+  </head>
+  <body>
+    <h1>CSS 'flex-wrap' Property</h1><hr/>
+
+
+<!-- The 'flex-wrap' property specifies whether the flex items 
+should wrap or not.
+
+The next examples have 12 flex items, to better demonstrate the 'flex-wrap'
+property.
+
+
+CSS Syntax
+===========  
+flex-wrap: wrap| nonwrap| wrap-reverse
+
+Value            Description
+-----            -----------
+wrap             specifies that the flex items will wrap if necessary
+--------------------------------------------------------------------------------
+nowrap           specifies that the flex items will not wrap (default)
+--------------------------------------------------------------------------------
+wrap-reverse     specifies that the flexible items will wrap if necessary,
+                 in reverse order
+-------------------------------------------------------------------------------->
+
+
+<h2>flex-wrap Property</h2>
+<!-- ------------------------------------------------->
+      <h3>flex-wrap: wrap</h3>
+      <!-- wrap value specifies that the flex items will wrap if necessary -->
+      <style>
+        .flex-container_7 {
+          display: flex;
+          background-color: dodgerblue;
+          flex-wrap: wrap;
+        }
+
+        .flex-container_7 > div {
+          background-color: #f1f1f1;
+          margin: 10px;
+          font-size: 30px;
+          width: 100px;
+          text-align: center;
+          line-height: 75px;
+        }
+
+      </style>
+      <div class="flex-container_7">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+      </div><br/><br/>
+
+      <!-------------------------------------------------->
+
+
+      <h3>flex-wrap: nonwrap</h3>
+      <!-- nowrap value specifies that the flex items will not wrap (default) -->
+      <style>
+        .flex-container_8 {
+          display: flex;
+          background-color: dodgerblue;
+          flex-wrap: non-wrap;
+        }
+
+        .flex-container_8 > div {
+          background-color: #f1f1f1;
+          margin: 10px;
+          font-size: 30px;
+          width: 100px;
+          text-align: center;
+          line-height: 75px; 
+        }
+
+      </style>
+      <div class="flex-container_8">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+      </div><br/><br/>
+
+      <!-------------------------------------------------->
+
+      
+      <h3>flex-wrap: wrap-reverse</h3>
+      <!-- wrap-reverse value specifies that the flexible items will wrap 
+      if necessary, in reverse order -->
+      <style>
+        .flex-container_9 {
+          display: flex;
+          background-color: dodgerblue;
+          flex-wrap: wrap-reverse;
+        }
+
+        .flex-container_9 > div {
+          background-color: #f1f1f1;
+          margin: 10px;
+          font-size: 30px;
+          width: 100px;
+          text-align: center;
+          line-height: 75px;
+        }
+
+      </style>
+      <div class="flex-container_9">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+      </div><br/><br/><hr/>
+
+      <!-------------------------------------------------->
+
+
+  </body>
+</html>

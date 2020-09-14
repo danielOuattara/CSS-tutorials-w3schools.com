@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS border</title>
+    <style>
+      p.dotted {border-style: dotted;}
+      p.dashed {border-style: dashed;}
+      p.solid {border-style: solid;}
+      p.double {border-style: double;}
+      p.groove {border-style: groove;}
+      p.ridge {border-style: ridge;}
+      p.inset {border-style: inset;}
+      p.outset {border-style: outset;}
+      p.none {border-style: none;}
+      p.hidden {border-style: hidden;}
+      p.mix {border-style: dotted dashed solid double;}
+
+      .p1 {
+        text-align:justify;
+        border-style: solid;
+        border-width: 5px;
+        border-color:green;
+      }
+
+      .p2 {
+        text-align:justify;
+        border-style: solid;
+        border-width: 5px;
+        border-color:green blue green blue; /* <--- */
+      }
+
+      .p3 {
+        text-align:justify;
+        border-top-style: dashed;
+        border-right-style: solid;
+        border-bottom-style: dotted;
+        border-left-style: solid;
+        border-width: 5px;
+        border-color:green blue green blue;
+      }
+
+      .p4 {
+        text-align:justify;
+        border-style: dashed solid ;
+        border-width: 5px;
+        border-color:green blue green blue;
+      }
+
+      .p5 {
+        text-align:justify;
+        border: 3px solid red;
+      }
+
+      .p6 {
+        text-align:justify;
+        border-left: 4px solid red;
+        background-color: lightgrey;
+      }
+
+      .p7 {
+        text-align:justify;
+        border-bottom: 3px solid red;
+        background-color: lightgrey;
+      }
+
+      .p8 {
+        text-align:justify;
+        border-top: 3px solid red;
+        background-color: lightgrey;
+      }
+
+      .p9 {
+        text-align:justify;
+        border: 5px solid red;
+        background-color: lightgrey;
+          border-radius: 5px;
+      }
+
+      .p10 {
+        text-align:justify;
+        border: 5px solid red;
+        background-color: lightgrey;
+        border-radius: 10px;
+      }
+
+      .p11 {
+        text-align:justify;
+        border: 5px solid red;
+        background-color: lightgrey;
+        border-radius: 15px;
+      }
+      .p12 {
+        text-align:justify;
+        border-style: solid;
+        border-top:double;
+        background-color: lightgrey;
+      }
+      .p13 {
+        text-align:justify;
+        border-style: solid;
+        background-color: lightgrey;
+        border-left-width:15px
+      }
+      .p14 {
+        text-align:justify;
+        border: 5px solid red;
+        background-color: lightgrey;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>CSS border-style:</h1>
+
+
+    <h2>The border-style Property</h2>
+    <p>This property specifies what kind of border to display:</p>
+
+    <p class="dotted">A dotted border.</p>
+    <p class="dashed">A dashed border.</p>
+    <p class="solid">A solid border.</p>
+    <p class="double">A double border.</p>
+    <p class="groove">A groove border.</p>
+    <p class="ridge">A ridge border.</p>
+    <p class="inset">An inset border.</p>
+    <p class="outset">An outset border.</p>
+    <p class="none">No border.</p>
+    <p class="hidden">A hidden border.</p>
+    <p class="mix">A mixed border.</p>
+
+    <h2>The border-radius Property</h2>
+    <p>This property is used to add rounded borders to an element:</p>
+
+    <p class="normal">Normal border</p>
+    <p class="round1">Round border</p>
+    <p class="round2">Rounder border</p>
+    <p class="round3">Roundest border</p>
+
+
+
+    <p class="p1">Le Lorem Ipsum est simplement du faux texte
+       employé dans la composition et la mise en page avant impression.
+       Le Lorem Ipsum est le faux texte standard de l'imprimerie
+       depuis les années 1500, quand un imprimeur anonyme assembla
+       ensemble des morceaux de texte pour réaliser un livre spécimen
+       de polices de texte.
+     </p>
+
+     <p class="p2">Le Lorem Ipsum est simplement du faux texte
+        employé dans la composition et la mise en page avant impression.
+        Le Lorem Ipsum est le faux texte standard de l'imprimerie
+        depuis les années 1500, quand un imprimeur anonyme assembla
+        ensemble des morceaux de texte pour réaliser un livre spécimen
+        de polices de texte.
+      </p>
+
+      <p class="p3">Le Lorem Ipsum est simplement du faux texte
+         employé dans la composition et la mise en page avant impression.
+         Le Lorem Ipsum est le faux texte standard de l'imprimerie
+         depuis les années 1500, quand un imprimeur anonyme assembla
+         ensemble des morceaux de texte pour réaliser un livre spécimen
+         de polices de texte.
+       </p>
+
+      <p class="p4">Le Lorem Ipsum est simplement du faux texte
+         employé dans la composition et la mise en page avant impression.
+         Le Lorem Ipsum est le faux texte standard de l'imprimerie
+         depuis les années 1500, quand un imprimeur anonyme assembla
+         ensemble des morceaux de texte pour réaliser un livre spécimen
+         de polices de texte.
+       </p>
+
+      <p class="p5">Le Lorem Ipsum est simplement du faux texte
+         employé dans la composition et la mise en page avant impression.
+         Le Lorem Ipsum est le faux texte standard de l'imprimerie
+         depuis les années 1500, quand un imprimeur anonyme assembla
+         ensemble des morceaux de texte pour réaliser un livre spécimen
+         de polices de texte.
+       </p>
+
+      <p class="p6">Le Lorem Ipsum est simplement du faux texte
+         employé dans la composition et la mise en page avant impression.
+         Le Lorem Ipsum est le faux texte standard de l'imprimerie
+         depuis les années 1500, quand un imprimeur anonyme assembla
+         ensemble des morceaux de texte pour réaliser un livre spécimen
+         de polices de texte.
+       </p>
+
+       <p class="p7">Le Lorem Ipsum est simplement du faux texte
+          employé dans la composition et la mise en page avant impression.
+          Le Lorem Ipsum est le faux texte standard de l'imprimerie
+          depuis les années 1500, quand un imprimeur anonyme assembla
+          ensemble des morceaux de texte pour réaliser un livre spécimen
+          de polices de texte.
+        </p>
+
+        <p class="p8">Le Lorem Ipsum est simplement du faux texte
+           employé dans la composition et la mise en page avant impression.
+           Le Lorem Ipsum est le faux texte standard de l'imprimerie
+           depuis les années 1500, quand un imprimeur anonyme assembla
+           ensemble des morceaux de texte pour réaliser un livre spécimen
+           de polices de texte.
+         </p>
+
+         <p class="p9">Le Lorem Ipsum est simplement du faux texte
+            employé dans la composition et la mise en page avant impression.
+            Le Lorem Ipsum est le faux texte standard de l'imprimerie
+            depuis les années 1500, quand un imprimeur anonyme assembla
+            ensemble des morceaux de texte pour réaliser un livre spécimen
+            de polices de texte.
+          </p>
+
+          <p class="p10">Le Lorem Ipsum est simplement du faux texte
+             employé dans la composition et la mise en page avant impression.
+             Le Lorem Ipsum est le faux texte standard de l'imprimerie
+             depuis les années 1500, quand un imprimeur anonyme assembla
+             ensemble des morceaux de texte pour réaliser un livre spécimen
+             de polices de texte.
+           </p>
+
+           <p class="p11">Le Lorem Ipsum est simplement du faux texte
+              employé dans la composition et la mise en page avant impression.
+              Le Lorem Ipsum est le faux texte standard de l'imprimerie
+              depuis les années 1500, quand un imprimeur anonyme assembla
+              ensemble des morceaux de texte pour réaliser un livre spécimen
+              de polices de texte.
+            </p>
+           <p class="p12">Le Lorem Ipsum est simplement du faux texte
+              employé dans la composition et la mise en page avant impression.
+              Le Lorem Ipsum est le faux texte standard de l'imprimerie
+              depuis les années 1500, quand un imprimeur anonyme assembla
+              ensemble des morceaux de texte pour réaliser un livre spécimen
+              de polices de texte.
+            </p>
+           <p class="p13">Le Lorem Ipsum est simplement du faux texte
+              employé dans la composition et la mise en page avant impression.
+              Le Lorem Ipsum est le faux texte standard de l'imprimerie
+              depuis les années 1500, quand un imprimeur anonyme assembla
+              ensemble des morceaux de texte pour réaliser un livre spécimen
+              de polices de texte.
+            </p>
+           <p class="p14">Le Lorem Ipsum est simplement du faux texte
+              employé dans la composition et la mise en page avant impression.
+              Le Lorem Ipsum est le faux texte standard de l'imprimerie
+              depuis les années 1500, quand un imprimeur anonyme assembla
+              ensemble des morceaux de texte pour réaliser un livre spécimen
+              de polices de texte.
+            </p>
+
+  </body>
+</html>

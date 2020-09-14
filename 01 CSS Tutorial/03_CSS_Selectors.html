@@ -1,0 +1,163 @@
+<!------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+03 03 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+ ------------------------------------------------>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS Selectors</title>
+    </head>
+    <body>
+        <h1>CSS Selectors</h1><hr/>
+
+<!-- CSS selectors
+==================
+
+CSS selectors are used to "find" (or select) the HTML elements 
+you want to style. We can divide CSS selectors into five categories:
+
+  > 'Simple selectors' (select elements based on 'name', 'id', 'class')
+
+  > 'Combinator selectors' (select elements based on a specific relationship between them)
+
+  > 'Pseudo-class selectors' (select elements based on a certain state)
+
+  > 'Pseudo-elements selectors' (select and style a part of an element)
+
+  > 'Attribute selectors' (select elements based on an attribute or attribute value)
+
+This page will explain the most basic CSS selectors.                                   -->
+
+
+<!-- CSS Element Selectors 
+===========================
+
+The element selector selects HTML elements based on the element name. -->
+
+        <style>
+          p {
+            text-align: center; 
+            color: red;
+          }
+        </style>
+
+        <p>Every paragraph will be affected by the style.</p>
+        <p>And me!</p><br/><hr/><br/> 
+
+
+<!-- CSS id Selector 
+====================
+
+The id selector uses the 'id' attribute of an HTML element to select a specific element.
+
+The 'id' of an element is unique within a page, so the 'id' selector is used to select 
+one unique element!
+
+To select an element with a specific 'id', write a hash (#) character, followed by 
+the id of the element.                                                                 -->
+
+        <style>
+          #para1 {
+            text-align: center; 
+            color:green;
+          }
+          #para2 {
+            text-align: right; 
+            color:blue;
+          }
+        </style>
+
+        <p id="para2">I was red by p {} and now blue by #para2 {}</p>
+        <p id="para1">Me too initialy. But #para1 made me green!</p>
+        <p>This paragraph is affected by the p{} style.</p><br/><hr/><br/> 
+
+
+<!-- CSS Class Selector 
+=======================
+
+The 'class' selector selects HTML elements with a specific 'class' attribute.
+
+To select elements with a specific class, write a period (.) character, 
+followed by the class name.                                                           -->
+
+        <style>
+          .center {
+            text-align: center; 
+            color: orange;
+          }
+
+          p.center2 {
+            text-align: right; 
+            color: violet;
+          }
+
+          p.large {font-size: 200%;}
+          
+          p.center3 {
+            text-align: center;
+            color: grey;
+          }
+        </style>
+
+        <h3 class="center">Orange and center-aligned heading</h3>
+        <p class="center">Orange and center-aligned paragraph.</p>
+
+        <h3 class="center2">This heading will not be affected</h3>
+        <p class="center2">This paragraph was initialy red and center-aligned.</p>
+
+        <h3 class="center3">This heading will not be affected</h3>
+        <p class="center3">This paragraph will be grey and center-aligned.</p>
+        <p class="center3 large">This paragraph will be red, center-aligned, and in 
+             a large font-size.</p>
+
+
+
+<!--The CSS Universal Selector:
+===============================
+
+The universal selector (*) selects all HTML elements on the page.                -->
+        <style>
+          * {
+            padding: 0; 
+            margin: 0
+          }
+        </style>
+
+
+
+ <!-- The CSS Grouping Selector
+  ==============================
+  
+The grouping selector selects all the HTML elements with the same style definitions. 
+
+        <style>
+          h1 {
+            text-align: center;
+            color: red;
+          }
+
+          h2 {
+            text-align: center;
+            color: red;
+          }
+
+          p {
+            text-align: center;
+            color: red;
+          }
+        </style>
+  
+It will be better to group the selectors, to minimize the code.
+To group selectors, separate each selector with a comma.
+
+          <style>
+          h1, h2, p {
+            text-align: center;
+            color: red;
+          }
+        </style>                                                                 -->  
+    </body>
+</html>

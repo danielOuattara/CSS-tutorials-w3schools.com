@@ -1,0 +1,86 @@
+<!------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+17 03 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+-------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS Outline Offset</title>
+        <style>
+            p {
+                padding: 20px; 
+                margin:110px;
+            }
+
+            p.ex1 { 
+                    border: 1px solid black;
+                    outline:1px solid red; 
+                    outline-offset: 35px; 
+                }
+
+            p.ex2 { 
+                    border: 1px solid black;
+                    outline:10px solid red; 
+                    outline-offset: 15px; 
+                }
+
+            p.ex3 { 
+                    border: 1px solid black;
+                    outline:10px solid red; 
+                    outline-offset: 25px; 
+                }
+
+            p.ex4 { 
+                    border: 1px solid black;
+                    outline:30px solid red; 
+                    outline-offset: 25px; 
+                }
+
+            p.ex5 { 
+                    background: yellow; 
+                    border: 1px solid black;
+                    outline:30px solid red; 
+                    outline-offset: 5px; 
+                }
+
+        </style>
+
+    </head>
+    <body>
+        <h1>CSS Outline Offset</h1>
+
+<!-- CSS Outline Offset
+========================
+
+The 'outline-offset' property adds a transparent space between an outline
+and the edge/border of an element. -->
+
+    <p class="ex1">This paragraph has an outline 5px outside the border edge.</p>
+    <p class="ex2">This paragraph has an outline 15px outside the border edge.</p>
+    <p class="ex3">This paragraph has an outline 25px outside the border edge.</p>
+    <p class="ex4">This paragraph has an outline 35px outside the border edge.</p>
+    <p class="ex5">This paragraph has an outline 45px outside the border edge.</p>
+
+
+<!-- All CSS Outline Properties
+
+Property 	   Description
+----------     -------------
+outline 	A shorthand property for setting outline-width, outline-style, and outline-color in one declaration
+--------------------------------------------------------------------------------------------------------------------
+outline-width 	Sets the width of an outline                             
+--------------------------------------------------------------------------------------------------------------------
+outline-color 	Sets the color of an outline
+--------------------------------------------------------------------------------------------------------------------
+outline-style 	Sets the style of an outline
+--------------------------------------------------------------------------------------------------------------------
+outline-offset 	Specifies the space between an outline and the edge or border of an element
+
+-->
+
+
+    </body>
+</html>

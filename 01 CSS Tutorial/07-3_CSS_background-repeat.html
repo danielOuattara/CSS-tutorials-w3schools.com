@@ -1,0 +1,120 @@
+<!-------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+10 03 2020
+CSS Tutorial from: https://www.w3schools.com/css/
+-------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        
+        <meta charset="utf-8">
+        <title>CSS background-repeat </title>
+    </head>
+    <body>
+        <h1>CSS background-repeat.</h1><hr/>
+
+<!-- CSS background-repeat
+============================
+
+By default, the 'background-image' property repeats an image 
+both horizontally and vertically.
+
+
+CSS Syntax
+===========
+
+background-repeat: repeat|repeat-x|repeat-y|no-repeat|initial|inherit;
+
+Value  	  Description
+-----------------------------------------------------------------
+repeat 	  The background image is repeated both vertically and 
+          horizontally. The last image will be clipped if it 
+          does not fit. (default)
+-----------------------------------------------------------------
+repeat-x 	The background image is repeated only horizontally 	
+-----------------------------------------------------------------
+repeat-y 	The background image is repeated only vertically 	
+-----------------------------------------------------------------
+no-repeat The background-image is not repeated. The image will 
+          only be shown once 	
+-----------------------------------------------------------------
+space 	  The background-image is repeated as much as possible
+          without clipping. The first and last images are pinned 
+          to either side of the element, and whitespace is 
+          distributed evenly between the images 	
+-----------------------------------------------------------------
+round 	  The background-image is repeated and squished or 
+          stretched to fill the space (no gaps) 	
+-----------------------------------------------------------------
+initial 	Sets this property to its default value. Read about 
+          initial 	
+-----------------------------------------------------------------
+inherit 	Inherits this property from its parent element. 
+          Read about inherit
+-----------------------------------------------------------------
+
+
+Some images should be repeated only horizontally or vertically, 
+or they will look strange, like this: -->
+
+        <style>
+          * {padding: 0; margin: 0}
+          div#one {
+            height: 600px;
+            width: 600px;
+            border: 2px solid black;
+            background-image: url("./../../images/butterfly.jpg");
+           
+          }
+
+          </style>
+
+          <div id="one"> div#one default: </div>
+
+<!-- If the image above is repeated only horizontally 
+(background-repeat: repeat-x;), the background will look better: 
+Tip: To repeat an image vertically, set background-repeat: repeat-y; -->
+  
+          <style>
+            div#two {
+              height: 600px;
+              width: 600px;
+              border: 2px solid black;
+              background-image: url("./../../images/butterfly.jpg");
+              /* background-repeat: repeat-x; */
+              background-repeat: repeat-y; 
+            }
+          </style>
+          
+          <div id="two">div#two: repeat-y</div>
+
+
+
+
+<!-- CSS background-repeat: no-repeat
+======================================
+
+Showing the background image only once is also specified by 
+the 'background-repeat' property: -->
+
+          <style>
+            div#three {
+              height: 600px;
+              width: 600px;
+              border: 2px solid black;
+              background-image: url("./../../images/butterfly.jpg");
+              /* background-repeat: repeat-x; */
+              background-repeat:no-repeat; 
+            }
+          </style>
+
+          <div id="three">div#three: no-repeat</div>
+
+
+
+
+
+ 
+    </body>
+</html>

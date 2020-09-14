@@ -1,0 +1,280 @@
+<!-------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+23 06 2020
+CSS Advanced from: https://www.w3schools.com/css/
+ -------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS align-content Property </title>
+  </head>
+  <body>
+    <h1>CSS align-content Property.</h1><hr/>
+
+
+
+<!--The align-content property is used to align the flex lines.
+
+CSS Syntax:
+============
+align-content: space-between| space-around| stretch| center| flex-start| flex-end
+
+Value           Description
+-----           -----------
+--------------------------------------------------------------------------------
+space-between   value displays the flex lines with equal space between them 
+--------------------------------------------------------------------------------
+space-around    displays the flex lines with space before,between, & after them  
+--------------------------------------------------------------------------------
+stretch         stretches the flex lines to take up the remaining space (default)    
+--------------------------------------------------------------------------------
+center          displays display the flex lines in the middle of the container
+--------------------------------------------------------------------------------
+flex-start      displays the flex lines at the start of the container
+--------------------------------------------------------------------------------
+flex-end        displays the flex lines at the end of the container
+--------------------------------------------------------------------------------
+
+In these examples we use a 600 pixels high container, with the flex-wrap 
+property set to 'wrap', to better demonstrate the align-content property.    -->
+
+   
+
+        <h2>align-content Property</h2>
+        <!-- ------------------------------------------------->
+            <h3>align-content: space-between</h3>
+            <style>
+              .flex-container_21 {
+                display: flex;
+                height: 600px;
+                flex-wrap: wrap;
+                align-content: space-between;
+                background-color: dodgerblue;
+              }
+
+              .flex-container_21 > div {
+                background-color: #f1f1f1;
+                margin: 10px;
+                font-size: 30px;
+                width: 100px;
+                text-align: center;
+                line-height: 75px;
+              }
+
+            </style>
+            <div class="flex-container_21">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>
+              <div>10</div>
+              <div>11</div>
+              <div>12</div>
+
+            </div><br/><br/>
+
+            <!-------------------------------------------------->
+
+            <h3>align-content: space-around</h3>
+            <style>
+              .flex-container_22 {
+                display: flex;
+                flex-wrap: wrap;
+                height: 600px;
+                background-color: dodgerblue;
+                align-content: space-around;
+              }
+
+              .flex-container_22 > div {
+                background-color: #f1f1f1;
+                margin: 10px;
+                font-size: 30px;
+                width: 100px;
+                text-align: center;
+                line-height: 75px;
+              }
+
+            </style>
+            <div class="flex-container_22">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>
+              <div>10</div>
+              <div>11</div>
+              <div>12</div>
+
+            </div><br/><br/>
+
+            <!-------------------------------------------------->
+
+            <h3>align-content: stretch</h3>
+            <style>
+              .flex-container_23 {
+                display: flex;
+                flex-wrap: wrap;
+                height: 600px;
+                background-color: dodgerblue;
+                align-content: stretch;
+              }
+
+              .flex-container_23 > div {
+                background-color: #f1f1f1;
+                margin: 10px;
+                font-size: 30px;
+                width: 100px;
+                text-align: center;
+                line-height: 75px;
+              }
+
+            </style>
+            <div class="flex-container_23">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>
+              <div>10</div>
+              <div>11</div>
+              <div>12</div>
+
+            </div><br/><br/>
+
+            <!-------------------------------------------------->
+
+            <h3>align-content: center</h3>
+            <style>
+              .flex-container_24 {
+                display: flex;
+                flex-wrap: wrap;
+                height: 600px;
+                background-color: dodgerblue;
+                align-content: center;
+              }
+
+              .flex-container_24 > div {
+                background-color: #f1f1f1;
+                margin: 10px;
+                font-size: 30px;
+                width: 100px;
+                text-align: center;
+                line-height: 75px;
+              }
+
+            </style>
+            <div class="flex-container_24">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>
+              <div>10</div>
+              <div>11</div>
+              <div>12</div>
+
+            </div><br/><br/>
+
+            <!-------------------------------------------------->
+
+            <h3>align-content: flex-start</h3>
+            <style>
+              .flex-container_25 {
+                display: flex;
+                flex-wrap: wrap;
+                height: 600px;
+                background-color: dodgerblue;
+                align-content: flex-start;
+              }
+
+              .flex-container_25 > div {
+                background-color: #f1f1f1;
+                margin: 10px;
+                font-size: 30px;
+                width: 100px;
+                text-align: center;
+                line-height: 75px;
+              }
+
+            </style>
+            <div class="flex-container_25">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>
+              <div>10</div>
+              <div>11</div>
+              <div>12</div>
+
+            </div><br/><br/>
+
+            <!-------------------------------------------------->
+
+            <h3>align-content: flex-end</h3>
+            <style>
+              .flex-container_26 {
+                display: flex;
+                flex-wrap: wrap;
+                height: 600px;
+                background-color: dodgerblue;
+                align-content: flex-end;
+              }
+
+              .flex-container_26 > div {
+                background-color: #f1f1f1;
+                margin: 10px;
+                font-size: 30px;
+                width: 100px;
+                text-align: center;
+                line-height: 75px;
+              }
+
+            </style>
+            <div class="flex-container_26">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>
+              <div>10</div>
+              <div>11</div>
+              <div>12</div>
+
+            </div><br/><br/>
+
+
+
+     
+
+
+
+  </body>
+</html>
