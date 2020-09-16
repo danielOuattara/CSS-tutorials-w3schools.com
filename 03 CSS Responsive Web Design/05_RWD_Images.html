@@ -8,10 +8,371 @@ CSS Advanced from: https://www.w3schools.com/css/
  <html lang="en" dir="ltr">
    <head>
      <meta charset="utf-8">
-     <title>CSS </title>
+     <title>CSS Responsive Web Design: Images </title>
    </head>
    <body>
-     <h1>CSS </h1>
+     <h1>CSS Responsive Web Design: Images.</h1><hr/>
+
+
+<!-- Using The 'width' Property
+=============================
+
+If the 'width' property is set to a percentage and the 'height' is set to "auto", 
+the image will be responsive and scale up and down: -->
+
+        <style>
+          img#image-1 {
+            width: 100%;
+            height: auto;
+            margin: 50px auto;
+          }
+        </style>
+
+        <div>
+          <img id="image-1" src="../images/acacia_flowers.jpg" alt=" image showing acacia flowers">
+        </div><hr/>
+  <!-- Notice that in the example above, the image can be scaled up to be 100% to the viewport, 
+which may be larger than its original size. 
+
+A better solution, in many cases, will be to use the max-width property instead. 
+
+
+Using The max-width Property
+============================
+
+If the 'max-width' property is set to 100%, the image will scale down if it has to, but never scale up 
+to be larger than its original size:-->
+      
+        <style>
+          img#image-2 {
+            max-width: 100%;
+            height: auto;
+            margin: 50px auto;
+          }
+        </style>
+
+        <div>
+          <img id="image-2" src="../images/acacia_flowers.jpg" alt=" image showing acacia flowers">
+        </div><hr/>
+
+<!--  Add an Image to The Example Web Page -->
+
+        <style>
+
+          * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+          }
+
+          html {
+            font-family: "Lucida Sans", sans-serif;
+          }
+
+          .header {
+            background-color: #9933cc;
+            color: #ffffff;
+            padding: 15px;
+            margin: 50px 15px 5px;
+          }
+
+          .row {
+              content: "";
+              clear: both;
+              display: table;
+              margin-bottom: 50px;
+            }
+
+
+          img#image-3 {
+            width: 100%;
+            height: auto;
+          }
+
+          [class*="col-"] {
+            float: none;
+            padding: 15px;
+            /* width: 100%; */
+            border: 1px solid green;
+          }
+
+          .menu ul {
+            list-style-type: none;
+          }
+
+          .menu li {
+            padding: 8px;
+            margin-bottom: 7px;
+            background-color :#33b5e5;
+            color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+          }
+
+          .menu li:hover {
+            background-color: #0099cc;
+          }
+
+          .aside {
+            background-color: #33b5e5;
+            padding: 15px;
+            color: #ffffff;
+            text-align: center;
+            font-size: 14px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+          }
+
+          .footer {
+            background-color: #0099cc;
+            color: #ffffff;
+            text-align: center;
+            font-size: 12px;
+            padding: 15px;
+            margin-bottom: 50px;
+          }
+
+          @media only screen and (min-width: 600px) {
+
+            
+          [class*="col-"] {
+            float: left;
+            padding: 15px;
+            width: 100%;
+          }
+
+          /* .col-s-1 {width: 8.33%;} */
+          /* .col-s-2 {width: 16.66%;} */
+          .col-s-3 {width: 25%;}
+          /* .col-s-4 {width: 33.33%;} */
+          /* .col-s-5 {width: 41.66%;} */
+          /* .col-s-6 {width: 50%;} */
+          /* .col-s-7 {width: 58.33%;} */
+          /* .col-s-8 {width: 66.66%;} */
+          .col-s-9 {width: 70%;}
+          /* .col-s-10 {width: 83.33%;} */
+          /* .col-s-11 {width: 91.66%;} */
+          .col-s-12 {width: 100%;}
+           }
+
+          @media only screen and (min-width: 968px) {
+            
+            [class*="col-"] {
+              float: left;
+              padding: 15px;
+              width: 100%;
+            }
+
+            /* .col-1 {width: 8.33%;} */
+            /* .col-2 {width: 16.66%;} */
+            .col-3 {width: 25%;}
+            /* .col-4 {width: 33.33%;} */
+            /* .col-5 {width: 41.66%;} */
+            .col-6 {width: 50%;}
+            /* .col-7 {width: 58.33%;} */
+            /* .col-8 {width: 66.66%;} */
+            /* .col-9 {width: 75%;} */
+            /* .col-10 {width: 83.33%;} */
+            /* .col-11 {width: 91.66%;} */
+            /* .col-12 {width: 100%;} */
+          }
+        </style>
+
+        <div class="header">
+          <h1>Peniscola</h1>
+        </div>
+
+        <div class="row">
+          <div class="col-3 col-s-3 menu">
+            <ul>
+              <li>The Flight</li>
+              <li>The City</li>
+              <li>The Island</li>
+              <li>The Food</li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-s-9">
+            <h1>The City</h1>
+            <p>Peniscola is the capital of the Peniscola region on the island of Crete. 
+              The city can be divided in two parts, the old town and the modern city.</p>
+            <img id="image-3"src="../images/peniscola.jpg" width="460" height="345">
+          </div>
+
+          <div class="col-3 col-s-12">
+            <div class="aside">
+              <h2>What?</h2>
+              <p>Peniscola is a city on the island of Crete.</p>
+              <h2>Where?</h2>
+              <p>Crete is a Greek island in the Mediterranean Sea.</p>
+              <h2>How?</h2>
+              <p>You can reach Peniscola airport from all over Europe.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <p>Resize the browser window to see how the content respond to the resizing.</p>
+        </div><hr/>
+
+
+<!-- Background Images
+=======================
+
+Background images can also respond to resizing and scaling.
+
+Here we will show three different methods:-->
+
+<!-- 1. If the 'background-size' property is set to 'contain', the background image 
+        will scale, and try to fit the content area. 
+   
+        However, the image will keep its aspect ratio (the proportional relationship 
+        between the image's width and height):          -->
+
+        <style>
+          #div-1 {
+            width: 100%;
+            height: 400px;
+            background-image: url('../images/acacia_flowers.jpg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            border: 1px solid red;
+            margin: 50px auto;
+          }
+
+        </style>
+
+        <p style="margin: 50px auto;">Resize the browser window to see the effect.</p>
+
+        <div id="div-1"></div><hr/>
+
+
+<!-- 2. If the 'background-size' property is set to '100% 100%'', the background image 
+        will stretch to cover the entire content area:                                -->
+
+        <style>
+          #div-2 {
+            width: 100%;
+            height: 400px;
+            background-image: url('../images/acacia_flowers.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            border: 1px solid red;
+            margin: 50px auto;
+          }
+
+        </style>
+
+        <p style="margin: 50px auto;">Resize the browser window to see the effect.</p>
+
+        <div id="div-2"></div><hr/>
+
+
+<!-- 3. If the 'background-size' property is set to 'cover', the background image 
+        will scale to cover the entire content area. Notice that the "cover" value 
+        keeps the aspect ratio, and some part of the background image may be clipped: -->
+
+        <style>
+          #div-3 {
+            width: 100%;
+            height: 400px;
+            background-image: url('../images/acacia_flowers.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 1px solid red;
+            margin: 50px auto;
+          }
+
+        </style>
+
+        <p style="margin: 50px auto;">Resize the browser window to see the effect.</p>
+
+        <div id="div-3"></div><hr/>
+
+
+<!-- Different Images for Different Devices
+============================================
+
+A large image can be perfect on a big computer screen, but useless on a small device. 
+Why load a large image when you have to scale it down anyway ? To reduce the load, 
+or for any other reasons, you can use media queries to display different images on 
+different devices.
+
+Here is one large image and one smaller image that will be displayed on different devices: -->
+
+        <style>
+          /* For width smaller than 400px: */
+
+          #div-4 {
+            width: 100%;
+            height: 800px;
+            background-repeat: no-repeat;
+            background-image: url('../images/img_mountains.jpg'); 
+            margin: 50px auto;
+          }
+          
+          /* For width 400px and larger: */
+          @media only screen and (min-width: 400px) {
+            #div-4 { 
+              background-image: url('../images/acacia-trees.jpg'); 
+            }
+          }
+        </style>
+
+        <div id="div-4"></div>
+        <p style="margin-top:360px;">Resize the browser width and the background 
+           image will change at 400px.</p>
+
+<!-- You can use the media query 'min-device-width', instead of 'min-width', which checks 
+     the device width, instead of the browser width. Then the image will not change when 
+     you resize the browser window:  -->
+
+        <style>
+          #div-5 {
+            width: 100%;
+            height: 800px;
+            background-repeat: no-repeat;
+            background-image: url('../images/img_mountains.jpg'); 
+            margin: 50px auto;
+          }
+          
+          /* For width 400px and larger: */
+          @media only screen and (min-device-width: 400px) {
+            #div-5 { 
+              background-image: url('../images/acacia-trees.jpg'); 
+            }
+          }
+        </style>
+
+        <div id="div-5"></div>
+        <p style="margin-top:360px;">Resize the browser width and the background 
+          image will change at 400px.</p>
+
+
+<!-- HTML5 <picture> Element
+==============================
+
+HTML5 introduced the <picture> element, which lets you define more than one image.
+Browser Support
+
+Element 		IE		Chrome    Firefox    Safari   Opera
+
+<picture> 	13 	    38.0 	     38.0      	9.1    25.0
+
+The <picture> element works similar to the <video> and <audio> elements. You set up different sources, and the first source that fits the preferences is the one being used: -->
+
+      <picture>
+        <source srcset="../images/html5.png" media="(max-width: 400px)">
+        <source srcset="../images/peniscola.jpg">
+        <img src="../images/peniscola.jpg" alt="Flowers" style="width:auto;">
+      </picture>
+      
+      <p>Resize the browser width and the background image will change at 400px.</p>
+
+
+<!-- The 'srcset' attribute is required, and defines the source of the image.
+
+The 'media' attribute is optional, and accepts the media queries you find in CSS @media rule.
+
+You should also define an '<img>'' element for browsers that do not support the '<picture>' element. -->
  
  
    </body>

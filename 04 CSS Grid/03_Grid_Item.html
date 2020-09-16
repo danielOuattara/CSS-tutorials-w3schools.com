@@ -8,10 +8,556 @@ CSS Advanced from: https://www.w3schools.com/css/
  <html lang="en" dir="ltr">
    <head>
      <meta charset="utf-8">
-     <title>CSS </title>
+     <title>CSS Grid Item</title>
    </head>
    <body>
-     <h1>CSS </h1>
+     <h1>CSS Grid Item.</h1><hr/>
+
+
+
+<!-- Introductory Example -->
+
+
+      <style>
+
+        .grid-container-0 {
+          display: grid;
+          /* grid-template-columns: auto auto auto; */  /* optional here: because of lines: 38-51*/
+          gap: 10px;
+          background-color: #2196f3;
+          padding: 10px;
+        }
+
+        .grid-container-0 .grid-item {
+          background-color: rgba(255, 255, 255, 0.8);
+          text-align: center;
+          padding: 20px;
+          font-size: 30px;
+        }
+
+        .grid-container-0 .item-1 {
+          grid-column: 1 / span 2;
+          grid-row: 1;
+        }
+
+        .grid-container-0 .item-2 {
+          grid-column: 3;
+          grid-row: 1 / span 2;
+        }
+
+        .grid-container-0 .item-5 {
+          grid-row: 3;
+          grid-column: 1 / span 3;
+        }
+
+      </style>
+
+      <h2>A Five Items Grid Layout:</h2>
+
+      <div class="grid-container-0">
+        <div class="grid-item item-1">1</div>
+        <div class="grid-item item-2">2</div>
+        <div class="grid-item item-3">3</div>  
+        <div class="grid-item item-4">4</div>
+        <div class="grid-item item-5">5</div>
+      </div>
+
+      <p>Direct child elements(s) of the grid container automatically becomes grid items.</p>
+      <p>Item 1, 2, and 5 are set to span multiple columns or rows.</p>
+
+
+
+<!-- Child Elements (Items)
+============================
+
+A grid container contains grid items.
+
+By default, a container has one grid item for each column, in each row, but you can style 
+the grid items so that they will span multiple columns and/or rows.
+
+
+The grid-column Property:
+==========================
+
+The 'grid-column' property defines on which column(s) to place an item.
+
+You define where the item will start, and where the item will end. 
+
+
+Note: The 'grid-column' property is a shorthand property for the 'grid-column-start' and 
+the 'grid-column-end' properties.
+
+To place an item, you can refer to line numbers, or use the keyword "span" to define how 
+many columns the item will span.                                                     -->
+
+
+
+        <hr/><style>
+
+          .grid-container-1 {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 10px;
+            background-color: #2196f3;
+            padding: 10px;
+          }
+
+          .grid-container-1 .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px;
+            font-size: 30px;
+          }
+
+          .grid-container-1 .item-1 {
+            grid-row: 1;
+            grid-column: 1 / 4;
+          }
+          .grid-container-1 .item-12 {
+            grid-row: 4;
+            grid-column: 2 / 5 ;
+          }
+
+        </style>
+
+        <h2>A Twelve Items Grid Layout:</h2>
+
+        <div class="grid-container-1">
+          <div class="grid-item item-1">1</div>
+          <div class="grid-item item-2">2</div>
+          <div class="grid-item item-3">3</div>  
+          <div class="grid-item item-4">4</div>
+          <div class="grid-item item-5">5</div>
+          <div class="grid-item item-6">6</div>
+          <div class="grid-item item-7">7</div>
+          <div class="grid-item item-8">8</div>
+          <div class="grid-item item-9">9</div>
+          <div class="grid-item item-10">10</div>
+          <div class="grid-item item-11">11</div>
+          <div class="grid-item item-12">12</div>
+
+        </div>
+
+        <!-- ------------------------------------------------ -->
+        <hr/><style>
+
+          .grid-container-2 {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 10px;
+            background-color: #2196f3;
+            padding: 10px;
+          }
+
+          .grid-container-2 .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px;
+            font-size: 30px;
+          }
+
+          .grid-container-2 .item-1 {
+            grid-row: 1;
+            grid-column: 1 / span 3;
+          }
+          .grid-container-2 .item-12 {
+            grid-row: 4;
+            grid-column: 2 / span 3 ;
+          }
+
+        </style>
+
+        <h2>A Twelve Items Grid Layout:</h2>
+
+        <div class="grid-container-2">
+          <div class="grid-item item-1">1</div>
+          <div class="grid-item item-2">2</div>
+          <div class="grid-item item-3">3</div>  
+          <div class="grid-item item-4">4</div>
+          <div class="grid-item item-5">5</div>
+          <div class="grid-item item-6">6</div>
+          <div class="grid-item item-7">7</div>
+          <div class="grid-item item-8">8</div>
+          <div class="grid-item item-9">9</div>
+          <div class="grid-item item-10">10</div>
+          <div class="grid-item item-11">11</div>
+          <div class="grid-item item-12">12</div>
+
+        </div>
+
+        <!-- ------------------------------------------------ -->
+        <hr/><style>
+
+          .grid-container-3 {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 10px;
+            background-color: #2196f3;
+            padding: 10px;
+          }
+
+          .grid-container-3 .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px;
+            font-size: 30px;
+          }
+
+          .grid-container-3 .item-2 {
+            grid-row: 1;
+            grid-column: 2 / span 3;
+          }
+          .grid-container-3 .item-11 {
+            grid-row: 4;
+            grid-column: 1 / span 3 ;
+          }
+
+        </style>
+
+        <h2>A Twelve Items Grid Layout:</h2>
+
+        <div class="grid-container-3">
+          <div class="grid-item item-1">1</div>
+          <div class="grid-item item-2">2</div>
+          <div class="grid-item item-3">3</div>  
+          <div class="grid-item item-4">4</div>
+          <div class="grid-item item-5">5</div>
+          <div class="grid-item item-6">6</div>
+          <div class="grid-item item-7">7</div>
+          <div class="grid-item item-8">8</div>
+          <div class="grid-item item-9">9</div>
+          <div class="grid-item item-10">10</div>
+          <div class="grid-item item-11">11</div>
+          <div class="grid-item item-12">12</div>
+
+        </div>
+
+        <!-- ------------------------------------------------ -->
+
+        <hr/><style>
+
+          .grid-container-4 {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 10px;
+            background-color: #2196f3;
+            padding: 10px;
+          }
+
+          .grid-container-4 .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px;
+            font-size: 30px;
+          }
+
+          .grid-container-4 .item-2 {
+            grid-row: 1;
+            grid-column: 2 / 5;
+          }
+          .grid-container-4 .item-11 {
+            grid-row: 4;
+            grid-column: 1 / 4 ;
+          }
+
+        </style>
+
+        <h2>A Twelve Items Grid Layout:</h2>
+
+        <div class="grid-container-4">
+          <div class="grid-item item-1">1</div>
+          <div class="grid-item item-2">2</div>
+          <div class="grid-item item-3">3</div>  
+          <div class="grid-item item-4">4</div>
+          <div class="grid-item item-5">5</div>
+          <div class="grid-item item-6">6</div>
+          <div class="grid-item item-7">7</div>
+          <div class="grid-item item-8">8</div>
+          <div class="grid-item item-9">9</div>
+          <div class="grid-item item-10">10</div>
+          <div class="grid-item item-11">11</div>
+          <div class="grid-item item-12">12</div>
+
+        </div>
+
+        <!-- ------------------------------------------------ -->
+
+
+<!-- The grid-row Property:
+===========================
+
+The 'grid-row' property defines on which row to place an item.
+
+You define where the item will start, and where the item will end.
+
+
+Note: The 'grid-row' property is a shorthand property for the 
+'grid-row-start' and the 'grid-row-end' properties.
+
+To place an item, you can refer to line numbers, or use the keyword 
+"span" to define how many rows the item will span:-->
+
+
+
+        <hr/><style>
+
+          .grid-container-5 {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 10px;
+            background-color: #2196f3;
+            padding: 10px;
+          }
+
+          .grid-container-5 .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px;
+            font-size: 30px;
+          }
+
+          .grid-container-5 .item-1 {
+            grid-column: 1;
+            grid-row: 1 / 3;
+          }
+          .grid-container-5 .item-4 {
+            grid-column: 4;
+            grid-row: 1 / 5;
+          }
+
+        </style>
+
+        <h2>A Twelve Items Grid Layout:</h2>
+
+        <div class="grid-container-5">
+          <div class="grid-item item-1">1</div>
+          <div class="grid-item item-2">2</div>
+          <div class="grid-item item-3">3</div>  
+          <div class="grid-item item-4">4</div>
+          <div class="grid-item item-5">5</div>
+          <div class="grid-item item-6">6</div>
+          <div class="grid-item item-7">7</div>
+          <div class="grid-item item-8">8</div>
+          <div class="grid-item item-9">9</div>
+          <div class="grid-item item-10">10</div>
+          <div class="grid-item item-11">11</div>
+          <div class="grid-item item-12">12</div>
+
+        </div>
+
+        <!-- ------------------------------------------------ -->
+        <hr/><style>
+
+          .grid-container-6 {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 10px;
+            background-color: #2196f3;
+            padding: 10px;
+          }
+
+          .grid-container-6 .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px;
+            font-size: 30px;
+          }
+
+          .grid-container-6 .item-1 {
+            grid-column: 1;
+            grid-row: 1 / span 2;
+          }
+          .grid-container-6 .item-4 {
+            grid-column: 4;
+            grid-row: 1 / span 4;
+          }
+
+        </style>
+
+        <h2>A Twelve Items Grid Layout:</h2>
+
+        <div class="grid-container-6">
+          <div class="grid-item item-1">1</div>
+          <div class="grid-item item-2">2</div>
+          <div class="grid-item item-3">3</div>  
+          <div class="grid-item item-4">4</div>
+          <div class="grid-item item-5">5</div>
+          <div class="grid-item item-6">6</div>
+          <div class="grid-item item-7">7</div>
+          <div class="grid-item item-8">8</div>
+          <div class="grid-item item-9">9</div>
+          <div class="grid-item item-10">10</div>
+          <div class="grid-item item-11">11</div>
+          <div class="grid-item item-12">12</div>
+
+        </div>
+
+        <!-- ------------------------------------------------ -->
+
+
+
+<!-- The grid-area Property
+===========================
+
+The 'grid-area' property can be used as a shorthand property for 
+the 'grid-row-start', 'grid-column-start', 'grid-row-end' and the 'grid-column-end' 
+properties. 
+
+The syntax is: grid-row-start / grid-column-start / grid-row-end / grid-column-end.
+-->
+
+
+          
+          <hr/>
+          <h2>The grid-area Property</h2>
+          
+          <style>
+
+            .grid-container-7 {
+              display: grid;
+              grid-template-columns: auto auto auto auto ;
+              gap: 10px;
+              background-color: #2196f3;
+              padding: 10px;
+            }
+
+            .grid-container-7 .grid-item {
+              background-color: rgba(255, 255, 255, 0.8);
+              text-align: center;
+              padding: 20px;
+              font-size: 30px;
+            }
+
+            .grid-container-7 .item-6 {
+              grid-area: 2 / 2 / 5 / 5;
+            }
+  
+          </style>
+
+          <h2>A Twelve Items Grid Layout:</h2>
+
+          <div class="grid-container-7">
+            <div class="grid-item item-1">1</div>
+            <div class="grid-item item-2">2</div>
+            <div class="grid-item item-3">3</div>  
+            <div class="grid-item item-4">4</div>
+            <div class="grid-item item-5">5</div>
+            <div class="grid-item item-6">6</div>
+            <div class="grid-item item-7">7</div>
+            <div class="grid-item item-8">8</div>
+            <div class="grid-item item-9">9</div>
+            <div class="grid-item item-10">10</div>
+            <div class="grid-item item-11">11</div>
+            <div class="grid-item item-12">12</div>
+
+          </div>
+
+<!-- ------------------------------------------------ -->
+
+          <hr/><style>
+
+            .grid-container-8 {
+              display: grid;
+              grid-template-columns: auto auto auto ;
+              gap: 10px;
+              background-color: #2196f3;
+              padding: 10px;
+            }
+
+            .grid-container-8 .grid-item {
+              background-color: rgba(255, 255, 255, 0.8);
+              text-align: center;
+              padding: 20px;
+              font-size: 30px;
+            }
+
+            .grid-container-8 .item-8 {
+              grid-area: 2 / 2 / span 2 / span 2;
+
+            }
+
+          </style>
+
+          <h2>A Twelve Items Grid Layout:</h2>
+
+          <div class="grid-container-8">
+            <div class="grid-item item-1">1</div>
+            <div class="grid-item item-2">2</div>
+            <div class="grid-item item-3">3</div>  
+            <div class="grid-item item-4">4</div>
+            <div class="grid-item item-5">5</div>
+            <div class="grid-item item-6">6</div>
+            <div class="grid-item item-7">7</div>
+            <div class="grid-item item-8">8</div>
+            <div class="grid-item item-9">9</div>
+            <div class="grid-item item-10">10</div>
+            <div class="grid-item item-11">11</div>
+            <div class="grid-item item-12">12</div>
+
+          </div>
+
+<!-- ------------------------------------------------ -->
+
+
+<!-- Naming Grid Items
+=======================
+
+The 'grid-area' property can also be used to assign names to grid items. 
+
+Named grid items can be referred to by the 'grid-template-areas' property of the grid container.
+
+Each row is defined by apostrophes (' ')
+
+The columns in each row is defined inside the apostrophes, separated by a space.
+
+Note: A period sign represents a grid item with no name.
+
+-->
+
+
+        <hr/><style>
+
+          .grid-container-9 {
+            display: grid;
+            grid-template-areas: 'myArea myArea myArea myArea';
+            gap: 10px;
+            background-color: #2196f3;
+            padding: 10px;
+          }
+
+          .grid-container-9 .item-1 {
+            grid-area: myArea;
+          }
+
+          .grid-container-9 .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px;
+            font-size: 30px;
+          }
+
+
+        </style>
+
+        <h2>Naming Grid Items:</h2>
+
+        <div class="grid-container-9">
+          <div class="grid-item item-1">1</div>
+          <div class="grid-item item-2">2</div>
+          <div class="grid-item item-3">3</div>  
+          <div class="grid-item item-4">4</div>
+          <div class="grid-item item-5">5</div>
+          <div class="grid-item item-6">6</div>
+          <div class="grid-item item-7">7</div>
+          <div class="grid-item item-8">8</div>
+          <div class="grid-item item-9">9</div>
+
+
+        </div>
+
+
+
+
  
  
    </body>

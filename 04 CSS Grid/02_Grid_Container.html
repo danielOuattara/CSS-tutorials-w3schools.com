@@ -8,11 +8,600 @@ CSS Advanced from: https://www.w3schools.com/css/
  <html lang="en" dir="ltr">
    <head>
      <meta charset="utf-8">
-     <title>CSS </title>
+     <title>CSS Grid Container</title>
    </head>
    <body>
-     <h1>CSS </h1>
- 
+     <h1>CSS Grid Container. </h1><hr/>
+
+
+<!-- Grid Container
+===================
+
+To make an HTML element behave as a 'grid container', you have to set the display 
+property to 'grid' or 'inline-grid'.
+
+Grid containers consist of grid items, placed inside columns and rows.
+
+
+The grid-template-columns Property
+==================================
+
+The 'grid-template-columns' property defines the number of columns in your grid 
+layout, and it can define the 'width' of each column.
+
+The value of grid-template-coumn' is a 'space-separated-list', where each value 
+defines the 'width' of the respective column.
+
+If you want your grid layout to contain 4 columns, specify the 'width' of the 
+4 columns; or wrtie "auto" 4 times  if all columns should have the same width. -->
+
+
+        <p>A Grid Container consists of grid items arranged in columns and rows</p>
+        <p>Direct child elements(s) of the grid container automatically becomes grid items.</p>
+
+
+        <style>
+          .grid-container-1 {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 10px;
+            background-color:#2196f3;
+            padding: 10px;
+            margin-bottom: 50px;
+          }
+
+          .grid-container-1 > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid black;
+            text-align: center;
+            font-size: 30px;
+            padding: 20px;
+          }
+        </style>
+
+        <div class="grid-container-1">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+          <div>7</div>
+          <div>8</div>
+        </div>
+
+<!--Note: If you have more than 4 items in a 4 columns grid, the grid will automatically add a new row to put the items in.
+
+
+The grid-template-columns property can also be used to specify the size (width) of the columns.-->
+        <style>
+          
+        div.grid-container-2 {
+          display: grid;
+          grid-template-columns: 120px  30% auto 14rem;
+          background-color: #41f321;
+          gap: 10px;
+          padding: 10px;
+          margin-bottom: 50px;
+          border: 1px solid grey;
+        }
+
+        div.grid-container-2>div {
+          padding: 20px;
+          background-color: rgba(255, 255, 255, 0.8);
+          border: 1px solid grey;
+          text-align: center;
+          font-size: 30px;
+        }
+
+        </style>
+
+        <div class="grid-container-2">
+          <div class="grid-item">1</div>
+          <div class="grid-item">2</div>
+          <div class="grid-item">3</div>
+          <div class="grid-item">4</div>
+          <div class="grid-item">5</div>
+          <div class="grid-item">6</div>
+          <div class="grid-item">7</div>
+          <div class="grid-item">8</div>
+        </div>
+
+
+
+<!-- The grid-template-rows Property
+=====================================
+
+The 'grid-template-rows' property defines the height of each row.
+
+The value of "grid-template-rows' is a space-separated-list, where 
+each value defines the 'height' of the respective row:         -->
+
+
+        <style>
+                  
+          div.grid-container-3 {
+            display: grid;
+            grid-template-rows: 100px 200px 150px;
+            background-color: #41f321;
+            gap: 10px;
+            padding: 10px;
+            margin-bottom: 50px;
+            border: 1px solid grey;
+          }
+
+          div.grid-container-3>div {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid grey;
+            text-align: center;
+            font-size: 30px;
+          }
+
+          </style>
+
+          <div class="grid-container-3">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+          </div>
+
+
+<!-- The justify-content Property
+==================================
+
+The 'justify-content' property is used to align the whole grid inside the container.
+
+Note: The grids's total width has to be less than the container's width for 
+the 'justify-content' property to have any effect.
+
+-->
+        <hr/><h2>justify-content</h2>
+        <h3> justify-content: space-evenly</h3>
+        <style>
+                  
+          div.grid-container-4 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            justify-content: space-evenly;
+            background-color: #41f321;
+            gap: 10px;
+            padding: 10px;
+            margin-bottom: 50px;
+            border: 1px solid grey;
+          }
+
+          div.grid-container-4>div {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid grey;
+            text-align: center;
+            font-size: 30px;
+          }
+
+          </style>
+
+          <div class="grid-container-4">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+          </div>
+
+          <!-- ------------------------------------- -->
+
+        <h3> justify-content: space-around</h3>
+        <style> 
+                  
+          div.grid-container-5 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            justify-content: space-around;  /* testing */
+            background-color: #41f321;
+            gap: 10px;
+            padding: 10px;
+            margin-bottom: 50px;
+            border: 1px solid grey;
+          }
+
+          div.grid-container-5>div {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid grey;
+            text-align: center;
+            font-size: 30px;
+          }
+
+          </style>
+
+          <div class="grid-container-5">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+          </div>
+          <!-- ------------------------------------- -->
+
+
+
+        <h3> justify-content: space-between</h3>
+        <style> 
+                  
+          div.grid-container-6 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            justify-content: space-between;  /* testing */
+            background-color: #41f321;
+            gap: 10px;
+            padding: 10px;
+            margin-bottom: 50px;
+            border: 1px solid grey;
+          }
+
+          div.grid-container-6>div {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid grey;
+            text-align: center;
+            font-size: 30px;
+          }
+
+          </style>
+
+          <div class="grid-container-6">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+          </div>
+          <!-- ------------------------------------- -->
+
+
+        <h3> justify-content: center</h3>  
+        <style> 
+                  
+          div.grid-container-7 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            justify-content: center;  /* testing */
+            background-color: #41f321;
+            gap: 10px;
+            padding: 10px;
+            margin-bottom: 50px;
+            border: 1px solid grey;
+          }
+
+          div.grid-container-7>div {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid grey;
+            text-align: center;
+            font-size: 30px;
+          }
+
+          </style>
+
+          <div class="grid-container-7">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+          </div>
+          <!-- ------------------------------------- -->
+
+
+        <h3> justify-content: start</h3>
+        <style> 
+                  
+          div.grid-container-8 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            justify-content: start;  /* testing */
+            background-color: #41f321;
+            gap: 10px;
+            padding: 10px;
+            margin-bottom: 50px;
+            border: 1px solid grey;
+          }
+
+          div.grid-container-8>div {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid grey;
+            text-align: center;
+            font-size: 30px;
+          }
+
+          </style>
+
+          <div class="grid-container-8">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+          </div>
+          <!-- ------------------------------------- -->
+
+
+        <h3> justify-content: end</h3>
+        <style> 
+                  
+          div.grid-container-9 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            justify-content: end;  /* testing */
+            background-color: #41f321;
+            gap: 10px;
+            padding: 10px;
+            margin-bottom: 50px;
+            border: 1px solid grey;
+          }
+
+          div.grid-container-9>div {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid grey;
+            text-align: center;
+            font-size: 30px;
+          }
+
+          </style>
+
+          <div class="grid-container-9">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+          </div>
+          <!-- ------------------------------------- -->
+
+
+<!-- The align-content Property
+===============================
+
+The 'align-content' property is used to vertically align the whole grid inside the container. -->
+
+
+         
+
+
+
+        <hr/><h2>align-content</h2>
+
+        <h3> align-content: center </h3>
+        <style> 
+                  
+          div.grid-container-10 {
+            display: grid;
+            height: 400px;
+            grid-template-columns: auto auto auto;
+            align-content:center;  /* testing */
+            background-color: #41f321;
+            gap: 10px;
+            padding: 10px;
+            margin-bottom: 50px;
+            border: 1px solid grey;
+          }
+
+          div.grid-container-10>div {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid grey;
+            text-align: center;
+            font-size: 20px 0;
+            font-size: 30px;
+          }
+
+          </style>
+
+          <div class="grid-container-10">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+          </div>
+          <!-- ------------------------------------- -->
+
+        <h3> align-content: space-evenly  </h3>
+        <style> 
+                  
+          div.grid-container-11 {
+            display: grid;
+            height: 400px;
+            grid-template-columns: auto auto auto;
+            align-content: space-evenly;  /* testing */
+            background-color: #41f321;
+            gap: 10px;
+            padding: 10px;
+            margin-bottom: 50px;
+            border: 1px solid grey;
+          }
+
+          div.grid-container-11>div {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid grey;
+            text-align: center;
+            font-size: 20px 0;
+            font-size: 30px;
+          }
+
+          </style>
+
+          <div class="grid-container-11">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+          </div>
+          <!-- ------------------------------------- -->
+
+        <h3> align-content: space-around </h3>
+        <style> 
+                  
+          div.grid-container-12 {
+            display: grid;
+            height: 400px;
+            grid-template-columns: auto auto auto;
+            align-content: space-around;  /* testing */
+            background-color: #41f321;
+            gap: 10px;
+            padding: 10px;
+            margin-bottom: 50px;
+            border: 1px solid grey;
+          }
+
+          div.grid-container-12>div {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid grey;
+            text-align: center;
+            font-size: 20px 0;
+            font-size: 30px;
+          }
+
+          </style>
+
+          <div class="grid-container-12">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+          </div>
+          <!-- ------------------------------------- -->
+
+        <h3> align-content: space-between </h3>
+        <style> 
+                  
+          div.grid-container-13 {
+            display: grid;
+            height: 400px;
+            grid-template-columns: auto auto auto;
+            align-content: space-between;  /* testing */
+            background-color: #41f321;
+            gap: 10px;
+            padding: 10px;
+            margin-bottom: 50px;
+            border: 1px solid grey;
+          }
+
+          div.grid-container-13>div {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid grey;
+            text-align: center;
+            font-size: 20px 0;
+            font-size: 30px;
+          }
+
+          </style>
+
+          <div class="grid-container-13">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+          </div>
+          <!-- ------------------------------------- -->
+
+        <h3> align-content: start </h3>
+        <style> 
+                  
+          div.grid-container-14 {
+            display: grid;
+            height: 400px;
+            grid-template-columns: auto auto auto;
+            align-content: start;  /* testing */
+            background-color: #41f321;
+            gap: 10px;
+            padding: 10px;
+            margin-bottom: 50px;
+            border: 1px solid grey;
+          }
+
+          div.grid-container-14>div {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid grey;
+            text-align: center;
+            font-size: 20px 0;
+            font-size: 30px;
+          }
+
+          </style>
+
+          <div class="grid-container-14">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+          </div>
+          <!-- ------------------------------------- -->
+
+        <h3> align-content: end</h3>
+        <style> 
+                  
+          div.grid-container-15 {
+            display: grid;
+            height: 400px;
+            grid-template-columns: auto auto auto;
+            align-content: end;  /* testing */
+            background-color: #41f321;
+            gap: 10px;
+            padding: 10px;
+            margin-bottom: 50px;
+            border: 1px solid grey;
+          }
+
+          div.grid-container-15>div {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid grey;
+            text-align: center;
+            font-size: 20px 0;
+            font-size: 30px;
+          }
+
+          </style>
+
+          <div class="grid-container-15">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+          </div>
+          <!-- ------------------------------------- -->
+
+
+
+
+
+
+     
  
    </body>
  </html>

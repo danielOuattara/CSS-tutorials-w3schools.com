@@ -19,7 +19,7 @@ CSS Responsive from: https://www.w3schools.com/css/
 <!-- What is a Grid-View ?
 ==========================
 
-Many web pages are based on a 'grid-view', which means that the page is
+Many web pages design are based on a 'grid-view', which means that the page is
 divided into columns:
 
 |  |  |  |  |  |  |  |  |  |  |  |  |
@@ -39,9 +39,9 @@ Building a Responsive Grid-View
 
 Lets start building a responsive grid-view.
 
- > First ensure that all HTML elements have the 'box-sizing' property set to
-   'border-box'. This makes sure that the 'padding' and 'border' are included
-   in the 'width' and 'height' of the elements.(instead of 'content' only)
+  > First ensure that all HTML elements have the 'box-sizing: border-box' property set. 
+    This ensures that the 'padding' and 'border' are included
+    in the 'width' and 'height' of the elements. (instead of 'content' only)
 
 Add the following code in your CSS:
 
@@ -134,31 +134,30 @@ First we must calculate the percentage for one column:
 Then we make one class for each of the 12 columns, class="col-" and a number
 defining how many columns the section should span:
 
-
 Example 3
 =========                                                                    -->
+
   <style>
   .header-2{
     clear: left;
     border: 1px solid red;
     padding: 15px;
+    margin: auto 20px;
   }
 
   /* The columns inside a row are all floating to the left, and are therefore
      taken out of the flow of the page, and other elements will be placed as
-     if the columns do not exist. To prevent this, we will add a style that
+     if the columns do not exist. To prevent this, we will add a style thats
      clears the flow:*/
-
+  
+  .row {
+    border: 2px solid grey;
+    margin: 5px 20px;
+  }
   .row::after {
      content:"";
      clear: both;
      display: table;
-  }
-
-  [class*="col-"]{
-    float: left;  /* All these columns should be floating to the left */
-    padding: 15px;  /* and have a padding of 15px:*/
-    border: 1px solid red;
   }
 
   .col-1 {width: 8.33%;}
@@ -174,6 +173,11 @@ Example 3
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
 
+  [class*="col-"]{
+    float: left;  /* All these columns should be floating to the left */
+    padding: 15px;  /* and have a padding of 15px:*/
+    border: 1px solid red;
+  }
   </style>
 
    <div class="header-2">
