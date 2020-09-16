@@ -8,11 +8,133 @@ CSS Advanced from: https://www.w3schools.com/css/
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>CSS </title>
+    <title>CSS 3-D Transforms </title>
   </head>
   <body>
-    <h1>CSS </h1>
+    <h1>CSS 3-D Transforms.</h1><hr/>
 
 
+  <!-- CSS 3D Transforms
+  =======================
+
+CSS also supports 3D transformations.
+
+In this chapter you will learn about the following CSS property: 'transform'
+
+
+Browser Support
+================
+
+Property    Chrome     IE     Firefox   Safari   Opera
+-------------------------------------------------------					
+transform 	36.0       10.0   16.0      9.0      23.0  
+-------------------------------------------------------
+
+
+CSS 3D Transforms Methods
+=========================
+
+With the CSS transform property you can use the following 3D transformation methods:
+
+    > rotateX()
+    > rotateY()
+    > rotateZ()
+
+
+The rotateX() Method
+====================
+
+The rotateX() method rotates an element around its X-axis at a given degree: -->
+
+         <style>
+          div {  /* for all div elements */
+             width: 200px;
+             height: 200px;
+             margin-left: 100px;  /* Remember this line*/
+             margin-bottom: 50px;
+           }
+           div.rotate-x-1 {
+             background-color: #00d0ff;
+             border: 1px solid grey;
+             -ms-transform: rotateX(180deg);  /* IE 9*/
+             transform: rotateX(180deg);  /* Standard*/
+           }
+          </style>
+         </style>
+         <div class="rotate-x-1">DIV-1: rotateX</div>
+
+
+<!--The rotateY() Method
+=========================
+
+The rotateY() method rotates an element around its X-axis at a given degree: -->
+
+         <style>
+
+           div.rotate-y-1 {
+             background-color: #00ff55;
+             border: 1px solid grey;
+             -ms-transform: rotateY(180deg);  /* IE 9*/
+             transform: rotateY(180deg);  /* Standard*/
+           }
+          </style>
+         </style>
+         <div class="rotate-y-1">DIV: rotateY</div>
+
+
+<!--The rotateZ() Method
+=========================
+
+The rotateZ() method rotates an element around its X-axis at a given degree: -->
+
+         <style>
+           
+           div.rotate-z-1 {
+             background-color: #ffa600;
+             border: 1px solid grey;
+             -ms-transform: rotateZ(180deg);  /* IE 9*/
+             transform: rotateZ(180deg);  /* Standard*/
+           }
+          </style>
+         </style>
+         <div class="rotate-z-1">DIV: rotateZ</div>
+
+
+    
+<!-- CSS Transform Properties
+==============================
+
+The following table lists all the 3D transform properties:
+
+Property 	        Description
+-------------------------------------------------------
+transform   	       Applies a 2D or 3D transformation to an element
+transform-origin 	   Allows you to change the position on transformed elements
+transform-style 	   Specifies how nested elements are rendered in 3D space
+perspective      	   Specifies the perspective on how 3D elements are viewed
+perspective-origin 	 Specifies the bottom position of 3D elements
+backface-visibility  Defines whether or not an element should be visible when not facing the screen
+
+
+CSS 3D Transform Methods
+=========================
+
+Function 	                          Description
+-----------------------------------------------------------------------------
+matrix3d
+(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n) 	Defines a 3D transformation, using a 4x4 matrix of 16 values
+translate3d(x,y,z) 	                Defines a 3D translation
+translateX(x) 	                    Defines a 3D translation, using only the value for the X-axis
+translateY(y) 	                    Defines a 3D translation, using only the value for the Y-axis
+translateZ(z) 	                    Defines a 3D translation, using only the value for the Z-axis
+scale3d(x,y,z) 	                    Defines a 3D scale transformation
+scaleX(x) 	                        Defines a 3D scale transformation by giving a value for the X-axis
+scaleY(y) 	                        Defines a 3D scale transformation by giving a value for the Y-axis
+scaleZ(z) 	                        Defines a 3D scale transformation by giving a value for the Z-axis
+rotate3d(x,y,z,angle) 	            Defines a 3D rotation
+rotateX(angle) 	                    Defines a 3D rotation along the X-axis
+rotateY(angle) 	                    Defines a 3D rotation along the Y-axis
+rotateZ(angle)  	                  Defines a 3D rotation along the Z-axis
+perspective(n) 	                    Defines a perspective view for a 3D transformed element -->
   </body>
 </html>
