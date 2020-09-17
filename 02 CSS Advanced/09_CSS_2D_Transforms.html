@@ -19,7 +19,6 @@ CSS Advanced from: https://www.w3schools.com/css/
 
 CSS transforms allow you to 'move', 'rotate', 'scale', and 'skew' elements.
 
-
 In this chapter you will learn about the following CSS property: 'transform'
 
 
@@ -58,6 +57,25 @@ The 'translate()' method moves an element from its current position
 The following example moves the <div> element 50 pixels to the right, and 100 pixels 
 down from its current position: -->
 
+
+         <style>
+
+           div {  /* for all div elements */
+             width: 100px;
+             height: 100px;
+             margin-left: 100px;  /* Remember this line*/
+             margin-bottom: 50px;
+             text-align: center;
+           }
+           div.intitial {
+             background-color: #9ca9ac;
+             border: 1px solid rgb(70, 32, 32);
+
+           }
+          </style>
+
+          <div class="intitial"> Initial</div>
+          <!-- --------------------------------------- -->
 
          <style>
 
@@ -106,8 +124,8 @@ Using negative values will rotate the element counter-clockwise.          -->
            div.rotation-1 {
              background-color: #bbff00;
              border: 1px solid grey;
-             -ms-transform: rotate(30deg);  /* IE 9*/
-             transform: rotate(30deg);  /* Standard*/
+             -ms-transform: rotate(45deg);  /* IE 9*/
+             transform: rotate(45deg);  /* Standard*/
            }
          </style>
         <div class="rotation-1">Rotate-1</div>
@@ -117,8 +135,8 @@ Using negative values will rotate the element counter-clockwise.          -->
            div.rotation-2 {
              background-color: #ffc400;
              border: 1px solid grey;
-             -ms-transform: rotate(-30deg);  /* IE 9*/
-             transform: rotate(-30deg);  /* Standard*/
+             -ms-transform: rotate(-45deg);  /* IE 9*/
+             transform: rotate(-45deg);  /* Standard*/
            }
          </style>
         <div class="rotation-2">Rotate-2</div>
@@ -200,8 +218,8 @@ The following example increases the <div> element to be two times of its origina
           div.scale-y-1 {
             background-color: #0099ff;
             border: 1px solid grey;
-            -ms-transform: scaleX(2);  /* IE 9*/
-            transform: scaleX(2);  /* Standard*/
+            -ms-transform: scaleY(2);  /* IE 9*/
+            transform: scaleY(2);  /* Standard*/
           }
         </style>
         <div class="scale-y-1">Scale-y-1</div>
@@ -260,7 +278,7 @@ The following example skews the <div> element 20 degrees along the X-axis: -->
 
 
 
-<!-- The skewY() Method
+<!-- The skew() Method
 =======================
 
 The 'skew()' method skews an element along the X and Y-axis by the given angles.
