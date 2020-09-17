@@ -18,15 +18,15 @@ CSS Advanced from: https://www.w3schools.com/css/
 ====================
 
 CSS 'transitions' allows you to change property values smoothly, 
-over a given duration.
+over a given time duration.
 
 In this chapter you will learn about the following properties:
 
    > transition
+   > transition-timing-function
    > transition-delay
    > transition-duration
    > transition-property
-   > transition-timing-function
 
 
 Browser Support for Transitions
@@ -39,13 +39,13 @@ CSS Property  			        Chrome  IE     Firefox  Safari  Opera
 -------------------------------------------------------------------
 transition 	                26.0 	  10.0 	    16.0 	  6.1 	12.1
 -------------------------------------------------------------------
+transition-timing-function 	26.0 	  10.0 	    16.0 	  6.1 	12.1
+-------------------------------------------------------------------
 transition-delay 	          26.0 	  10.0 	    16.0 	  6.1 	12.1
 -------------------------------------------------------------------
 transition-duration 	      26.0 	  10.0 	    16.0 	  6.1 	12.1
 -------------------------------------------------------------------
 transition-property 	      26.0 	  10.0 	    16.0 	  6.1 	12.1
--------------------------------------------------------------------
-transition-timing-function 	26.0 	  10.0 	    16.0 	  6.1 	12.1
 -------------------------------------------------------------------
 
 
@@ -55,14 +55,14 @@ How to Use CSS Transitions ?
 To create a transition effect, you must specify two things:
 
     1. the CSS property you want to add an effect to
-    2 . the duration of the effect
+    2. the duration of the effect
 
 Note: If the duration part is not specified, the transition will have no effect, 
-because the default value is 0.
+because the default value is 0 (default).
 
-The following example shows a 100px * 100px red <div> element. 
-The <div> element has also specified a transition effect , when mousseover,
-for the width property, with a duration of 2 seconds: 
+The following example shows a 100px * 100px <div> element. 
+The <div> element has also specified a 'transition effect' , on 'mousseover',
+for the 'width' property, with a 'duration' of 2 seconds: 
 
 The transition effect will start when the specified CSS property (width) changes value.
 
@@ -76,7 +76,7 @@ back to its original style.-->
           .transition-1 {
             width: 100px;
             height: 100px;
-            background-color: #00ffff;
+            background-color: #26b3b3;
             transition: width 2s;
             margin-bottom: 50px;
           }
@@ -85,14 +85,15 @@ back to its original style.-->
             width: 300px;
           }
         </style>
-        <div class="transition-1"></div>
+        <div class="transition-1">Width</div>
 
 
 <!-- Change Several Property Values
 ===================================
 
-The following example adds a transition effect for both the width and height property, 
-with a duration of 1 second for the width and 2 seconds for the height: -->
+The following example adds a transition effect for both the width and height property. 
+
+The duration is 1 second for the width and 2 seconds for the height: -->
 
       <style>
         .transition-2 {
@@ -108,7 +109,7 @@ with a duration of 1 second for the width and 2 seconds for the height: -->
           height: 300px;
         }
       </style>
-      <div class="transition-2"></div>
+      <div class="transition-2">Width & Height</div><hr/>
 
 
 <!-- Specify the Speed Curve of the Transition
@@ -118,12 +119,12 @@ The 'transition-timing-function' property specifies the speed curve of the trans
 
 The 'transition-timing-function' property can have the following values:
 
-    > ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)
-    > linear - specifies a transition effect with the same speed from start to end
-    > ease-in - specifies a transition effect with a slow start
-    > ease-out - specifies a transition effect with a slow end
-    > ease-in-out - specifies a transition effect with a slow start and end
-    > cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function
+  > ease - specifies a transition effect with a slow start, then fast, then end slowly (default)
+  > linear - specifies a transition effect with the same speed from start to end
+  > ease-in - specifies a transition effect with a slow start
+  > ease-out - specifies a transition effect with a slow end
+  > ease-in-out - specifies a transition effect with a slow start and end
+  > cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function
 
 The following example shows the some of the different speed curves that can be used: -->
 
@@ -132,11 +133,15 @@ The following example shows the some of the different speed curves that can be u
           width: 100px;
           height: 100px;
           background-color: #757677;
-          transition: width 2s;
+          transition: width 800ms;
           margin-bottom: 50px;
           font-size:20px;
           color: white;
           text-align: center;
+        }
+
+        .transition-timing:hover {
+          width: 500px;
         }
 
         .linear {transition-timing-function: linear;}
@@ -145,9 +150,6 @@ The following example shows the some of the different speed curves that can be u
         .ease-out {transition-timing-function: ease-out; }
         .ease-in-out {transition-timing-function:ease-in-out; }
 
-        .transition-timing:hover {
-          width: 300px;
-        }
       </style>
 
       <div class="transition-timing linear"> linear</div>
@@ -167,11 +169,11 @@ The following example has a 700 miliseconds delay before starting: -->
 
 
       <style>
-        .transitiondelay-1 {
+        .transition-delay-1 {
           width: 150px;
           height: 100px;
           background-color: #289191;
-          transition: width 1s;
+          transition: width 800ms;
           transition-delay: 700ms;
           margin-bottom: 50px;
           font-size:20px;
@@ -179,11 +181,11 @@ The following example has a 700 miliseconds delay before starting: -->
           text-align: center;
         }
 
-        .transitiondelay-1:hover {
-          width: 300px;
+        .transition-delay-1:hover {
+          width: 500px;
         }
       </style>
-      <div class="transitiondelay-1">Transition-delay: 700ms</div><hr/>
+      <div class="transition-delay-1">Transition-delay: 700ms</div><hr/>
 
 
 <!-- Transition + Transformation
@@ -224,10 +226,7 @@ The CSS transition properties can be specified one by one, like this: -->
           width: 150px;
           height: 100px;
           background-color: #98a23a;
-          transition-property: width;
-          transition-duration: 1s;
-          transition-timing-function: ease;
-          transition-delay: 600ms;
+          transition: transform 1s ease-out 500ms ;
           margin-bottom: 50px;
           font-size:20px;
           color: white;
@@ -235,12 +234,11 @@ The CSS transition properties can be specified one by one, like this: -->
         }
 
         .transition-transformation-2:hover {
-          width: 300px;
           -ms-transform: rotate(90deg);
           transform: rotate(90deg);
         }
       </style>
-      <div class="transition-transformation-2">Transition-details</div><hr/>
+      <div class="transition-transformation-2">Transition Shorthand formulation</div><hr/>
 
 
       <style>
@@ -248,10 +246,10 @@ The CSS transition properties can be specified one by one, like this: -->
           width: 150px;
           height: 100px;
           background-color: #993aa2;
-          transition-property: width;
-          transition-duration: 1s;
-          transition-timing-function: ease;
-          transition-delay: 600ms;
+          transition-property: width, transform;
+          transition-duration: 1s, 2s;
+          transition-timing-function: ease-out, linear;
+          transition-delay: 500ms, 1000ms;
           margin-bottom: 50px;
           font-size:20px;
           color: white;
@@ -259,12 +257,33 @@ The CSS transition properties can be specified one by one, like this: -->
         }
 
         .transition-transformation-3:hover {
-          width: 300px;
+          width: 500px;
           -ms-transform: rotate(90deg);
           transform: rotate(90deg);
         }
       </style>
-      <div class="transition-transformation-3">Transition-shorthand</div><hr/>
+      <div class="transition-transformation-3">Transition + Transformation: no shorthand</div><hr/>
+
+      
+      <style>
+        .transition-transformation-4 {
+          width: 150px;
+          height: 100px;
+          background-color: #a23a4d;
+          transition: width 1s ease-out 500ms, transform 2s linear 1000ms;
+          margin-bottom: 50px;
+          font-size:20px;
+          color: white;
+          text-align: center;
+        }
+
+        .transition-transformation-4:hover {
+          width: 500px;
+          -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+        }
+      </style>
+      <div class="transition-transformation-4">Transition no shorthand formulation</div><hr/>
 
   
 <!-- CSS Transition Properties
