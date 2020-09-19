@@ -1,0 +1,89 @@
+<!-------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+15 06 2020
+CSS Advanced from: https://www.w3schools.com/css/
+ -------------------------------------------------->
+
+ <!DOCTYPE html>
+ <html lang="en" dir="ltr">
+   <head>
+     <meta charset="utf-8">
+     <title>CSS Transitions- Example-1</title>
+   </head>
+   <body>
+     <h1>CSS CSS Transitions- Example-1.</h1><hr/>
+
+
+     <style>
+
+       .container {
+         width: 30%;
+         margin: 200px auto ;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-around;
+         border: 1px solid gray;
+         padding: 100px;
+       }
+
+       .item {
+         flex-basis: 7%;
+         height: 70px;
+         background-color: blue;
+         transition: transform 1000ms;
+       }
+
+       .div-1{
+         transition-delay: 0;
+       }
+       .div-2 {
+         transition-delay: 150ms;
+       }
+       .div-3 {
+         transition-delay: 300ms;
+       }
+       .div-4 {
+         transition-delay: 450ms;
+       }
+       .div-5 {
+         transition-delay: 600ms;
+       }
+       .div-6 {
+         transition-delay: 750ms;
+       }
+       .div-7 {
+         transition-delay: 900ms;
+       }
+
+
+       .container:hover .item{
+         -ms-transform: scaleY(2);
+         transform: scaleY(2);
+       }
+
+
+
+     </style>
+
+
+     <div class="container">
+       <div class="div-1 item"></div>
+       <div class="div-2 item" ></div>
+       <div class="div-3 item"></div>
+       <div class="div-4 item"></div>
+       <div class="div-5 item"></div>
+       <div class="div-6 item"></div>
+       <div class="div-7 item"></div>
+     </div>
+
+
+
+
+
+
+
+
+
+ </body>
+</html>
+ 

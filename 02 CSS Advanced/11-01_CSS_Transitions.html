@@ -69,7 +69,7 @@ The transition effect will start when the specified CSS property (width) changes
 Now, let us specify a new value for the width property when a user mouses 
 over the <div> element:
   
-Notice that when the cursor mouses out of the element, it will gradually change 
+Notice that when the cursor mouves out of the element, it will gradually change 
 back to its original style.-->
 
         <style>
@@ -80,13 +80,10 @@ back to its original style.-->
           margin-bottom: 50px;
           cursor: pointer;
         }
+
         .transition-1 {
-            width: 100px;
-            height: 100px;
             background-color: #26b3b3;
-            transition: width 2s;
-            margin-bottom: 50px;
-           
+            transition: width 2s;     
           }
 
           .transition-1:hover {
@@ -201,7 +198,7 @@ The following example adds a transition effect to the transformation: -->
           width: 150px;
           height: 100px;
           background-color: #3aa243;
-          transition: width 2s, height 2s, transform 2s;
+          transition: width 1s, height 1s 2s, transform 1s 3s;
           font-size:20px;
           color: white;
           text-align: center;
