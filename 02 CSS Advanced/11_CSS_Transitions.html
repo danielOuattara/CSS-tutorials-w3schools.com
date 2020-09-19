@@ -73,12 +73,20 @@ Notice that when the cursor mouses out of the element, it will gradually change
 back to its original style.-->
 
         <style>
-          .transition-1 {
+
+        div {
+          width: 100px;  /* remember this line */
+          height: 100px;
+          margin-bottom: 50px;
+          cursor: pointer;
+        }
+        .transition-1 {
             width: 100px;
             height: 100px;
             background-color: #26b3b3;
             transition: width 2s;
             margin-bottom: 50px;
+           
           }
 
           .transition-1:hover {
@@ -96,12 +104,10 @@ The following example adds a transition effect for both the width and height pro
 The duration is 1 second for the width and 2 seconds for the height: -->
 
       <style>
+
         .transition-2 {
-          width: 100px;
-          height: 100px;
           background-color: #289191;
           transition: width 1s, height 2s;
-          margin-bottom: 50px;
         }
 
         .transition-2:hover {
@@ -130,11 +136,8 @@ The following example shows the some of the different speed curves that can be u
 
       <style>
         .transition-timing {
-          width: 100px;
-          height: 100px;
           background-color: #757677;
           transition: width 800ms;
-          margin-bottom: 50px;
           font-size:20px;
           color: white;
           text-align: center;
@@ -175,7 +178,6 @@ The following example has a 700 miliseconds delay before starting: -->
           background-color: #289191;
           transition: width 800ms;
           transition-delay: 700ms;
-          margin-bottom: 50px;
           font-size:20px;
           color: white;
           text-align: center;
@@ -200,7 +202,6 @@ The following example adds a transition effect to the transformation: -->
           height: 100px;
           background-color: #3aa243;
           transition: width 2s, height 2s, transform 2s;
-          margin-bottom: 50px;
           font-size:20px;
           color: white;
           text-align: center;
@@ -227,7 +228,6 @@ The CSS transition properties can be specified one by one, like this: -->
           height: 100px;
           background-color: #98a23a;
           transition: transform 1s ease-out 500ms ;
-          margin-bottom: 50px;
           font-size:20px;
           color: white;
           text-align: center;
@@ -250,7 +250,6 @@ The CSS transition properties can be specified one by one, like this: -->
           transition-duration: 1s, 2s;
           transition-timing-function: ease-out, linear;
           transition-delay: 500ms, 1000ms;
-          margin-bottom: 50px;
           font-size:20px;
           color: white;
           text-align: center;
@@ -271,7 +270,6 @@ The CSS transition properties can be specified one by one, like this: -->
           height: 100px;
           background-color: #a23a4d;
           transition: width 1s ease-out 500ms, transform 2s linear 1000ms;
-          margin-bottom: 50px;
           font-size:20px;
           color: white;
           text-align: center;
