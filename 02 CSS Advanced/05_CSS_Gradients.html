@@ -8,28 +8,412 @@ CSS Advanced from: https://www.w3schools.com/css/
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>CSS </title>
+    <title>CSS Gradients</title>
   </head>
   <body>
-    <h1>CSS </h1>
+    <h1>CSS Gradients.</h1><hr/>
 
 
-  </body>
-</html>
-<!-------------------------------------------------
-Daniel OUATTARA- daniel.ouattara_AT_gmx.com
-15 06 2020
-CSS Advanced from: https://www.w3schools.com/css/
- -------------------------------------------------->
+<!-- CSS gradients let you display smooth transitions between two or more specified 
+colors.
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>CSS </title>
-  </head>
-  <body>
-    <h1>CSS </h1>
+CSS defines two types of gradients:
+
+   > Linear Gradients (goes down/up/left/right/diagonally)
+   > Radial Gradients (defined by their center)
+
+
+CSS Linear Gradients
+====================
+
+To create a linear gradient you must define at least two color stops.
+
+'Color stops' are the colors you want to render smooth transitions among. 
+
+You can also set a starting point and a direction (or an angle) along with 
+the gradient effect.
+
+Syntax
+-------
+
+background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
+
+
+Direction - Top to Bottom (this is default)
+===========================================
+
+The following example shows a linear gradient that starts at the top. 
+It starts red, transitioning to yellow: -->
+       
+        <style>
+          div {
+            height: 200px;
+            margin-bottom: 50px;
+            border-radius: 20px;
+          }
+
+
+          .gradient-1 {
+            background-image: linear-gradient(red, yellow);
+          }
+        </style>
+
+        <div class="gradient-1"></div>
+
+
+<!-- Direction - Left to Right
+===============================
+
+The following example shows a linear gradient that starts from the left. 
+It starts red, transitioning to yellow: -->
+
+              
+        <style>
+          .gradient-2 {
+            background-image: linear-gradient(to right, red, yellow);
+          }
+        </style>
+        <div class="gradient-2"></div>
+
+
+<!-- Direction - Right to Left
+===============================
+
+The following example shows a linear gradient that starts from the right. 
+It starts red, transitioning to yellow: -->
+
+        <style>
+          .gradient-3 {
+            background-image: linear-gradient(to left, red, yellow);
+          }
+        </style>
+        <div class="gradient-3"></div><hr/>
+
+
+<!-- Direction - Diagonal
+==========================
+
+You can make a 'gradient diagonally' by specifying both the horizontal and 
+vertical starting positions.
+
+The following example shows a linear gradient that starts at top left, 
+and goes to bottom right. It starts red, transitioning to yellow: -->
+
+
+          <style>
+          .gradient-4 {
+            background-image: linear-gradient(to bottom right, red, yellow);
+          }
+        </style>
+        <div class="gradient-4"></div>
+
+
+<!-- The following example shows a linear gradient that starts at top right, 
+and goes to bottom left. It starts red, transitioning to yellow: --> 
+
+          <style>
+          .gradient-5 {
+            background-image: linear-gradient(to bottom left, red, yellow);
+          }
+        </style>
+        <div class="gradient-5"></div><hr/>
+
+    
+<!-- Using Angles
+==================
+
+If you want more control over the direction of the gradient, you can define an angle, 
+instead of the predefined directions (to bottom, to top, to right, to left, to bottom 
+right, etc.). 
+
+A value of 0deg is equivalent to "to top". 
+A value of 90deg is equivalent to "to right". 
+A value of 180deg is equivalent to "to bottom".
+A value of 270deg is equivalent to "to left".
+
+Syntax
+-------
+background-image: linear-gradient(angle, color-stop1, color-stop2);
+
+The following example shows how to use angles on linear gradients: -->
+
+        <style>
+          .gradient-6 {
+            background-image: linear-gradient(0deg, red, yellow);
+          }
+          .gradient-7 {
+            background-image: linear-gradient(90deg, red, yellow);
+          }
+          .gradient-8 {
+            background-image: linear-gradient(180deg, red, yellow);
+          }
+          .gradient-9 {
+            background-image: linear-gradient(270deg, red, yellow);
+          }
+
+        </style>
+        <div class="gradient-6"></div>
+        <div class="gradient-7"></div>
+        <div class="gradient-8"></div>
+        <div class="gradient-9"></div>
+        <div class="gradient-10"></div>
+
+
+<!-- Using Multiple Color Stops
+================================
+
+The following example shows a linear gradient (from top to bottom) 
+with multiple color stops: -->
+
+      <style>
+
+        .gradient-11 {
+          background-image: linear-gradient(red, yellow, green);
+        }
+
+        .gradient-12 {
+          background-image: linear-gradient(270deg, red, yellow, green);
+        }
+
+        .gradient-13 {
+          background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+        }
+
+      </style>
+      <div class="gradient-11"></div>
+      <div class="gradient-12"></div>
+      <div class="gradient-13"></div><hr/>
+
+
+<!-- Using Transparency
+=======================
+
+CSS gradients also support transparency, which can be used to create fading effects.
+
+To add transparency, we use the rgba() function to define the color stops. 
+The last parameter in the rgba() function can be a value from 0 to 1, 
+and it defines the transparency of the color: 0 indicates full transparency, 
+1 indicates full color (no transparency).
+
+The following example shows a linear gradient that starts from the left. 
+It starts fully transparent, transitioning to full color red: -->
+
+
+
+        <style>
+
+          .gradient-14 {
+            background-image: linear-gradient(to right,rgba(255, 0, 0, 0), rgba(255, 0, 0, 1.0));
+          }
+
+          .gradient-15 { background-image: linear-gradient(rgba(255, 0, 0, 0), rgba(255, 0, 0, 1.0));
+          }
+
+          .gradient-16 {
+            background-image: linear-gradient(45deg,rgba(255, 0, 0, 0), rgba(255, 0, 0, 1.0));
+          }
+
+        </style>
+        <div class="gradient-14"></div>
+        <div class="gradient-15"></div>
+        <div class="gradient-16"></div>
+
+
+<!-- Repeating a linear-gradient
+=================================
+
+The repeating-linear-gradient() function is used to repeat linear gradients: -->
+
+        <style>
+          .gradient-17 {
+            background-image: repeating-linear-gradient(to right, red, yellow 10%, green 20%);
+          }
+
+          .gradient-18 { 
+            background-image: repeating-linear-gradient( black 10%, yellow 20%, black 30%);
+          }
+
+          .gradient-19 {
+            background-image: repeating-linear-gradient(45deg, black 0px, black 40px, yellow 40px, yellow 80px);
+          }
+
+        </style>
+        <div class="gradient-17"></div>
+        <div class="gradient-18"></div>
+        <div class="gradient-19"></div><hr/>
+
+
+<!-- CSS Radial Gradients
+==========================
+
+A radial gradient is defined by its center.
+
+To create a radial gradient you must also define at least two color stops.
+
+Syntax:
+-------
+background-image: radial-gradient(shape size at position, start-color, ..., last-color);
+
+By default, shape is ellipse, size is farthest-corner, and position is center.
+
+Radial Gradient - Evenly Spaced Color Stops (this is default)
+-------------------------------------------------------------
+
+The following example shows a radial gradient with evenly spaced color stops: -->
+
+
+
+      <style>
+        .gradient-20 {
+          background-image: radial-gradient(red, yellow, green);
+        }
+
+        .gradient-21 { 
+          background-image: radial-gradient( black 10%, yellow 20%, black 30%);
+        }
+
+        .gradient-22 {
+          background-image: radial-gradient(black 0px, black 40px, yellow 40px, yellow 80px);
+        }
+
+      </style>
+      <div class="gradient-20"></div>
+      <div class="gradient-21"></div>
+      <div class="gradient-22"></div><hr/>
+
+
+<!-- Radial Gradient - Differently Spaced Color Stops
+=====================================================
+
+The following example shows a radial gradient with differently spaced color stops: -->
+
+
+   
+      <style>
+        .gradient-23 {
+          background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+        }
+
+
+      </style>
+      <div class="gradient-23"></div><hr/>
+
+
+<!-- Set Shape
+==============
+
+The shape parameter defines the shape. It can take the value circle or ellipse. 
+The default value is ellipse.
+
+The following example shows a radial gradient with the shape of a circle: -->
+
+
+      <style>
+        .gradient-24 {
+          width: 200px;
+          height: 200px;
+          background-image: radial-gradient( red, yellow, green);
+        }
+
+        .gradient-25 {
+          width: 200px;
+          height: 200px;
+          background-image: radial-gradient(circle, red, yellow, green);
+        }
+
+
+      </style>
+      <div class="gradient-24"></div>
+      <div class="gradient-25"></div>
+
+
+<!-- Use of Different Size Keywords
+====================================
+
+The size parameter defines the size of the gradient. It can take four values:
+
+    > closest-side
+    > farthest-side
+    > closest-corner
+    > farthest-corner                                                        -->
+
+          <style>
+          #grad1 {
+            clear: both;
+        height: 150px;
+        width: 150px;
+        background-color: red; /* For browsers that do not support gradients */
+        background-image: radial-gradient(closest-side at 60% 55%, red, yellow, black);
+      }
+
+      #grad2 {
+        height: 150px;
+        width: 150px;
+        background-color: red; /* For browsers that do not support gradients */
+        background-image: radial-gradient(farthest-side at 60% 55%, red, yellow, black);
+      }
+
+      #grad3 {
+        height: 150px;
+        width: 150px;
+        background-color: red; /* For browsers that do not support gradients */
+        background-image: radial-gradient(closest-corner at 60% 55%, red, yellow, black);
+      }
+
+      #grad4 {
+        height: 150px;
+        width: 150px;
+        background-color: red; /* For browsers that do not support gradients */
+        background-image: radial-gradient(farthest-corner at 60% 55%, red, yellow, black);
+      }
+      </style>
+
+
+      <h1>Radial Gradients - Different size keywords</h1>
+
+      <h2>closest-side:</h2>
+      <div id="grad1"></div>
+
+      <h2>farthest-side:</h2>
+      <div id="grad2"></div>
+
+      <h2>closest-corner:</h2>
+      <div id="grad3"></div>
+
+      <h2>farthest-corner (default):</h2>
+      <div id="grad4"></div>
+
+
+
+      <!-- Repeating a radial-gradient
+    ===================================
+
+The repeating-radial-gradient() function is used to repeat radial gradients: -->
+
+
+<style>
+  .gradient-26 {
+    background-image: repeating-radial-gradient(red, yellow, green);
+  }
+
+  .gradient-27 { 
+    background-image: repeating-radial-gradient( black 10%, yellow 20%, black 30%);
+  }
+
+  .gradient-28 {
+    background-image: repeating-radial-gradient(black 0px, black 40px, yellow 40px, yellow 80px);
+  }
+
+</style>
+<div class="gradient-26"></div>
+<div class="gradient-27"></div>
+<div class="gradient-28"></div><hr/>
+
+
+
+
+
+
 
 
   </body>
