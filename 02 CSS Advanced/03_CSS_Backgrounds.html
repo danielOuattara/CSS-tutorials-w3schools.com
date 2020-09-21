@@ -23,6 +23,7 @@ You will also learn about the following properties:
     > background-origin
     > background-clip
 
+
 CSS Multiple Backgrounds
 =========================
 
@@ -41,7 +42,6 @@ the bottom and right, and the second image is aligned to the top-left corner-->
               background-image:url('./../../images/red-fish.jpg'), url('./../../images/sky_1.jpg') ;
               background-position: right bottom, left top;
               background-repeat: no-repeat, repeat;
-
               /* overflow: hidden; */
               padding: 50px;
             }
@@ -71,8 +71,8 @@ example above): -->
           <style>
             #example2 {
               border: 1px solid black;
-              background: url('./../../images/red-fish.jpg') right bottom
-                no-repeat , url('./../../images/sky_1.jpg') left top  repeat;
+              background: url('./../../images/red-fish.jpg') right bottom no-repeat , 
+                          url('./../../images/sky_1.jpg') left top  repeat;
 
               overflow: hidden;
               padding: 50px;
@@ -108,10 +108,8 @@ the original image (using pixels): -->
           <style>
             #example3 {
               border: 1px solid black;
-              background: url('./../../images/red-fish.jpg') right bottom
-                no-repeat;
+              background: url('./../../images/red-fish.jpg') right bottom no-repeat;
               background-size: 150px 120px;
-
               overflow: hidden;
               padding: 50px;
             }
@@ -160,6 +158,7 @@ The following example illustrates the use of contain and cover: -->
                aliquam erat volutpat.</p>
           </div>
 
+
           <style>
             #example5 {
               border: 1px solid black;
@@ -178,6 +177,7 @@ The following example illustrates the use of contain and cover: -->
             aliquam erat volutpat.</p>
           </div>
 
+
           <style>
             #example6 {
               border: 1px solid black;
@@ -195,6 +195,7 @@ The following example illustrates the use of contain and cover: -->
             diam nonummy nibh euismod tincidunt ut laoreet dolore magna
             aliquam erat volutpat.</p>
           </div>
+
 
 <!-- Define Sizes of Multiple Background Images
 ================================================
