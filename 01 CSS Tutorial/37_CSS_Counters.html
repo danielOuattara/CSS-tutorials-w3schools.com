@@ -9,12 +9,276 @@ CSS Tutorial from: https://www.w3schools.com/css/
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>CSS </title>
+      <title>CSS Counter</title>
   </head>
 
   <body>
 
-    <h1>CSS .</h1>
+    <h1>CSS Counter.</h1><hr/>
+
+
+
+<!-- CSS counters are "variables" maintained by CSS whose values 
+can be incremented by CSS rules (to track how many times they are used). 
+
+Counters let you adjust the appearance of content based on its placement 
+in the document.
+
+
+Automatic Numbering With Counters
+==================================
+
+CSS counters are like "variables". Their values can be incremented by CSS 
+rules (which will track how many times they are used).
+
+To work with CSS counters we will use the following properties:
+
+  >  counter-reset - Creates or resets a counter
+  >  counter-increment - Increments a counter value
+  >  content - Inserts generated content
+  >  counter() or counters() function - Adds the value of a counter to an element
+
+
+To use a CSS counter, it must first be created with counter-reset.
+
+The following example creates a counter for container_1,  then increments 
+the counter value for each <h2> element and adds "Section <value of the counter>:" 
+to the beginning of each <h2> element:                                          -->
+
+
+      <style>
+        .container_1 {
+          border: 1px solid grey;
+          counter-reset: section;
+          padding: 20px;
+        }
+
+       .container_1 h2::before {
+          counter-increment: section;
+          content: "Section " counter(section)" : " ;
+        }
+        
+      </style> 
+
+      <div class="container_1">
+        <h2>HTML Tutorial</h2>
+        <h2>CSS Tutorial</h2>
+        <h2>JavaScript Tutorial</h2>
+        <p><b>Note:</b> IE8 supports these properties only if a !DOCTYPE is specified.</p>
+      </div>
+
+      <!-------------------------------------------------------------------->
+
+      <style>
+        .container_2 {
+          border: 1px solid grey;
+          counter-reset: partie;
+          padding: 20px;
+        }
+
+       .container_2 h2::before {
+          counter-increment: partie;
+          content: "Partie " counter(partie)" : " ;
+        }
+
+      </style> 
+
+      <div class="container_2">
+        <h2>HTML Tutorial</h2>
+        <h2>CSS Tutorial</h2>
+        <h2>JavaScript Tutorial</h2>
+        <p><b>Note:</b> IE8 supports these properties only if a !DOCTYPE is specified.</p>
+      </div>
+
+
+<!-- Nesting Counters
+======================
+
+The following example creates one counter for the page (section) and one counter for 
+each <h1> element (subsection). 
+
+The "section" counter will be counted for each <h1> element with 
+"Section <value of the section counter>.", and the "subsection" counter will be counted 
+for each <h2> element with "<value of the section counter>. <value of the subsection counter>": -->
+
+       <style>
+         .container_3 {
+          border: 1px solid grey;
+          counter-reset: titre;
+          padding: 20px;
+         }
+
+         .container_3 h1::before {
+           counter-increment: titre;
+           content: "Titre" counter( titre) " : ";
+         }
+
+         .container_3 h1 {
+           counter-reset: sous-titre;
+         }
+
+         .container_3 h2::before {
+           counter-increment: sous-titre;
+           content: "Sous-titre" counter(sous-titre) " : ";
+         }
+
+         .container_3 h2 {
+           counter-reset: section;
+         }
+
+         .container_3 h3::before {
+           counter-increment: section;
+           content: "Section " counter(section) " : ";
+         }
+       </style>
+
+       <div class="container_3">
+        <h1>HTML tutorials:</h1>
+          <h2>HTML Tutorial</h2>
+            <h3>One</h3>
+            <h3>Two</h3>
+            <h3>Three</h3>
+          <h2>CSS Tutorial</h2>
+        
+        <h1>Scripting tutorials:</h1>
+          <h2>JavaScript</h2>
+            <h3>One</h3>
+            <h3>Two</h3>
+            <h3>Three</h3>
+          <h2>VBScript</h2>
+            <h3>One</h3>
+            <h3>Two</h3>
+            <h3>Three</h3>
+        
+        <h1>XML tutorials:</h1>
+        <h2>XML</h2>
+        <h2>XSL</h2>
+        
+       </div>
+
+<!-- A counter can also be useful to make outlined lists because a new 
+instance of a counter is automatically created in child elements. 
+Here we use the counters() function to insert a string between different 
+levels of nested counters:                                             -->
+
+       
+      
+      <style>
+        .container_4 {
+        border: 1px solid grey;
+        padding: 20px;
+        }
+
+        .container_4 ol {
+          list-style-type: none;
+          counter-reset: level;
+        }
+
+        .container_4 ol li::before{
+          counter-increment: level;
+          content: counters(level,".") " ";
+        }
+      </style>
+
+      <div class="container_4">
+        <ol>
+          <li>item</li>
+          <li>item   
+            <ol>
+              <li>item</li>
+              <li>item</li>
+              <li>item
+                <ol>
+                  <li>item</li>
+                  <li>item</li>
+                  <li>item</li>
+                </ol>
+              </li>
+              <li>item</li>
+            </ol>
+          </li>
+          
+          <li>item</li>
+          <li>item</li>
+        </ol>
+        
+        <ol>
+          <li>item</li>
+          <li>item</li>
+        </ol>
+      </div>
+
+ <!--CSS Counter Properties
+============================
+
+Property 	          Description
+----------------------------------------------------------------------------------------
+content 	          Used with the ::before and ::after pseudo-elements, 
+                    to insert generated content
+----------------------------------------------------------------------------------------
+counter-increment 	Increments one or more counter values
+----------------------------------------------------------------------------------------
+counter-reset 	    Creates or resets one or more counters 
+---------------------------------------------------------------------------------------->
+
+
+
+<!--  Application -->
+
+  
+ 
+   <style>
+     .container_5 {
+       border: 1px solid grey;
+       background: rgb(21, 135, 21);
+       color: white;
+     }
+     .container_5 ul {
+      list-style-type: none;
+      counter-reset: item;
+     }
+
+     .container_5 ul li {
+      padding: 10px;
+     }
+     .container_5 ul li::before {
+       counter-increment: item;
+       content: counter(item) ;
+       background: grey;
+       padding: 15px 20px;
+       margin-right: 20px;
+       display: inline-block;
+       border-radius: 50%;
+     }
+
+
+    /* 
+    counter-increment: section;
+    content: counter(section);
+    display: inline-block;
+    color: white;
+    background: #555;
+    border: 5px solid #555;
+    padding: 1px 15px;
+    margin-right: 16px;
+    border-radius: 50%;
+    */
+
+
+
+
+
+   </style>
+
+   <div class="container_5">
+    <ul>
+      <li>Pizza</li>
+      <li>Hamburger</li>
+      <li>Hot-dogs</li>
+    </ul>
+   </div>
+
+
 
   </body>
 </html>
