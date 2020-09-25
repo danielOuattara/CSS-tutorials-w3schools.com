@@ -1,0 +1,171 @@
+<!-------------------------------------------------
+Daniel OUATTARA- daniel.ouattara_AT_gmx.com
+15 06 2020
+CSS Advanced from: https://www.w3schools.com/css/
+ -------------------------------------------------->
+
+ <!DOCTYPE html>
+ <html lang="en" dir="ltr">
+   <head>
+     <meta charset="utf-8">
+     <title>CSS Shadow Effects  </title>
+   </head>
+   <body>
+     <h1>CSS Shadow Effects. </h1><hr/>
+ 
+ 
+ <!-- CSS Shadow Effects
+ =======================
+ 
+ With CSS you can add 'shadow' to text and to elements.
+ 
+ In these chapters you will learn about the following properties:
+ 
+   > text-shadow
+   > box-shadow
+ 
+ 
+ CSS Text Shadow
+ ================
+ 
+ The CSS 'text-shadow' property applies shadow to text.
+ 
+ In its simplest use, you only specify the horizontal and vertical offset: -->
+ 
+         <style>
+           h2#one-1 {
+             text-shadow: 2px red; /* nothing acting*/
+           }
+           h2#one-2 {
+             text-shadow: 2px 0 green;  /*  X-offest only*/
+           }
+           h2#one-3 {
+             text-shadow: 4px 0 green; /* X-offset */
+           }
+           h2#one-4 {
+             text-shadow: 0 2px green; /* Y-offset*/
+           }
+           h2#one-5 {
+             text-shadow: 0 4px green;  /* Y-offset*/
+           }
+           h2#one-6 {
+             text-shadow: 4px 4px green;  /* Y-offset*/
+           }
+           h2#one-7 {
+             text-shadow: -4px 0 blue; /* Y-offset*/
+           }
+           h2#one-8 {
+             text-shadow: 0 -4px blue;  /* Y-offset*/
+           }
+           h2#one-9 {
+             text-shadow: -4px -4px blue;  /* Y-offset*/
+           }
+         </style>
+         <h2 id="one-1">First text shadow</h2>
+         <h2 id="one-2">First text shadow</h2>
+         <h2 id="one-3">First text shadow</h2>
+         <h2 id="one-4">First text shadow</h2>
+         <h2 id="one-5">First text shadow</h2>
+         <h2 id="one-6">First text shadow</h2>
+         <h2 id="one-7">First text shadow</h2>
+         <h2 id="one-8">First text shadow</h2>
+         <h2 id="one-9">First text shadow</h2><hr>
+ 
+ <!-- Next, add a color to the shadow: -->
+ 
+         <style>
+           h2#two {
+             text-shadow: 2px 2px red; /* X-offset & Y-offset*/
+           }
+         </style>
+         <h2 id="two">Second text shadow</h2><hr>
+ 
+ 
+   <!-- Then, add a blur effect to the shadow: -->
+ 
+         <style>
+           h2#three-1 {
+             text-shadow: 2px 2px 2px red;
+           }
+           h2#three-2 {
+             text-shadow: 2px 2px 5px red;
+           }
+           h2#three-3 {
+             text-shadow: 2px 2px 10px red;
+           }
+           h2#three-4 {
+             text-shadow: 2px 2px 15px red;
+           }
+
+         </style>
+         <h2 id="three-1">Third text shadow</h2>
+         <h2 id="three-2">Third text shadow</h2>
+         <h2 id="three-3">Third text shadow</h2>
+         <h2 id="three-4">Third text shadow</h2><hr>
+ 
+ 
+   <!-- The following example shows a white text with black shadow: -->
+ 
+         <style>
+           h2#four {
+             color: white;
+             text-shadow: 2px 2px 4px black;
+           }
+         </style>
+         <h2 id="four">Fourth text shadow</h2><hr>
+ 
+ 
+   <!-- The following example shows a red neon glow shadow: -->
+ 
+       <style>
+         h2#five {
+           color: white;
+           text-shadow: 0 0  3px red;
+         }
+       </style>
+       <h2 id="five">Fifth text shadow</h2><hr>
+ 
+ 
+ <!-- Multiple Shadows
+ =====================
+ 
+ To add more than one shadow to the text, you can add a comma-separated list of shadows.
+ 
+ The following example shows a red and blue neon glow shadow: -->
+
+       <h2>Multiple shadow</h2>
+       <style>
+         h2#six {
+           text-shadow: 0 0  3px red, 0 0 5px blue;
+         }
+       </style>
+       <h2 id="six">Sixth text shadow</h2>
+ 
+ 
+ 
+ <!-- The following example shows a white text with black, blue, and darkblue shadow: -->
+ 
+       <style>
+         h2#seven {
+           color: white;
+           text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+         }
+       </style>
+       <h2 id="seven">Seventh text shadow</h2>
+ 
+   
+ <!-- You can also use the text-shadow property to create a plain border around some 
+   text (without shadows): -->
+ 
+     <style>
+       h2#height {
+         color: yellow;
+         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+       }
+     </style>
+     <h2 id="height">Eighth text shadow</h2>
+ 
+ 
+   </body>
+ </html>
+ 
