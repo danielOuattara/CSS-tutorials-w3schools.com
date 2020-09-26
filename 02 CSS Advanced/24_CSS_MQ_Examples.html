@@ -8,10 +8,115 @@ CSS Advanced from: https://www.w3schools.com/css/
  <html lang="en" dir="ltr">
    <head>
      <meta charset="utf-8">
-     <title>CSS </title>
+     <title>CSS Medai Query Examples </title>
    </head>
    <body>
-     <h1>CSS </h1>
+     <h1>CSS Medai Query Eamples. </h1><hr/>
+
+
+<!-- CSS Media Queries - More Examples
+======================================
+
+Let us look at some more examples of using media queries.
+
+Media queries are a popular technique for delivering a tailored style sheet 
+to different devices. To demonstrate a simple example, we can change the background
+color for different devices: -->
+
+
+      <style>
+
+         * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        div.container-1 {
+
+          width: 90%;
+          height: 300px;
+          background-color: blue;
+          margin: 30px auto  30px 30px;
+        }
+
+        @media screen and (max-width: 992px) {
+
+          div.container-1 {
+            background-color: rgba(0, 0, 255, 0.59);
+          }
+        }
+        @media  screen  and (max-width :600px) {
+
+          div.container-1 {
+            background-color: rgba(0, 0, 255, 0.309);
+          }
+        }
+      </style>
+      <div class="container-1">
+        <h2>Resize the browser window to see the effect!</h2>
+      </div><hr/>
+
+
+<!-- Media Queries For Menus
+=============================
+
+In this example, we use media queries to create a responsive navigation menu, that varies 
+in design on different screen sizes. -->
+
+       <style>
+         .navigation ul {
+           list-style-type: none;
+           background: rgb(72, 72, 72);
+           margin-top: 30px;
+           overflow: hidden;
+           width: 90%;
+           margin: auto;
+           margin-top: 30px;
+         }
+
+        .navigation ul li {
+          float: left;
+          padding: 15px;
+          color: white;
+        }
+
+        .navigation ul li.active {
+          background-color: green;
+          color: white;
+        }
+        .navigation ul li:not(.active):hover {
+          background-color: rgb(201, 201, 201);
+          color: black;
+        }
+
+        @media screen and (max-width: 600px) {
+
+          .navigation ul li {
+            float: none;
+            width: 100%;
+          };
+        }
+        
+       </style>
+    
+       <div class="container-2">
+          <div class="navigation">
+            <ul>
+              <li class="active">Home</li>
+              <li>Link 1</li>
+              <li>Link 2</li>
+              <li>Link 3</li>
+            </ul>
+        </div>
+
+
+
+
+
+
+       </div>
+    
  
  
    </body>
