@@ -8,10 +8,228 @@ CSS Advanced from: https://www.w3schools.com/css/
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>CSS </title>
+    <title>CSS Text Effect </title>
   </head>
   <body>
-    <h1>CSS </h1>
+    <h1>CSS Text Effect.</h1><hr/>
+
+  
+<!-- CSS Text Overflow, Word Wrap, Line Breaking Rules, and Writing Modes
+
+In this chapter you will learn about the following properties:
+
+  >  text-overflow
+  >  word-wrap
+  >  word-break
+  >  writing-mode
+
+
+CSS Text Overflow
+==================
+
+The CSS 'text-overflow' property specifies how overflowed content that is not 
+displayed should be signaled to the user.
+
+It can be 'clipped' or 'rendered' as an ellipsis (...):            -->
+
+
+    <style>
+
+      p.examples-1 {
+        width: 200px;
+        border: 1px solid black;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      p.test-1 {
+        text-overflow: clip;
+      }
+
+      p.test-2 {
+        text-overflow: ellipsis;
+      }
+
+    </style>
+
+    <h2>The text overflow Property</h2>
+    <p>The following 2 paragraphs contains a long text that will not fit in the box.</p>
+
+    <h3> clip:</h3>
+    <p class="test-1 examples-1">This is some long text that will not fit in the box</p>
+
+    <h3> ellipsis:</h3>
+    <p class="test-2 examples-1">This is some long text that will not fit in the box</p><hr/>
+
+
+
+<!--The following example shows how you can display the overflowed content 
+when hovering over the element:                                         -->
+
+
+<style>
+
+  p.overflow-visible-1 {
+    width: 200px;
+    border: 1px solid black;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  p.test-3 {
+    text-overflow: ellipsis;
+  }
+
+  p.test-4 {
+    text-overflow: clip;
+  }
+
+  p.overflow-visible-1:hover {
+    overflow: visible;
+  }
+
+</style>
+
+<p>Hover over the two divs below, to see the entire text.</p>
+
+<h3> clip:</h3>
+<p class="test-3 overflow-visible-1">This is some long text that will not fit in the box</p>
+
+<h3> ellipsis:</h3>
+<p class="test-2 overflow-visible-1">This is some long text that will not fit in the box</p><hr/>
+
+
+
+
+<style>
+
+  p.overflow-visible-2 {
+    width: 200px;
+    border: 1px solid black;
+    white-space: nowrap;
+    overflow: visible;
+  }
+
+  p.test-4 {
+    text-overflow:ellipsis;
+  }
+
+  p.test-5 {
+    text-overflow: clip;
+  }
+
+  p.overflow-visible-2:hover {
+
+    overflow: hidden;
+  }
+
+</style>
+
+<p>Hover over the two divs below, to see the entire text.</p>
+
+<h3>clip:</h3>
+<p class="test-4 overflow-visible-2">This is some long text that will not fit in the box</p>
+
+<h3>ellipsis:</h3>
+<p class="test-5 overflow-visible-2">This is some long text that will not fit in the box</p> <hr/>
+
+
+
+<!-- CSS Word Wrapping
+=======================
+
+The CSS 'word-wrap' property allows long words to be able to be broken and 
+wrap onto the next line. 
+
+If a word is too long to fit within an area, it expands outside:
+
+The 'word-wrap' property allows you to force the text to wrap - 
+even if it means splitting it in the middle of a word:   -->
+
+
+
+    <style>
+      p.test-word-wrapping {
+        width: 11em;
+        border: 1px solid black;
+        word-wrap: break-word;;
+      }
+    </style>
+    <h2>Word wrapping</h2>
+    <p class="test-word-wrapping"> This paragraph contains a very long word: 
+      thisisaveryveryveryveryveryverylongword. The long word will break and 
+      wrap to the next line.</p><hr/>
+
+
+
+
+
+<!--CSS Word Breaking
+======================
+The CSS word-break property specifies line breaking rules. -->
+
+    
+    <style> 
+      .word-break {
+        width: 140px; 
+        border: 1px solid #000000;
+      }
+
+      p.test-6{
+        word-break: keep-all;
+      }
+      
+      p.test-7 {
+        word-break: break-all;
+      }
+      
+      </style>
+      </head>
+      <body>
+      
+      <h2>The word-break Property</h2>
+      
+      <p class="test-6 word-break">This paragraph contains some text. This line will-break-at-hyphens.</p>
+      
+      <p class="test-7 word-break">This paragraph contains some text. The lines will break at any character.</p>
+
+
+
+
+
+
+<!-- CSS Writing Mode
+======================
+
+The CSS 'writing-mode' property specifies whether lines of text are laid out 
+horizontally or vertically.
+
+Some text with a span element with a vertical-rl writing-mode.
+
+The following example shows some different writing modes:
+Example
+p.test1 {
+  writing-mode: horizontal-tb;
+}
+
+span.test2 {
+  writing-mode: vertical-rl;
+}
+
+p.test2 {
+  writing-mode: vertical-rl;
+}
+Test Yourself with Exercises!
+CSS Text Effect Properties
+
+The following table lists the CSS text effect properties:
+Property 	Description
+text-align-last 	Specifies how to align the last line of a text
+text-justify 	Specifies how justified text should be aligned and spaced
+text-overflow 	Specifies how overflowed content that is not displayed should be signaled to the user
+word-break 	Specifies line breaking rules for non-CJK scripts
+word-wrap 	Allows long words to be able to be broken and wrap onto the next line
+writing-mode 	Specifies whether lines of text are laid out horizontally or vertically -->
 
 
   </body>
