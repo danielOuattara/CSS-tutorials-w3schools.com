@@ -42,7 +42,7 @@ Media queries can be used to check many things, such as:
    > resolution
 
 Using 'media queries' is a popular technique for delivering a tailored style sheet 
-to desktops, laptops, tablets, and mobile phones (such as iPhone and Android phones). 
+to desktops, laptops, tablets, and mobile phones (iPhone, Android phones, ...).
 
 
 Browser Support
@@ -51,7 +51,7 @@ Browser Support
 The numbers in the table specifies the first browser version that fully supports 
 the @media rule.
 
----------------------------------------------------------------
+----------------------------------------------------------------
 Property 		Google 		 Internet    Mozilla     Safari    Opera
             Chrome     Explorer    Firefox 	
 ----------------------------------------------------------------
@@ -59,13 +59,11 @@ Property 		Google 		 Internet    Mozilla     Safari    Opera
 ----------------------------------------------------------------
 
 
-
 Media Query Syntax
 ===================
 
 A 'media query' consists of a 'media type' and can contain one or more expressions, 
 which resolve to either true or false.
-
 ________________________________________________
 
 @media not|only mediatype and (expressions) {
@@ -73,19 +71,17 @@ ________________________________________________
 }
 
 The result of the query is 'true' if the specified media type matches the type of device 
-the document is being displayed on and all expressions in the media query are true. 
+the document is being displayed on and 'all expressions' in the media query are 'true'. 
 
-When a media query is true, the corresponding style sheet or style rules are applied, 
+When a media query is 'true', the corresponding style sheet or style rules are applied, 
 following the normal cascading rules.
 
-Unless you use the 'not' or 'only' operators, the media type is optional and the all 
+Unless you use the 'not' or 'only' operators, the 'mediatype' is optional and the all 
 type will be implied.
 
 You can also have different stylesheets for different media:
-
 _____________________________________________________________________________________
 <link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
-
 
 
 CSS3 Media Types
@@ -97,7 +93,6 @@ all 	  Used for all media type devices
 print 	Used for printers
 screen 	Used for computer screens, tablets, smart-phones etc.
 speech 	Used for screenreaders that "reads" the page out loud
-
 
 
 Media Queries Simple Examples
@@ -167,7 +162,6 @@ background-color will be pink):                                                 
             margin: 4px;
           }
 
-
           @media screen and (min-width: 480px) {
             .container-2 {
               background-color: #90ee90;
@@ -198,13 +192,8 @@ background-color will be pink):                                                 
             <p>This example shows a menu that will float to the left of the page
                if the viewport is 480 pixels wide or wider. If the viewport is less than 
                480 pixels, the menu will be on top of the content.</p>
-
-
-
-
         </div>
- 
- 
+
    </body>
  </html>
  
