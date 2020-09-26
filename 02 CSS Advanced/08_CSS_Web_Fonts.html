@@ -114,12 +114,12 @@ through the font-family property: -->
 
       <style>
         @font-face {
-          font-family: comforta;
-          src: url(./../Comfortaa/Comfortaa-VariableFont_wght.ttf);
+          font-family: 'Long Cang';
+          src: url(./../fonts/Long_Cang/LongCang-Regular.ttf);
         }
 
         div.group-1 {
-          font-family: comforta;
+          font-family: 'Long Cang';
         }
       </style>
 
@@ -127,7 +127,7 @@ through the font-family property: -->
           <h2>The font-face Rule</h2>
           <div>With CSS, Websites can use fonts other than the pre-selecteds "web-safe" fonts</div>
           <p><b>Note:</b> Internet Explorer 8 and earlier, do not support the @font-face rule.</p>
-        </div>
+        </div><hr/>
 
 
         <!-- ---------------------------------------------------------------------- -->
@@ -135,25 +135,19 @@ through the font-family property: -->
 
       <style>
         @font-face {
-          font-family: 'Long Cang';
-          src: url(./../Long_Cang/LongCang-Regular.ttf);
-        }
-        
-        @font-face {
-          font-family: 'Long Cang';
-          src: url(./../Long_Cang/LongCang-Regular.ttf);
-          font-weight: 900;
+          font-family: 'Confortaa-light';
+          src: url(./../fonts/Comfortaa/static/Comfortaa-Light.ttf);
         }
 
         div.group-2 {
-          font-family: 'Long Cang';
+          font-family: 'Confortaa-light';
         }
       </style>
 
         <div class="group-2">
           <h2>The font-face Rule</h2>
           <div>With CSS, Websites can use fonts other than the pre-selecteds "web-safe" fonts</div>
-        </div>
+        </div><hr/>
 
 
 
@@ -162,20 +156,72 @@ through the font-family property: -->
 
 You must add another '@font-face' rule containing descriptors for bold text: -->
 
+      <style>
+        @font-face {
+          font-family: 'Confortaa';
+          src: url(./../Comfortaa/static/Comfortaa-Regular.ttf);
+        }
 
+        @font-face {
+          font-family: 'Confortaa Bold';
+          src: url(./../Comfortaa/static/Comfortaa-Bold.ttf);
+        }
 
+        div.group-3 {
+          font-family: 'Confortaa Bold';
+        }
+      </style>
 
+        <div class="group-3">
+          <h2>The font-face Rule</h2>
+          <div>With CSS, Websites can use fonts other than the pre-selecteds "web-safe" fonts</div>
+        </div><hr/>
 
+<!-- ------------------------------------------------------------------------------------------ -->
 
+      <style>
+        @font-face {
+          font-family: 'Ubuntu';
+          src: url(./../fonts/Ubuntu/Ubuntu-Regular.ttf);
+        }
 
+        @font-face {
+          font-family: 'Ubuntu italic';
+          src: url(./../fonts/Ubuntu/Ubuntu-Italic.ttf);
+        }
 
+        @font-face {
+          font-family: 'Ubuntu light italic';
+          src: url(./../fonts/Ubuntu/Ubuntu-LightItalic.ttf);
+        }
 
+        div.group-4 {
+          font-family: 'Ubuntu';
+        }
 
+        div.group-5 {
+          font-family: 'Ubuntu italic';
+        }
 
+        div.group-6 {
+          font-family: 'Ubuntu light italic';
+        }
+      </style>
 
+        <div class="group-4">
+          <h2>The font-face Rule</h2>
+          <div>With CSS, Websites can use fonts other than the pre-selecteds "web-safe" fonts</div>
+        </div>
 
+        <div class="group-5">
+          <h2>The font-face Rule</h2>
+          <div>With CSS, Websites can use fonts other than the pre-selecteds "web-safe" fonts</div>
+        </div>
 
-
+        <div class="group-6">
+          <h2>The font-face Rule</h2>
+          <div>With CSS, Websites can use fonts other than the pre-selecteds "web-safe" fonts</div>
+        </div>
 
 
 
