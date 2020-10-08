@@ -11,7 +11,7 @@ CSS Advanced from: https://www.w3schools.com/css/
      <title>CSS Transitions</title>
    </head>
    <body>
-     <h1>CSS CSS Transitions.</h1><hr/>
+     <h1>CSS Transitions.</h1><hr/>
 
 
 <!-- CSS Transitions
@@ -54,7 +54,7 @@ How to Use CSS Transitions ?
 
 To create a transition effect, you must specify two things:
 
-    1. the CSS property you want to add an effect to
+    1. the CSS property you want to modify
     2. the duration of the effect
 
 Note: If the duration part is not specified, the transition will have no effect, 
@@ -173,10 +173,11 @@ The following example has a 700 miliseconds delay before starting: -->
           width: 150px;
           height: 100px;
           background-color: #289191;
+          color: white;
+          font-size:20px;
           transition: width 800ms;
           transition-delay: 700ms;
-          font-size:20px;
-          color: white;
+          /* transition: width 800ms 300ms; */
 
         }
 
@@ -227,7 +228,6 @@ The CSS transition properties can be specified one by one, like this: -->
           transition: transform 1s ease-out 500ms ;
           font-size:20px;
           color: white;
-
         }
 
         .transition-transformation-2:hover {
@@ -238,6 +238,7 @@ The CSS transition properties can be specified one by one, like this: -->
       <div class="transition-transformation-2">Transition Shorthand formulation</div><hr/>
 
 
+      <!--  many CSS transition properties can also be gathered  -->
       <style>
         .transition-transformation-3 {
           width: 150px;

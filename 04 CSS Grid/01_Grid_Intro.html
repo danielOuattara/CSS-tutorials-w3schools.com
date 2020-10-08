@@ -9,6 +9,7 @@ CSS Responsive from: https://www.w3schools.com/css/
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./01_Grid_Intro.css">
     <title>CSS Grid Layout Module</title>
   </head>
 
@@ -28,40 +29,6 @@ and 'positioning'.
 Introductory example
 =====================-->
 
-        <style>
-
-
-          .grid-container-0 {
-            display: grid;
-            grid-template-areas: 
-            'header header header header header header'
-            'menu main main main right right'
-            'menu footer footer footer footer footer';
-
-            /* grid-gap: 10px; */  /*obslete*/
-
-            row-gap: 5px;
-            column-gap: 10px;
-            background-color: rgb(33, 150, 243);
-            padding: 10px;
-            margin-bottom: 50px;
-          }
-          .grid-item-0-1 { grid-area: header; }
-          .grid-item-0-2 { grid-area: menu; }
-          .grid-item-0-3 { grid-area: main; }
-          .grid-item-0-4 { grid-area: right; }
-          .grid-item-0-5 { grid-area: footer; }
-
-          .grid-container-0 > div {
-            background-color: rgba(255, 255, 255, 0.8);
-            text-align: center;
-            padding: 20px 0;
-            font-size: 30px;
-
-          }
-
-        </style>  
-     
         <div class="grid-container-0">
           <div class="grid-item-0-1">Header</div>
           <div class="grid-item-0-2">Menu</div>

@@ -33,7 +33,7 @@ transform 	36.0       10.0   16.0      9.0      23.0
 CSS 2D Transforms Methods
 ==========================
 
-With the CSS transform property you can use the following 2D transformation methods:
+With the CSS 'transform' property you can use the following 2D transformation methods:
 
     > translate()
     > rotate()
@@ -66,13 +66,23 @@ down from its current position: -->
              margin: 0 0 100px 100px;  /* Remember this line*/
              text-align: center;
            }
-           div.intitial {
+
+           div.initial {
              background-color: #9ca9ac;
              border: 1px solid rgb(70, 32, 32);
+             /* -ms-transform: rotate(0);
+             transform: rotate(0);
+             transition: transform 0.7s ease ; */
+           }
+
+           div.initial:hover {
+             cursor: pointer;
+             /* -ms-transform: rotate(180deg); */
+             transform: rotate(190deg);
            }
           </style>
 
-          <div class="intitial"> Initial</div>
+          <div class="initial"> Initial</div>
           <!-- --------------------------------------- -->
 
          <style>
@@ -108,7 +118,6 @@ The 'rotate()' method rotates an element clockwise or counter-clockwise accordin
 to a given degree.
 
 The following example rotates the <div> element clockwise with 20 degrees:
-
 Using negative values will rotate the element counter-clockwise.          -->
 
 
