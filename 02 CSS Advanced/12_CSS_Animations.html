@@ -774,7 +774,7 @@ The example below uses six of the animation properties: -->
           animation-name: animation-15;
           animation-duration: 3s;
           animation-delay: -1s;
-          animation-iteration-count: infinite;
+          /* animation-iteration-count: infinite; */
           animation-direction: alternate;
           animation-fill-mode: forwards;
           position: relative;
@@ -820,7 +820,7 @@ The example below uses six of the animation properties: -->
 
           .animation-16 {
             background-color: blue;
-            animation: animation-16 3s -1s infinite alternate forwards;
+            animation: animation-16 3s 1s /*infinite*/ alternate forwards;
             position: relative;
           }
   
