@@ -16,14 +16,14 @@ CSS Advanced from: https://www.w3schools.com/css/
 
 <!-------------------------------------------------------------------------- -->
     <style>
-      div.flex-container_1 {
+      div.flex-container {
          display: flex;
-         flex-wrap: nonwrap;
-         background-color: DodgerBlue;
+         flex-wrap: nowrap;
+         background: DodgerBlue;
          /* flex-direction: column; */
       }
 
-      .flex-container_1 > div {
+      .flex-container > div {
         background-color: #b1f01d;
         width: 100%;
         margin: 10px;
@@ -33,7 +33,7 @@ CSS Advanced from: https://www.w3schools.com/css/
       }
     </style>
 
-    <div class="flex-container_1">
+    <div class="flex-container">
       <div>1</div>
       <div>2</div>
       <div>3</div>
@@ -54,7 +54,7 @@ CSS Advanced from: https://www.w3schools.com/css/
 <!-- CSS Flexbox Layout Module
 ===============================
 
-Before the Flexbox Layout module, there were four layout modes:
+Before the Flexbox Layout module, there were 4 layouts modes:
 
   >  Block, for sections in a webpage
   >  Inline, for text
@@ -80,7 +80,8 @@ Flexbox Elements
           padding: 20px;
           margin: 10px;
           font-size: 30px;
-          /* width: 100%; */
+          width: 100%;
+          text-align: center;
         }
       </style>
       <div class="flex-container_2">

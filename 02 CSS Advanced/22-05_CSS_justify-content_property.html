@@ -15,7 +15,7 @@ CSS Advanced from: https://www.w3schools.com/css/
 
 
 <!-- The justify-content property is used to align (distribute) 
-simultaneously all the flex items on the x-axis.
+simultaneously all the flex items on the Main Axis
 
 CSS Syntax: 
 ============
@@ -68,8 +68,7 @@ space-between   displays the flex items with space between the lines
 
       <!-------------------------------------------------->
 
-
-      <h3>justify-content: flex-start</h3>
+      <h3>justify-content: flex-start (Default)</h3>
       <!-- flex-start value aligns the flex items at the beginning of the container (default) -->
       <style>
         .flex-container_12 {
@@ -168,6 +167,33 @@ space-between   displays the flex items with space between the lines
 
         .flex-container_15 > div {
           background-color: #f1f1f1;
+          /* margin: 10px; */
+          font-size: 30px;
+          width: 100px;
+          text-align: center;
+          line-height: 75px;
+        }
+
+      </style>
+      <div class="flex-container_15">
+        <div>1</div>
+        <div>2</div>
+         <div>3</div>
+      </div><br/><br/><hr/>
+
+      <!-- ------------------------------------------------ -->
+
+      <h3>justify-content: space-evenly</h3>
+      <!-- space-between value displays the flex items with space between the lines -->
+      <style>
+        .flex-container_15 {
+          display: flex;
+          background-color: dodgerblue;
+          justify-content: space-evenly;
+        }
+
+        .flex-container_15 > div {
+          background-color: #f1f1f1;
           margin: 10px;
           font-size: 30px;
           width: 100px;
@@ -180,9 +206,8 @@ space-between   displays the flex items with space between the lines
         <div>1</div>
         <div>2</div>
         <div>3</div>
+        <div>3</div>
 
       </div><br/><br/><hr/>
-
-  
   </body>
 </html>
