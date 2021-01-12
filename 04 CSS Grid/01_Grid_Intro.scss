@@ -1,13 +1,15 @@
         .grid-container-0 {
           display: grid;
           grid-template-areas: 
-          'header header header header header header'
-          'menu main main main right right'
-          'menu footer footer footer footer footer';
+                              'header header header header header header'
+                              'menu main main main right right'
+                              'menu footer footer footer footer footer';
 
           /* grid-gap: 10px;  obslete*/   
           row-gap: 5px;
-          column-gap: 10px;
+          -webkit-column-gap: 10px;
+             -moz-column-gap: 10px;
+                  column-gap: 10px;
           background-color: rgb(33, 150, 243);
           padding: 10px;
           margin-bottom: 50px;

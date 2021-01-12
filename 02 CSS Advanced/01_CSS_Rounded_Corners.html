@@ -8,10 +8,10 @@ CSS Advanced from: https://www.w3schools.com/css/
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>CSS </title>
+    <title>CSS Rounded Corners </title>
   </head>
   <body>
-    <h1>CSS </h1>
+    <h1>CSS Rounded Corners </h1>
 
 <!-- With the CSS 'border-radius' property, you can give any element
 "rounded corners".
@@ -23,7 +23,6 @@ CSS border-radius Property
 The CSS 'border-radius' property defines the radius of an element's corners.
 
 Tip: This property allows you to add rounded corners to elements!
-====
 
 
 Rounded corners for an element with a specified background color:   
@@ -46,6 +45,7 @@ Rounded corners for an element with a specified background color:
           width: 200px;
           height: 150px;
           border-radius: 25px;
+          text-align: center;
         }
 
         #rcorners3 {
@@ -70,9 +70,12 @@ Rounded corners for an element with a specified background color:
 
 
 
-<!-- Tip: The 'border-radius' property is actually a shorthand property
-     for the 'border-top-left-radius', 'border-top-right-radius',
-    'border-bottom-right-radius' and 'border-bottom-left-radius' properties.
+<!-- Tip: The 'border-radius' property is actually a shorthand property for:
+
+     - 'border-top-left-radius'
+     - 'border-top-right-radius'
+     - 'border-bottom-right-radius'
+     - 'border-bottom-left-radius'
 
 
 CSS border-radius - Specify Each Corner
@@ -165,11 +168,21 @@ Here are the rules:
             height: 150px;
             text-align: center;
           }
+
+          #rcorners4c {
+            border-radius: 50% ;
+            background: #73AD21;
+            padding: 20px;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+          }
           </style>
 
           <p id="rcorners1c">Rounded corners!</p>
           <p id="rcorners2c">Rounded corners!</p>
           <p id="rcorners3c">Rounded corners!</p>
+          <p id="rcorners4c">Rounded corners!</p>
 
 
 
