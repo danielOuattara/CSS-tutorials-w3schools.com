@@ -17,7 +17,7 @@ CSS Advanced from: https://www.w3schools.com/css/
 <!-- Grid Container
 ===================
 
-To make an HTML element behave as a 'grid container', you have to set the display 
+To make an HTML element behave as a 'grid container', you have to set the display
 property to 'grid' or 'inline-grid'.
 
 Grid containers consist of grid items, placed inside columns and rows.
@@ -26,13 +26,13 @@ Grid containers consist of grid items, placed inside columns and rows.
 The grid-template-columns Property
 ==================================
 
-The 'grid-template-columns' property defines the number of columns in your grid 
+The 'grid-template-columns' property defines the number of columns in your grid
 layout, and it can define the 'width' of each column.
 
-The value of grid-template-coumn' is a 'space-separated-list', where each value 
+The value of grid-template-coumn' is a 'space-separated-list', where each value
 defines the 'width' of the respective column.
 
-If you want your grid layout to contain 4 columns, specify the 'width' of the 
+If you want your grid layout to contain 4 columns, specify the 'width' of the
 4 columns; or wrtie "auto" 4 times  if all columns should have the same width. -->
 
 
@@ -70,12 +70,14 @@ If you want your grid layout to contain 4 columns, specify the 'width' of the
           <div>8</div>
         </div>
 
-<!--Note: If you have more than 4 items in a 4 columns grid, the grid will automatically add a new row to put the items in.
+<!--Note: If you have more than 4 items in a 4 columns grid, the grid will
+automatically add a new row to put the items in.
 
 
-The grid-template-columns property can also be used to specify the size (width) of the columns.-->
+The grid-template-columns property can also be used to specify the size (width)
+of the columns.-->
         <style>
-          
+
         div.grid-container-2 {
           display: grid;
           grid-template-columns: 120px  30% auto 14rem;
@@ -114,12 +116,12 @@ The grid-template-columns property can also be used to specify the size (width) 
 
 The 'grid-template-rows' property defines the height of each row.
 
-The value of "grid-template-rows' is a space-separated-list, where 
+The value of "grid-template-rows' is a space-separated-list, where
 each value defines the 'height' of the respective row:         -->
 
 
         <style>
-                  
+
           div.grid-container-3 {
             display: grid;
             grid-template-rows: 100px 200px 150px;
@@ -152,14 +154,14 @@ each value defines the 'height' of the respective row:         -->
 
 The 'justify-content' property is used to align the whole grid inside the container.
 
-Note: The grids's total width has to be less than the container's width for 
+Note: The grids's total width has to be less than the container's width for
 the 'justify-content' property to have any effect.
 
 -->
         <hr/><h2>justify-content</h2>
         <h3> justify-content: space-evenly</h3>
         <style>
-                  
+
           div.grid-container-4 {
             display: grid;
             grid-template-columns: auto auto auto;
@@ -193,8 +195,8 @@ the 'justify-content' property to have any effect.
           <!-- ------------------------------------- -->
 
         <h3> justify-content: space-around</h3>
-        <style> 
-                  
+        <style>
+
           div.grid-container-5 {
             display: grid;
             grid-template-columns: auto auto auto;
@@ -229,8 +231,8 @@ the 'justify-content' property to have any effect.
 
 
         <h3> justify-content: space-between</h3>
-        <style> 
-                  
+        <style>
+
           div.grid-container-6 {
             display: grid;
             grid-template-columns: auto auto auto;
@@ -263,9 +265,9 @@ the 'justify-content' property to have any effect.
           <!-- ------------------------------------- -->
 
 
-        <h3> justify-content: center</h3>  
-        <style> 
-                  
+        <h3> justify-content: center</h3>
+        <style>
+
           div.grid-container-7 {
             display: grid;
             grid-template-columns: auto auto auto;
@@ -299,8 +301,8 @@ the 'justify-content' property to have any effect.
 
 
         <h3> justify-content: start</h3>
-        <style> 
-                  
+        <style>
+
           div.grid-container-8 {
             display: grid;
             grid-template-columns: auto auto auto;
@@ -334,8 +336,8 @@ the 'justify-content' property to have any effect.
 
 
         <h3> justify-content: end</h3>
-        <style> 
-                  
+        <style>
+
           div.grid-container-9 {
             display: grid;
             grid-template-columns: auto auto auto;
@@ -374,15 +376,15 @@ the 'justify-content' property to have any effect.
 The 'align-content' property is used to vertically align the whole grid inside the container. -->
 
 
-         
+
 
 
 
         <hr/><h2>align-content</h2>
 
         <h3> align-content: center </h3>
-        <style> 
-                  
+        <style>
+
           div.grid-container-10 {
             display: grid;
             height: 400px;
@@ -417,8 +419,8 @@ The 'align-content' property is used to vertically align the whole grid inside t
           <!-- ------------------------------------- -->
 
         <h3> align-content: space-evenly  </h3>
-        <style> 
-                  
+        <style>
+
           div.grid-container-11 {
             display: grid;
             height: 400px;
@@ -453,8 +455,8 @@ The 'align-content' property is used to vertically align the whole grid inside t
           <!-- ------------------------------------- -->
 
         <h3> align-content: space-around </h3>
-        <style> 
-                  
+        <style>
+
           div.grid-container-12 {
             display: grid;
             height: 400px;
@@ -489,8 +491,8 @@ The 'align-content' property is used to vertically align the whole grid inside t
           <!-- ------------------------------------- -->
 
         <h3> align-content: space-between </h3>
-        <style> 
-                  
+        <style>
+
           div.grid-container-13 {
             display: grid;
             height: 400px;
@@ -525,8 +527,8 @@ The 'align-content' property is used to vertically align the whole grid inside t
           <!-- ------------------------------------- -->
 
         <h3> align-content: start </h3>
-        <style> 
-                  
+        <style>
+
           div.grid-container-14 {
             display: grid;
             height: 400px;
@@ -561,8 +563,8 @@ The 'align-content' property is used to vertically align the whole grid inside t
           <!-- ------------------------------------- -->
 
         <h3> align-content: end</h3>
-        <style> 
-                  
+        <style>
+
           div.grid-container-15 {
             display: grid;
             height: 400px;
@@ -601,8 +603,7 @@ The 'align-content' property is used to vertically align the whole grid inside t
 
 
 
-     
- 
+
+
    </body>
  </html>
- 

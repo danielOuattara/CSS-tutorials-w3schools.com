@@ -1,7 +1,9 @@
 .grid-container-0 {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'header header header header header header' 'menu main main main right right' 'menu footer footer footer footer footer';
+      grid-template-areas: 'header header header header header header'
+                           'menu main main main right right'
+                           'menu footer footer footer footer footer';
   /* grid-gap: 10px;  obslete*/
   row-gap: 5px;
   -webkit-column-gap: 10px;
